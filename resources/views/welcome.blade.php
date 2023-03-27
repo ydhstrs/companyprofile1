@@ -162,7 +162,7 @@
                                 </a>
                             </div>
                         </div>
-                                                <div
+                        <div
                             class="leading-1 w-full p-4 bg-[url('/public/images/sara.jpg')] rounded-xl shadow splide__slide bg:fixed bg-cover 2xl:h-64 mb-10 lg:max-w-lg">
                             <div class="">
                                 <p class="text-white text-2xl font-semibold ">
@@ -287,91 +287,47 @@
         </div>
 
     </section>
-    <section class="bg-[url('/public/images/articlebg.jpg')] bg-cover bg-center ">
-        <div class="lg:grid lg:grid-cols-3 lg:gap-4 md:flex md:flex-row md:mx-auto container px-1 sm:px-8 lg:gap-x-8">
-            <div class="col-span-1 py-20">
-                <h1 class="text-left align-middle text-white">
-                    Latest Article
-                </h1>
-                <p class="text-left align-middle text-white text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. Officiis iste voluptatum suscipit aperiam officia optio beatae incidunt, tempore nam ut nesciunt
-                    delectus quidem maxime culpa esse! Nesciunt ratione adipisci optio magnam omnis nihil veniam recusandae
-                    autem molestiae ut, error soluta expedita porro nulla quod temporibus deserunt necessitatibus quasi cum
-                    nobis.</p>
-            </div>
+    <section class=" bg-[url('/public/images/articlebg.jpg')] bg-cover bg-center ">
+        <div class="bg-black bg-opacity-50">
 
-            <div class="col-span-2">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20 ">
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                        {{-- <div class="place-items-center h-48 overflow-hidden">
+            <div class="container px-1 sm:px-8 lg:gap-x-8">
 
-                            <img src="{{ asset('/storage/' . $news->image) }}" class="w-full">
-                        </div>
-                    @else --}}
-                        <img class="w-full" src="https://source.unsplash.com/1200x600?nurse"
-                            alt="Sunset in the mountains">
-                        {{-- @endif --}}
+                <div class="py-10">
+                    <h1 class="text-center align-middle text-white font-thin">
+                        Aktivitas Terbaru
+                    </h1>
+                    <p class="text-center pt-20 font-light align-middle text-white text-md">Selamat datang di aktivitas
+                        terbaru Lunnizom Group.
+                        Kami menyajikan aktivitas terbaru meliputi seluruh lini bisnis sebagai langkah yang membawa Lunnizom
+                        Group lebih dekat dengan publik</p>
+                </div>
 
-                        <div class="px-4 py-4">
-                            <div class="font-bold text-xl mb-2">Latest Article</div>
-                            <p class="text-gray-700 text-xs">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, molestiae possimus.
-                                Veniam exercitationem modi mollitia!
-                            </p>
-                        </div>
-                        <div class="pt-4 pb-2 px-6">
-                            <a href="#"
-                                class="inline-block bg-cyan-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Read
-                                More</a>
-                        </div>
+                <div class="">
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-20 ">
+                        @foreach ($articles as $item)
+                            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+
+                                <img class="w-full" src="{{ asset('/storage/' . $item->image) }}"
+                                    alt="Sunset in the mountains">
+
+                                <div class="px-4 py-4">
+                                    <div class="font-bold text-xl mb-2">{{ $item->title }}</div>
+                                    <p class="text-gray-700 text-xs">
+                                        {{ $item->excerpt }}
+                                    </p>
+                                </div>
+                                <div class="pt-4 pb-2 px-6">
+                                    <a href="#"
+                                        class="inline-block bg-cyan-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Read
+                                        More</a>
+                                </div>
+
+                            </div>
+                            {{-- @endforeach --}}
+                        @endforeach
+
                     </div>
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                        {{-- <div class="place-items-center h-48 overflow-hidden">
-
-                            <img src="{{ asset('/storage/' . $news->image) }}" class="w-full">
-                        </div>
-                    @else --}}
-                        <img class="w-full" src="https://source.unsplash.com/1200x600?jungle"
-                            alt="Sunset in the mountains">
-                        {{-- @endif --}}
-
-                        <div class="px-4 py-4">
-                            <div class="font-bold text-xl mb-2">Latest Article</div>
-                            <p class="text-gray-700 text-xs">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, molestiae possimus.
-                                Veniam exercitationem modi mollitia!
-                            </p>
-                        </div>
-                        <div class="pt-4 pb-2 px-6">
-                            <a href="#"
-                                class="inline-block bg-cyan-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Read
-                                More</a>
-                        </div>
-                    </div>
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                        {{-- <div class="place-items-center h-48 overflow-hidden">
-
-                            <img src="{{ asset('/storage/' . $news->image) }}" class="w-full">
-                        </div>
-                    @else --}}
-                        <img class="w-full" src="https://source.unsplash.com/1200x600?car" alt="Sunset in the mountains">
-                        {{-- @endif --}}
-
-                        <div class="px-4 py-4">
-                            <div class="font-bold text-xl mb-2">Latest Article</div>
-                            <p class="text-gray-700 text-xs">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, molestiae possimus.
-                                Veniam exercitationem modi mollitia!
-                            </p>
-                        </div>
-                        <div class="pt-4 pb-2 px-6">
-                            <a href="#"
-                                class="inline-block bg-cyan-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Read
-                                More</a>
-                        </div>
-                    </div>
-                    {{-- @endforeach --}}
-
                 </div>
             </div>
     </section>
@@ -389,6 +345,8 @@
     </section>
     <section id="footer" class="bg-[url('/public/images/footer.jpg')] bg-cover bg-center ">
         <div class="bg-gradient-to-t from-black  via-black pb-16">
+                @foreach ($contacts as $item)
+
             <div class="py-16 min-w-full flex transition-all duration-500 pt-30 mt-64">
                 <div class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16">
                     <div class="col-span-1 m-auto">
@@ -409,9 +367,7 @@
                             </div>
                             <div class="col-span1">
                                 <h5 class="text-2xl">Our Office</h5>
-                                <p>Jl. Gagak Hitam No.25, Sei Sikambing B, Kec. Medan Sunggal, Kota Medan, Sumatera Utara
-                                    20128,
-                                    Indonesia</p>
+                                <p>{{ $item->address }}</p>
                             </div>
                         </div>
                     </div>
@@ -433,7 +389,7 @@
                     </p>
 
                     <div class="flex items-center mt-10 text-white gap-8">
-                        <a href="#" target="_blank"
+                        <a href="{{ $item->instagram }}" target="_blank"
                             class="w-10 h-10 mr-3 rounded-full flex justify-center items-center
                    ">
                             <svg role="img" viewBox="0 0 24 24" class="fill-white"
@@ -444,7 +400,7 @@
                             </svg>
                         </a>
 
-                        <a href="#" target="_blank"
+                        <a href="{{ $item->tiktok }}" target="_blank"
                             class="w-10 h-10 mr-3 rounded-full flex justify-center items-center
               ">
                             <svg role="img" class="fill-white" viewBox="0 0 24 24"
@@ -454,7 +410,7 @@
                                     d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
                             </svg>
                         </a>
-                        <a href="#" target="_blank"
+                        <a href="{{ $item->twitter }}" target="_blank"
                             class="w-10 h-10 mr-3 rounded-full flex justify-center items-center
                    ">
                             <svg role="img" class="fill-white" viewBox="0 0 24 24"
@@ -464,7 +420,7 @@
                                     d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                             </svg>
                         </a>
-                        <a href="#" target="_blank"
+                        <a href="{{ $item->linkedin }}" target="_blank"
                             class="w-10 h-10 mr-3 rounded-full flex justify-center items-center
               ">
                             <svg role="img" viewBox="0 0 24 24" class="fill-white"
@@ -474,7 +430,7 @@
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                         </a>
-                        <a href="#" target="_blank"
+                        <a href="{{ $item->email }}" target="_blank"
                             class="w-10 h-10 mr-3 rounded-full flex justify-center items-center
                    ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24"
@@ -484,7 +440,7 @@
                             </svg>
 
                         </a>
-                        <a href="#" target="_blank"
+                        <a href="{{ $item->youtube }}" target="_blank"
                             class="w-10 h-10 mr-3 rounded-full flex justify-center items-center
                    ">
                             <svg role="img" viewBox="0 0 24 24" class="fill-white"
@@ -496,6 +452,8 @@
                             </svg>
                         </a>
                     </div>
+                @endforeach
+
                 </div>
                 <div class="col-span-1 m-auto">
                     <div class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16">

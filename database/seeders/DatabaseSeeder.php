@@ -6,7 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Banner;
 use App\Models\Bio;
-use App\Models\Project;
+use App\Models\Article;
 use App\Models\User;
 
 
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
             'text' => 'A Fast learner, Ambitious and Motivated, with working experience as a UI/UX Designer. Having Skilled in Wireframing, User Flow, Prototyping, Hands-On Design Research, and User Experience to ensure delivery solutions that are creatively useful and have a significant impact on users.'
         ]);
 
-        Project::create([
+        Article::create([
             'title' => 'KAIA',
             'slug'  => 'kaia',
             'excerpt' => 'KAIKAIA is the final project I made in Apple Developer Academy with four other teammates. We finishe...',

@@ -24,14 +24,14 @@
                     <x-nav-link :href="'/dashboard/bio'" :active="request()->routeIs('bio.index')">
                         {{ __('Bio') }}
                     </x-nav-link>
-                    <x-nav-link :href="'/dashboard/project'" :active="request()->routeIs('project.index')">
-                        {{ __('Project') }}
+                    <x-nav-link :href="'/dashboard/article'" :active="request()->routeIs('article.index')">
+                        {{ __('Article') }}
                     </x-nav-link>
                     <x-nav-link :href="'/dashboard/strength'" :active="request()->routeIs('strength.index')">
                         {{ __('Strength') }}
                     </x-nav-link>
-                    <x-nav-link :href="'/dashboard/testimonial'" :active="request()->routeIs('testimonial.index')">
-                        {{ __('Testimonial') }}
+                    <x-nav-link :href="'/dashboard/contact'" :active="request()->routeIs('contact.index')">
+                        {{ __('Contact') }}
                     </x-nav-link>
                     <x-nav-link :href="'/dashboard/about'" :active="request()->routeIs('about.index')">
                         {{ __('About') }}
@@ -40,7 +40,7 @@
                         {{ __('CV') }}
                     </x-nav-link>
                     <x-nav-link :href="'/dashboard/tool'" :active="request()->routeIs('tool.index')">
-                        {{ __('Tool') }}
+                        {{ __('Partner') }}
                     </x-nav-link>
                 </div>
             </div>
