@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Banner;
 use App\Models\Bio;
 use App\Models\Article;
+use App\Models\Contact;
 use App\Models\User;
 
 
@@ -59,6 +60,17 @@ class DatabaseSeeder extends Seeder
             follows:<br>Sign Up and Sign In Page<br>Connect Bank Account Page<br>Choose Budget Page<br>Budgeting Set by App and Manually Page<br>Add Budget Page<br>Transaction Page<br>Track Expenses Manually
             Page <br><br><strong>Process</strong><br>Our next plan is to dig deeper into financial wellness, managing, controlling, and planning money. We also want to understand people's habits in order to
             manage their money.</div>"
+        ]);
+
+        Contact::create([
+            'address' => 'Jl. Gagak Hitam No.25, Sei Sikambing B, Kec. Medan Sunggal, Kota Medan, Sumatera Utara 20128, Indonesia.',
+            'email' => 'lunnizom.indogroup@gmail.com',
+            'instagram' => '#',
+            'tiktok' => '#',
+            'linkedin' => '#',
+            'twitter' => '#',
+            'youtube' => '#'
+
         ]);
     }
 }
