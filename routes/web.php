@@ -13,6 +13,7 @@ use App\Http\Controllers\DashboardTestimonialController;
 use App\Http\Controllers\DashboardContactController;
 use App\Http\Controllers\DashboardAboutController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\FoundationController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\WorksController;
 
@@ -29,6 +30,7 @@ use App\Http\Controllers\WorksController;
 */
 
 Route::get('/', [WelcomeController::class, 'index']);
+Route::get('/foundation', [FoundationController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/works', [WorksController::class, 'index']);
 Route::get('/work/{project:slug}', [WorksController::class, 'show']);
