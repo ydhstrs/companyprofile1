@@ -2,7 +2,7 @@
 
 @section('contents')
     <header id=""
-        class=" text-center md:pt-36 lg:text-left bg-[url('/public/images/LANDINGHEADER3.png')] 2xl:h-screen lg:min-h-fit pb-10">
+        class=" text-center md:pt-36 lg:text-left bg-[url('/public/images/LANDINGHEADER3.png')] lg:h-full 2xl:h-full  pb-10">
 
         <div class="container mx-auto px-1 sm:px-8 lg:grid lg:grid-cols-2  lg:gap-x-8 ">
             <div class="mb-8 lg:mt-2  2xl:mt-40 xl:mr-12">
@@ -24,7 +24,7 @@
 
         </div> <!-- end of container -->
 
-        <div class="container relative flex pb-1 pt-12 items-center">
+        <div class="container flex pb-1 pt-12 items-center">
             <span class="flex-shrink mx-4 text-white">Subsidiary</span>
             <span class=" h-1 flex-grow bg-gradient-to-r from-blue-400  to-white lg:w-1/3"></span>
         </div>
@@ -62,7 +62,7 @@
                                     magnam doloribus ipsam! Repellat amet laborum itaque saepe ducimus nulla ut tempore
                                     mollitia.
                                 </p>
-                                <a href="#" class="bg-white rounded-full text-center mt-10 py-2 px-4">
+                                <a href="/foundation" class="bg-white rounded-full text-center mt-10 py-2 px-4">
                                     Visit Us
                                 </a>
                             </div>
@@ -176,7 +176,7 @@
                                     magnam doloribus ipsam! Repellat amet laborum itaque saepe ducimus nulla ut tempore
                                     mollitia.
                                 </p>
-                                <a href="#" class="bg-white rounded-full text-center mt-10 py-2 px-4">
+                                <a href="/saramoda" class="bg-white rounded-full text-center mt-10 py-2 px-4">
                                     Visit Us
                                 </a>
                             </div>
@@ -190,16 +190,12 @@
 
 
 
-    <section id="strength" class=" ">
-
-    </section>
-
-    <section class="bg-gray-100 py-10 ">
+    <section id="about" class="bg-gray-100 py-10 ">
         <div class="lg:grid lg:grid-cols-2 lg:gap-4 md:flex md:flex-row md:mx-auto container px-1 sm:px-8 lg:gap-x-8">
 
             <div class="col-span-1">
 
-                <div class=" w-full h-96 overflow-hidden">
+                <div class="w-fit h-96 overflow-hidden">
                     <div class="platform shadow-xl h-full flex">
                         <img src="/images/Rectangle_47.png" class="w-full ">
 
@@ -216,10 +212,6 @@
                 </p>
             </div>
 
-        </div>
-        </div>
-
-        </div>
         </div>
     </section>
 

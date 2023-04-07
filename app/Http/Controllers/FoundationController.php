@@ -17,7 +17,7 @@ class FoundationController extends Controller
 {
     public function index()
     {
-        return view('sublanding.foundation', [
+        return view('sublanding.foundation.welcome', [
             "banner" => Banner::all(),
             "articles" => Article::latest()->get(),
             "strengths" => Strength::all(),
