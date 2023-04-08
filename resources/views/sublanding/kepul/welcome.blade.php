@@ -238,14 +238,23 @@
         <div class="p-5 lg:p-20 bg-gradient-to-b from-kepul-primary to-kepul-primary lg:to-white rounded-lg">
             <div class="flex flex-col items-center align-center">
                 <p class="text-white font-medium text-4xl lg:text-5xl">Try for free</p>
+
+                <p class="mt-10 px-10 text-white text-center">
+                    Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi
+                    ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata
+                    pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar,
+                    ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah
+                    organik dan non-organik.
+                </p>
+    
+                <div class="mt-[50px] aligns-center">
+                    <a
+                        class="bg-transparent hover:bg-white text-white font-semibold hover:text-kepul-primary py-2 px-4 border-2 border-white hover:border-transparent rounded-lg">
+                        Try for free
+                    </a>
+                </div>
+
             </div>
-            <p class="mt-10 px-10 text-white text-center">
-                Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi
-                ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata
-                pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar,
-                ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah
-                organik dan non-organik.
-            </p>
 
             <div class="flex  hidden lg:block">
                 <img class="max-h-[700px] justify-self-end" src="/images/kepul/try-free.png" />

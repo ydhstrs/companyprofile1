@@ -23,6 +23,7 @@ module.exports = {
                 'third1': '#ECE5D5',
                 'fourth1': '#505924',
                 'kepul-primary': '#0773F1',
+                'tech-primary': '#F4F4F4',
             },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
