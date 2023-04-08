@@ -19,6 +19,8 @@ use App\Http\Controllers\IndomarketController;
 use App\Http\Controllers\WorksController;
 use App\Http\Controllers\SaramodaController;
 use App\Http\Controllers\LegalinController;
+use App\Http\Controllers\BarbekoeController;
+use App\Http\Controllers\IndopropertiController;
 
 
 /*
@@ -39,8 +41,12 @@ Route::get('/legalin', [LegalinController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/works', [WorksController::class, 'index']);
 Route::get('/indomarket', [IndomarketController::class, 'index']);
+Route::get('/indoproperti', [IndopropertiController::class, 'index']);
 Route::get('/work/{project:slug}', [WorksController::class, 'show']);
 
+
+
+Route::get('/barbekoe', [BarbekoeController::class, 'index']);
 
 
 Route::get('/dashboard', function () {

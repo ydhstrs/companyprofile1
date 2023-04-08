@@ -201,6 +201,7 @@
         </div>
         </div>
     </section>
+
  <section id="footer">
         <div class=" bg-zinc-800">
             @foreach ($contacts as $item)
