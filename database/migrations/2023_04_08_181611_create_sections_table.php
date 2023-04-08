@@ -20,17 +20,18 @@ return new class extends Migration
             $table->string('title1')->nullable();
             $table->string('title2')->nullable();
             $table->string('title3')->nullable();
-            $table->string('desc1')->nullable();
-            $table->string('desc2')->nullable();
-            $table->string('desc3')->nullable();
+            $table->text('desc1')->nullable();
+            $table->text('desc2')->nullable();
+            $table->text('desc3')->nullable();
             $table->string('subtitle1')->nullable();
             $table->string('subtitle2')->nullable();
             $table->string('subtitle3')->nullable();
-            $table->string('subdesc1')->nullable();
-            $table->string('subdesc2')->nullable();
-            $table->string('subdesc3')->nullable();
+            $table->text('subdesc1')->nullable();
+            $table->text('subdesc2')->nullable();
+            $table->text('subdesc3')->nullable();
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();
+            $table->tinyInteger('withlist')->default(0);
             $table->timestamps();
         });
     }

@@ -10,6 +10,7 @@ class ListSection extends Model
     use HasFactory;
     protected $fillable = [
         'id_section',
+        'typelanding',
         'title',
         'subtitle',
         'slug',
@@ -18,4 +19,8 @@ class ListSection extends Model
         'isi',
 
     ];
+    public function section()
+    {
+        return $this->belongsTo(Section::class, 'id', 'id_section');
+    }
 }

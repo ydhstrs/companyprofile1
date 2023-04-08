@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->string('landingtype');
             $table->string('image')->nullable();
             $table->string('excerpt');
             $table->text('isi');

@@ -34,10 +34,10 @@
                                     </div>
                                 </button>
                                 <x-slot name="content">
-                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                    <x-dropdown-link :href="'/dashboard/main/section'">
                                         {{ __('Section') }}
                                     </x-dropdown-link>
-                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                    <x-dropdown-link :href="'/dashboard/main/listsection'">
                                         {{ __('List Section') }}
                                     </x-dropdown-link>
                                 </x-slot>

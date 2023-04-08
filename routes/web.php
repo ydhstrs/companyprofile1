@@ -22,6 +22,8 @@ use App\Http\Controllers\SaramodaController;
 use App\Http\Controllers\LegalinController;
 use App\Http\Controllers\BarbekoeController;
 use App\Http\Controllers\IndopropertiController;
+use App\Http\Controllers\DashboardMainSectionController;
+use App\Http\Controllers\DashboardMainListSectionController;
 
 use App\Http\Controllers\TechnologyController;
 
@@ -65,6 +67,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dashboard/article', DashboardArticleController::class);
     Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
     Route::resource('/dashboard/strength', DashboardStrengthController::class);
+    Route::resource('/dashboard/main/section', DashboardMainSectionController::class);
+    Route::resource('/dashboard/main/listsection', DashboardMainListSectionController::class);
     Route::resource('/dashboard/testimonial', DashboardTestimonialController::class);
     Route::resource('/dashboard/contact', DashboardContactController::class);
     // Route::post('/dashboard/project/addToMain/{slug}', [DashboardProjectController::class, 'addToMain'])->name('project.addToMain');

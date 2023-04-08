@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('list_sections', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_section');
+            $table->string('typelanding');
             $table->string('title')->nullable();
             $table->string('subtitle')->nullable();
             $table->string('slug')->nullable();

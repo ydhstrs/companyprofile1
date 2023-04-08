@@ -14,7 +14,7 @@
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full px-4 max-w-full flex-grow flex-1">
                                 <h3 class="font-semibold text-lg text-blueGray-700">
-                                    Project
+                                    Section
                                 </h3>
                             </div>
 
@@ -35,14 +35,14 @@
                         @endif
                     </div>
 
-                    <a href="/dashboard/article/create"
-                        class="flex flex-wrap gap-3 bg-cyan-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded m-8 w-40">
+                    <a href="/dashboard/main/section/create"
+                        class="flex flex-wrap gap-3 bg-cyan-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded m-8 w-48">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Add Article</a>
+                        Add Section</a>
                     <div class="block w-full overflow-x-auto px-8">
 
                         <table class="items-center w-full bg-transparent border-collaps ">
@@ -53,83 +53,44 @@
                             </th>
                             <th
                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
-                                Title
+                                Section
                             </th>
                             <th
                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
-                                Image
+                                Title 1
                             </th>
                             <th
                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
-                                Content
+                                Title 2
                             </th>
-                            {{-- <th
-                                class="px-6  align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
-                                Status
-                            </th> --}}
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Title 3
+                            </th>
                             <th
                                 class="px-6  align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
                                 Action
                             </th>
-                            @foreach ($articles as $item)
+                            @foreach ($sections as $item)
                                 <tr>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                                         {{ $loop->iteration }}</td>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                        {{ $item->title }}</td>
-
+                                        {{ $item->typesection }}</td>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                        <img src="{{ asset('storage/' . $item->image) }}" class="rounded max-h-8">
-                                    </td>
+                                        {{ $item->title1 }}</td>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                        {{ $item->excerpt }}</td>
-                                        {{-- STart Di Komen Dulu Keknya Ga Tepakek --}}
-                                    {{-- <td class="text-center">
-                                        @if ($item->status == 0)
-                                            <form action="{{ route('project.addToMain', $item->slug) }}" method="POST">
+                                        {{ $item->title2 }}</td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        {{ $item->title3 }}</td>
 
-                                                @csrf
-                                                @method('POST')
-                                                <button
-                                                    onclick="return confirm('Yakin Ko Fit? Aksi ini akan membuat project tampil di halaman utama') "
-                                                    class="bg-green-400 rounded-md hover:shadow-xl hover:bg-green-500 font-bold self-center">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-6 h-6">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M4.5 12.75l6 6 9-13.5" />
-                                                    </svg>
-
-                                                </button>
-                                            </form>
-                                        @else
-                                            <form action="{{ route('project.delToMain', $item->slug) }}" method="POST">
-
-                                                @csrf
-                                                @method('POST')
-                                                <button
-                                                    onclick="return confirm('Yakin Ko Fit? Aksi ini akan membuat project tidak tampil di halaman utama') "
-                                                    class="bg-yellow-300 rounded-md hover:shadow-xl hover:bg-yellow-400 font-bold">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                                        class="w-6 h-6">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="M6 18L18 6M6 6l12 12" />
-                                                    </svg>
-
-                                                </button>
-                                            </form>
-                                        @endif
-                                    </td> --}}
-                                        {{-- END Di Komen Dulu Keknya Ga Tepakek --}}
-
-                                    <td class="flex flex-wrap gap-2">
-
-                                        <a href="/dashboard/article/{{ $item->slug }}">
+                                    <td class="flex flex-wrap">
+                                        <a href="/dashboard/main/section/{{ $item->id }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-700">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -138,7 +99,7 @@
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                             </svg>
                                         </a>
-                                        <a href="/dashboard/article/{{ $item->slug }}/edit">
+                                        <a href="/dashboard/main/section/{{ $item->id }}/edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor"
                                                 class="w-6 h-6 text-yellow-600 hover:bg-yellow-300">
@@ -146,12 +107,9 @@
                                                     d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                                             </svg>
                                         </a>
-                                        {{-- action --}}
-
-
                     </div>
                     <div>
-                        <form action="/dashboard/article/{{ $item->slug }}" method="post">
+                        <form action="/dashboard/main/section/{{ $item->id }}" method="post">
                             @method('delete')
                             @csrf
                             <button class="" onclick="return confirm('Apakah Kamu Yakin Ingin Menghapus?') ">

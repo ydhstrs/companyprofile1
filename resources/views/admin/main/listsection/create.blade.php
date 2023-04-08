@@ -21,29 +21,34 @@
                     </div>
 
                     <div class="block w-full overflow-x-auto p-8">
-                        <form method="post" action="/dashboard/about" enctype="multipart/form-data">
+                        <form method="post" action="/dashboard/main/listsection" enctype="multipart/form-data">
                             @csrf
+                            <input type="hidden" id="typelanding" name="typelanding" value="main"
+                                class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
                             <div class="mb-6">
-                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-                                <input type="text" id="email" name="email"
+                                <label for="id_section"
+                                    class="block mb-2 text-sm font-medium text-gray-900">Section</label>
+                                <select class="form-select" name="id_section" id="id_section"
+                                    class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg">
+                                    @foreach ($sections as $item)
+                                        <option value="{{ $item->id }}">{{ $item->typesection }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Title</label>
+                                <input type="text" id="title" name="title"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
                             </div>
                             <div class="mb-6">
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900">Tiktok</label>
-                                <input type="text" id="tiktok" name="tiktok"
+                                    class="block mb-2 text-sm font-medium text-gray-900">Subtitle</label>
+                                <input type="text" id="subtitle" name="subtitle"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
                             </div>
                             <div class="mb-6">
-                                <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900">Linkedin</label>
-                                <input type="text" id="linkedin" name="linkedin"
-                                    class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
-                            </div>
-                            <div class="mb-6">
-                                <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900">Instaram</label>
-                                <input type="text" id="instagram" name="instagram"
+                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Slug</label>
+                                <input type="text" id="slug" name="slug"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
                             </div>
                             <div class="mb-6">
@@ -63,20 +68,19 @@
                                     </div>
                                 @enderror
                             </div>
-                            <div class="mb-6">
-                                <img class="img-preview w-56">
-                                <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload
-                                    file</label>
-                                <input
-                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:placeholder-gray-400" 
-                                    aria-describedby="file_input_help" id="cv" name="cv" type="file"
-                                    >
-
-                            </div>
-                            <div class="mb-6">
+                            {{-- <div class="mb-6">
                                 <label for="isi" class="block mb-2 text-sm font-medium text-gray-900">Isi</label>
-                                <textarea class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "" name="isi"
-                                    value="{{ old('isi') }}"> </textarea>
+                                <input id="isi" type="hidden" name="isi" value="{{ old('isi') }}">
+                                <trix-editor input="isi"></trix-editor>
+                            </div> --}}
+                            <div class="mb-6">
+                                <label class="block">
+                                    <span class="text-gray-700">Isi</span>
+                                    <textarea id="editor" class="block w-full mt-1 rounded-md" name="isi" rows="3"></textarea>
+                                </label>
+                                @error('description')
+                                    <div class="text-sm text-red-600">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <button type="submit"
@@ -91,6 +95,41 @@
 
 </x-app-layout>
 
+<script>
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result
+        }
+    }
+</script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: '{{ route('image.upload') . '?_token=' . csrf_token() }}',
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<script>
+    const title = document.querySelector("#title");
+    const slug = document.querySelector("#slug");
+
+    title.addEventListener("keyup", function() {
+        let preslug = title.value;
+        preslug = preslug.replace(/ /g, "-");
+        slug.value = preslug.toLowerCase();
+    });
+</script>
 <script>
     function previewImage() {
         const image = document.querySelector('#image');
