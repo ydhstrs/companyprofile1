@@ -15,35 +15,196 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{-- <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/banner'" :active="request()->routeIs('banner.index')">
-                        {{ __('Banner') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/bio'" :active="request()->routeIs('bio.index')">
-                        {{ __('Bio') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/article'" :active="request()->routeIs('article.index')">
-                        {{ __('Article') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/strength'" :active="request()->routeIs('strength.index')">
-                        {{ __('Strength') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/contact'" :active="request()->routeIs('contact.index')">
-                        {{ __('Contact') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/about'" :active="request()->routeIs('about.index')">
-                        {{ __('About') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/cv'" :active="request()->routeIs('cv.index')">
-                        {{ __('CV') }}
-                    </x-nav-link>
-                    <x-nav-link :href="'/dashboard/tool'" :active="request()->routeIs('tool.index')">
-                        {{ __('Partner') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Main') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Section') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('List Section') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Legalin') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Section') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('List Section') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Indo Market') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Section') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('List Section') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Barbekoe') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Section') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('List Section') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Indo Properti') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Section') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('List Section') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Saramoda') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Section') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('List Section') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
 
+                        <x-dropdown width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Kepul') }}</div>
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <x-slot name="content">
+                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                        {{ __('Article') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                        {{ __('Mission') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/foundation/vision'">
+                                        {{ __('Vision') }}
+                                    </x-dropdown-link>
+                                </x-slot>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
                         <x-dropdown width="48">
                             <x-slot name="trigger">
                                 <button
