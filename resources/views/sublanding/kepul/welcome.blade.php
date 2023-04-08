@@ -100,7 +100,7 @@
             <div class="lg:basis-1/2 lg:mr-20">
                 <div>
                     <p class="font-medium text-3xl lg:text-6xl">
-                        Barang bekas menumpuk? <br> <span class="text-kepul-primary"> Kepul</span>-in aja
+                        Barang bekas menumpuk? <span class="text-kepul-primary"> Kepul</span>-in aja
                     </p>
 
                     <p class="mt-10">
@@ -129,7 +129,7 @@
             <div class="lg:basis-1/2 lg:mr-20">
                 <div>
                     <p class="font-medium text-4xl lg:text-6xl">
-                        Kenapa harus <br> <span class="text-kepul-primary"> Kepul?</span>
+                        Kenapa harus <span class="text-kepul-primary"> Kepul?</span>
                     </p>
 
                     <p class="mt-10">
