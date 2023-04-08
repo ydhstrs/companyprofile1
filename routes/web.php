@@ -16,12 +16,14 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\FoundationController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\IndomarketController;
+use App\Http\Controllers\KepulController;
 use App\Http\Controllers\WorksController;
 use App\Http\Controllers\SaramodaController;
 use App\Http\Controllers\LegalinController;
 use App\Http\Controllers\BarbekoeController;
 use App\Http\Controllers\IndopropertiController;
 
+use App\Http\Controllers\TechnologyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,8 @@ use App\Http\Controllers\IndopropertiController;
 
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/foundation', [FoundationController::class, 'index']);
+Route::get('/kepul', [KepulController::class, 'index']);
+Route::get('/technology', [TechnologyController::class, 'index']);
 Route::get('/saramoda', [SaramodaController::class, 'index']);
 Route::get('/legalin', [LegalinController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
