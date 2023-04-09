@@ -181,6 +181,25 @@
                                     </a>
                                 </div>
                             </div>
+                            <div
+                                class="leading-1 w-full p-4 bg-[url('/public/images/legalinbanner.png')] rounded-xl shadow splide__slide bg:fixed bg-cover 2xl:h-64 mb-10 lg:max-w-lg">
+                                <div class="">
+                                    <p class="text-gray-700 text-2xl font-semibold ">
+                                        Legalin.idn
+                                    </p>
+                                    <p class="text-white text-2xl font-light ">
+                                        
+                                    </p>
+                                    <p class="text-gray-700  pt-6 mr-16 pb-2 text-left">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum magni, voluptate
+                                        magnam doloribus ipsam! Repellat amet laborum itaque saepe ducimus nulla ut tempore
+                                        mollitia.
+                                    </p>
+                                    <a href="/legalin" class="bg-white rounded-full text-center mt-10 py-2 px-4">
+                                        Visit Us
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,25 +222,26 @@
 
     <section id="section3" class="py-32">
 
-            <div class="bg-[url('/public/images/mainvision.png')] bg-cover py-24">
-                <div class="container relative flex pb-5 items-center ">
-                    <span class=" h-1 flex-grow bg-white lg:w-1/3"></span>
+        <div class="bg-[url('/public/images/mainvision.png')] bg-cover py-24">
+            <div class="container relative flex pb-5 items-center ">
+                <span class=" h-1 flex-grow bg-white lg:w-1/3"></span>
 
-                    <h4 class="text-center text-2xl mx-4 text-white py-12">{{ $sections3[0]->title1 }}</h4>
-                    <span class=" h-1 flex-grow bg-white lg:w-1/3"></span>
-                </div>
-                <p class="mx-44 font-light text-center text-xl text-white">
-                    {{ $sections3[0]->desc1 }}
-                </p>
+                <h4 class="text-center text-2xl mx-4 text-white py-12">{{ $sections3[0]->title1 }}</h4>
+                <span class=" h-1 flex-grow bg-white lg:w-1/3"></span>
             </div>
-            <div class="container relative flex pb-5 items-center pt-16">
-                <span class=" h-1 flex-grow bg-gray-800 lg:w-1/3"></span>
+            <p class="mx-44 font-light text-center text-xl text-white">
+                {{ $sections3[0]->desc1 }}
+            </p>
+        </div>
+        <div class="container relative flex pb-5 items-center pt-16">
+            <span class=" h-1 flex-grow bg-gray-800 lg:w-1/3"></span>
 
-                <h4 class="text-center text-2xl mx-4 text-gray-800 py-12">{{ $sections3[0]->title2 }}</h4>
-                <span class=" h-1 flex-grow bg-gray-800 lg:w-1/3"></span>
-            </div>
+            <h4 class="text-center text-2xl mx-4 text-gray-800 py-12">{{ $sections3[0]->title2 }}</h4>
+            <span class=" h-1 flex-grow bg-gray-800 lg:w-1/3"></span>
+        </div>
 
-        <div class="lg:grid lg:grid-cols-5 lg:gap-1 lg:px-28 grid grid-cols-1 place-items-center md:gap-y-4 gap-y-4 lg:gap-y-0">
+        <div
+            class="lg:grid lg:grid-cols-5 lg:gap-1 lg:px-28 grid grid-cols-1 place-items-center md:gap-y-4 gap-y-4 lg:gap-y-0">
             @foreach ($listsections3 as $item)
                 <div class="max-w-sm h-72 rounded overflow-hidden  items-center shadow-md sm:py-4">
                     <img class="w-20 mx-auto" src="{{ asset('/storage/' . $item->image) }}"
@@ -286,7 +306,8 @@
                 <h4 class="text-center pb-16">{{ $item->title1 }}</h4>
             @endforeach
 
-        <div class="lg:grid lg:grid-cols-5 grid grid-cols-1 place-items-center container gap-16 lg:gap-4 mx-auto mb-40">
+            <div
+                class="lg:grid lg:grid-cols-5 grid grid-cols-1 place-items-center container gap-16 lg:gap-4 mx-auto mb-40">
 
                 @foreach ($listsections5 as $item)
                     <img class="h-16" src="{{ asset('storage/' . $item->image) }}" alt="Lunnizoom Partner" />
