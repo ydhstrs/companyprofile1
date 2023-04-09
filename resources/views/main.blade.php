@@ -15,7 +15,7 @@
 <body>
     <!-- Header Section Start -->
     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
-        <div class="container">
+ <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="mb-2 sm:mb-0 flex flex-row
   ">

@@ -202,25 +202,24 @@
     </section>
 
     <section id="section3" class="py-32">
-        @foreach ($sections3 as $item)
+
             <div class="bg-[url('/public/images/mainvision.png')] bg-cover py-24">
                 <div class="container relative flex pb-5 items-center ">
                     <span class=" h-1 flex-grow bg-white lg:w-1/3"></span>
 
-                    <h4 class="text-center text-2xl mx-4 text-white py-12">{{ $item->title1 }}</h4>
+                    <h4 class="text-center text-2xl mx-4 text-white py-12">{{ $sections3[0]->title1 }}</h4>
                     <span class=" h-1 flex-grow bg-white lg:w-1/3"></span>
                 </div>
                 <p class="mx-44 font-light text-center text-xl text-white">
-                    {{ $item->desc1 }}
+                    {{ $sections3[0]->desc1 }}
                 </p>
             </div>
             <div class="container relative flex pb-5 items-center pt-16">
                 <span class=" h-1 flex-grow bg-gray-800 lg:w-1/3"></span>
 
-                <h4 class="text-center text-2xl mx-4 text-gray-800 py-12">{{ $item->title2 }}</h4>
+                <h4 class="text-center text-2xl mx-4 text-gray-800 py-12">{{ $sections3[0]->title2 }}</h4>
                 <span class=" h-1 flex-grow bg-gray-800 lg:w-1/3"></span>
             </div>
-        @endforeach
 
         <div class="lg:grid lg:grid-cols-5 lg:gap-1 lg:px-28 grid grid-cols-1 place-items-center md:gap-y-4 gap-y-4 lg:gap-y-0">
             @foreach ($listsections3 as $item)
@@ -229,7 +228,7 @@
                         alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         {{-- <div class="font-bold text-xl mb-2 text-center text-gray-800 font-Akira">{{ $item->title }}</div> --}}
-                        <p class="text-gray-600 text-base text-center font-light font-Amiri">
+                        <p class="text-gray-600 text-base text-center font-light">
                             {{ strip_tags($item->isi) }}
                         </p>
                     </div>

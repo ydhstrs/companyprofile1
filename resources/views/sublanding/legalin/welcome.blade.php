@@ -1,4 +1,5 @@
 @extends('main')
+@extends('legalinnav')
 
 @section('contents')
     <header id=""

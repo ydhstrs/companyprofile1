@@ -24,6 +24,8 @@ use App\Http\Controllers\BarbekoeController;
 use App\Http\Controllers\IndopropertiController;
 use App\Http\Controllers\DashboardMainSectionController;
 use App\Http\Controllers\DashboardMainListSectionController;
+use App\Http\Controllers\DashboardLegalinSectionController;
+use App\Http\Controllers\DashboardLegalinListSectionController;
 
 use App\Http\Controllers\TechnologyController;
 
@@ -73,7 +75,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dashboard/contact', DashboardContactController::class);
     // Route::post('/dashboard/project/addToMain/{slug}', [DashboardProjectController::class, 'addToMain'])->name('project.addToMain');
     // Route::post('/dashboard/project/delToMain/{slug}', [DashboardProjectController::class, 'delToMain'])->name('project.delToMain');
-
+    Route::resource('/dashboard/legalin/section', DashboardLegalinSectionController::class);
+    Route::resource('/dashboard/legalin/listsection', DashboardLegalinListSectionController::class);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
