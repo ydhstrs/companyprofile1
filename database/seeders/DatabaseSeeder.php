@@ -118,6 +118,110 @@ class DatabaseSeeder extends Seeder
             'title1' => 'Partner Kami',
             'withlist' => 1
         ]);
+
+        // Kepul
+        Section::create([
+            'id' => 7,
+            'typelanding' => 'kepul',
+            'typesection' => 1,
+            'title1' => 'Ubah sampah jadi berkah hanya di <span class="text-kepul-primary"> Kepul</span>',
+            'subtitle1' => 'Aplikasi penjual sampah daur ulang nomor 1 di Kota Medan',
+            'withlist' => 0,
+            'image1' => 'section-images/BILdIWKED0S7JOS72KnlP5fdFQ3xJEHqk0Cy9RcB.png',
+        ]);
+        Section::create([
+            'id' => 8,
+            'typelanding' => 'kepul',
+            'typesection' => 2,
+            'title1' => 'Barang bekas menumpuk? <span class="text-kepul-primary"> Kepul</span>-in aja',
+            'desc1' => 'Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah organik dan non-organik.',
+            'withlist' => 0,
+            'image1' => 'section-images/GDpqXk5J5WczB7pjuk3yCYX5qaLvGPRirZPgusVv.png',
+        ]);
+        Section::create([
+            'id' => 9,
+            'typelanding' => 'kepul',
+            'typesection' => 3,
+            'title1' => 'Kenapa harus <span class="text-kepul-primary"> Kepul?</span>',
+            'desc1' => 'Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah organik dan non-organik.',
+            'withlist' => 0,
+            'image1' => 'section-images/PjGzbG4ALPdFzowoFjKM5MDxNI8rkwI8OIHK8p57.png',
+        ]);
+        Section::create([
+            'id' => 10,
+            'typelanding' => 'kepul',
+            'typesection' => 4,
+            'desc1' => 'Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah organik dan non-organik.',
+            'title1' => 'Program <br> <span class="text-kepul-primary"> Kepul?</span>',
+            'withlist' => 1
+        ]);
+        Section::create([
+            'id' => 11,
+            'typelanding' => 'kepul',
+            'typesection' => 5,
+            'title1' => 'Try for free',
+            'desc1' => 'Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah organik dan non-organik.',
+            'withlist' => 0,
+            'image1' => 'section-images/5iVnBcFF5hc3t5R0bi4gY9yRr4L4Rf2P8eZLpvym.png',
+        ]);
+
+        // List Section Kepul
+        ListSection::create([
+            'typelanding' => 'kepul',
+            'id_section' => 10,
+            'title' => 'Pionir di kota Medan',
+            'slug' => 'pionir-di-kota-medan',
+            'image' => 'listsection-images/Xmi3iVhMu1vZHACbDyTeAbcRAW6Qx3eNBbW1CVv3.png',
+            'excerpt' => '',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'kepul',
+            'id_section' => 10,
+            'title' => 'Semua driver berasal dari pengepul sampah',
+            'slug' => 'semua-driver-berasal-dari-pengepul-sampah',
+            'image' => 'listsection-images/yyqAW6CZrxLl9fZ5MSbbczIj0fsNevWtRLfOlaLZ.png',
+            'excerpt' => '',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'kepul',
+            'id_section' => 10,
+            'title' => 'Menjual lebih dari 30 jenis sampah organik & unorganik',
+            'slug' => 'menjual-lebih-dari-30-jenis-sampah-organik-&-unorganik',
+            'image' => 'listsection-images/wyTB1OzHjHjRMitQc6vw59nrnJ8KHQUPaySwXR48.png',
+            'excerpt' => '',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'kepul',
+            'id_section' => 10,
+            'title' => 'Harga sampah lebih tinggi',
+            'slug' => 'harga-sampah-lebih-tinggi',
+            'image' => 'listsection-images/Bq2DXLRzPcwQ3TS0zr7ez15lA7vBQiXi5rdUfo4h.png',
+            'excerpt' => '',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'kepul',
+            'id_section' => 10,
+            'title' => 'Gratis penjemputan sampah',
+            'slug' => 'gratis-penjemputan-sampah',
+            'image' => 'listsection-images/PQXyGArNbwN1FAALrFYfyrGoHmMk5M1pZl7IGFAW.png',
+            'excerpt' => '',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'kepul',
+            'id_section' => 10,
+            'title' => 'Jual sampah lebih mudah & cepat',
+            'slug' => 'jual-sampah-lebih-mudah-&-cepat',
+            'image' => 'listsection-images/9vNyoGtU4rVIIj4nFX2RhlvuYGay6KrCNieODKcO.png',
+            'excerpt' => '',
+        ]);
+
+        // End List Section
+
         ListSection::create([
             'typelanding' => 'main',
             'id_section' => 3,
