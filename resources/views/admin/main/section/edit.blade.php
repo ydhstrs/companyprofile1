@@ -109,7 +109,7 @@
                                 file</label>
                             <input
                                 class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:placeholder-gray-400 @error('image') is-invalid @enderror"
-                                aria-describedby="file_input_help" id="image" name="image" type="file"
+                                aria-describedby="file_input_help" id="image1" name="image1" type="file"
                                 onchange="previewImage1()">
                             <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG,
                                 JPG

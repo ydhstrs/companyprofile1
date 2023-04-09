@@ -164,6 +164,170 @@ class DatabaseSeeder extends Seeder
             'withlist' => 0,
             'image1' => 'section-images/5iVnBcFF5hc3t5R0bi4gY9yRr4L4Rf2P8eZLpvym.png',
         ]);
+        Section::create([
+            'id' => 111,
+            'typelanding' => 'legalin',
+            'typesection' => 1,
+            'title1' => 'Semua bisa',
+            'title2' => 'di legalin.idn',
+            'desc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubianostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 12,
+            'typelanding' => 'legalin',
+            'typesection' => 2,
+            'title1' => 'About us',
+            'title2' => 'Selamat datang di legalin.idn',
+            'desc1' => 'Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo
+efficitur neque. orem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 13,
+            'typelanding' => 'legalin',
+            'typesection' => 3,
+            'title1' => 'Service',
+            'title2' => 'Bidang keahlian',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 14,
+            'typelanding' => 'legalin',
+            'typesection' => 4,
+            'title1' => 'Our Team',
+            'title2' => 'Temui Tim Kami',
+            'desc1' => 'Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo
+efficitur neque. orem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac
+aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.',
+            'withlist' => 1,
+            'image1' => 'listsection-images/e3BL04ub5eH1vTuYShWzNaqj7sPVSJlcJ4SrM11j.png',
+
+        ]);
+        Section::create([
+            'id' => 15,
+            'typelanding' => 'legalin',
+            'typesection' => 5,
+            'title1' => 'People Said',
+            'title2' => 'Testimonial Client',
+            'withlist' => 1,
+
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Hukum Pidana',
+            'slug' => 'hukum-pidana',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Hukum Perdata',
+            'slug' => 'hukum-perdata',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'PK Pengadilan',
+            'slug' => 'pk-pengadilan',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Izin Perusahaan',
+            'slug' => 'izin-perusahaan',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Sertifikat',
+            'slug' => 'sertifikat',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Mediasi',
+            'slug' => 'mediasi',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Hukum Agana',
+            'slug' => 'hukum-agama',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 13,
+            'title' => 'Hukum Bantuan',
+            'slug' => 'hukum-bantuan',
+            'image' => 'listsection-images/t1PGYcvuWBPM9cm9ZqEYjAKrNz6vx1fxJiBDRyeB.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 15,
+            'title' => 'Dartdroid Company',
+            'slug' => 'dartdroidcomp',
+            'image' => 'listsection-images/2MLoT9KHWylIGLNISuwMjSpDm1tuAKXfjcOMNF66.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 15,
+            'title' => 'Usop',
+            'slug' => 'usop',
+            'image' => 'listsection-images/W3zzf5XupGRkCOOSdbyQ81vKq4MHfgHcI4k7E73G.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 15,
+            'title' => 'Boby',
+            'slug' => 'boby',
+            'image' => 'listsection-images/DMO730jxhjnT28kWBuK9OUwTkkOqDlvTagcp7WYu.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'legalin',
+            'id_section' => 15,
+            'title' => 'Nikii',
+            'slug' => 'nikii',
+            'image' => 'listsection-images/gDXQMp33uUOYsbj6kzFae6fkquZ1dtSr35CRcxd3.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,</p>',
+        ]);
 
         // List Section Kepul
         ListSection::create([
