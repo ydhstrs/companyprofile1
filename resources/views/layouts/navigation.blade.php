@@ -191,14 +191,11 @@
                                     </div>
                                 </button>
                                 <x-slot name="content">
-                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
-                                        {{ __('Article') }}
+                                    <x-dropdown-link :href="'/dashboard/kepul/section'">
+                                        {{ __('Section') }}
                                     </x-dropdown-link>
-                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
-                                        {{ __('Mission') }}
-                                    </x-dropdown-link>
-                                    <x-dropdown-link :href="'/dashboard/foundation/vision'">
-                                        {{ __('Vision') }}
+                                    <x-dropdown-link :href="'/dashboard/kepul/listsection'">
+                                        {{ __('List Section') }}
                                     </x-dropdown-link>
                                 </x-slot>
                             </x-slot>
