@@ -57,11 +57,11 @@
             <div class="lg:basis-1/2 ">
                 <div>
                     <p class="font-bold text-4xl lg:text-6xl">
-                        {!!$sections1[0]->title1!!}
+                        {!! $sections1->title1 !!}
                     </p>
 
                     <p class="mt-2">
-                        {!!$sections1[0]->subtitle1!!}
+                        {!! $sections1->subtitle1 !!}
                     </p>
                 </div>
                 <div class="flex flex-row mt-5">
@@ -78,9 +78,10 @@
             </div>
             {{-- RIGHT --}}
 
-            <div class="hidden basis-1/2 lg:block">
+            <div class="hidden basis-1/2 lg:block md:block">
                 <div class="flex justify-center ">
-                    <img class=" mx-5 max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections1[0]->image1) }}" />
+                    <img class=" mx-5 max-h-[700px] justify-self-end"
+                        src="{{ asset('storage/' . $sections1->image1) }}" />
                 </div>
             </div>
 
@@ -91,20 +92,21 @@
     <section class="mt-10 px-4 lg:px-20">
         <div class="flex items-center">
             {{-- LEFT --}}
-            <div class="hidden basis-1/2 lg:block">
+            <div class="hidden basis-1/2 lg:block md:block">
                 <div class="flex justify-center ">
-                    <img class=" mx-5 max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections2[0]->image1)}}" />
+                    <img class=" mx-5 max-h-[700px] justify-self-end"
+                        src="{{ asset('storage/' . $sections2->image1) }}" />
                 </div>
             </div>
             {{-- RIGHT --}}
             <div class="lg:basis-1/2 lg:mr-20">
                 <div>
                     <p class="font-medium text-3xl lg:text-6xl">
-                        {!!$sections2[0]->title1!!}
+                        {!! $sections2->title1 !!}
                     </p>
 
                     <p class="mt-10">
-                        {!!$sections2[0]->desc1!!}
+                        {!! $sections2->desc1 !!}
                     </p>
 
                     <div class="mt-[50px]">
@@ -125,20 +127,21 @@
             <div class="lg:basis-1/2 lg:mr-20">
                 <div>
                     <p class="font-medium text-4xl lg:text-6xl">
-                        {!!$sections3[0]->title1!!}
+                        {!! $sections3->title1 !!}
                     </p>
 
                     <p class="mt-10">
-                        
-                        {!!$sections3[0]->desc1!!}
+
+                        {!! $sections3->desc1 !!}
                     </p>
                 </div>
             </div>
 
             {{-- RIGHT --}}
-            <div class="hidden lg:block">
+            <div class="hidden lg:block md:block">
                 <div class="flex justify-end ">
-                    <img class=" mx-5 max-h-[600px] justify-self-end" src="{{ asset('storage/' . $sections3[0]->image1)}}" />
+                    <img class=" mx-5 max-h-[600px] justify-self-end"
+                        src="{{ asset('storage/' . $sections3->image1) }}" />
                 </div>
             </div>
         </div>
@@ -151,68 +154,24 @@
             <div class="lg:mr-20">
                 <div>
                     <p class="font-medium text-4xl lg:text-6xl text-center">
-                        {!!$sections4[0]->title1!!}
+                        {!! $sections4->title1 !!}
                     </p>
 
                     <p class="mt-10 lg:px-10 lg:px-20 text-center">
-                        {!!$sections4[0]->desc1!!}
+                        {!! $sections4->desc1 !!}
                     </p>
-
                     <div class="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div
-                            class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
-                            <div class="flex justify-center">
-                                <img class=" mx-5 max-h-[80px]" src="/images/kepul/Hands.png" />
+                        @foreach ($listsections4 as $item)
+                            <div
+                                class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
+                                <div class="flex justify-center">
+                                    <img class=" mx-5 max-h-[80px]" src="{{ asset('storage/' . $item->image) }}" />
+                                </div>
+                                <p class="mt-10">
+                                    {{$item->title}}
+                                </p>
                             </div>
-                            <p class="mt-10">
-                                Pionir di kota Medan
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
-                            <div class="flex justify-center">
-                                <img class=" mx-5 max-h-[80px]" src="/images/kepul/graduation-hat.png" />
-                            </div>
-                            <p class="mt-10">
-                                Semua driver berasal dari pengepul sampah
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
-                            <div class="flex justify-center">
-                                <img class=" mx-5 max-h-[80px]" src="/images/kepul/Mosque.png" />
-                            </div>
-                            <p class="mt-10">
-                                Menjual lebih dari 30 jenis sampah organik & unorganik
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
-                            <div class="flex justify-center">
-                                <img class=" mx-5 max-h-[80px]" src="/images/kepul/Electricity.png" />
-                            </div>
-                            <p class="mt-10">
-                                Menjual lebih dari 30 jenis sampah organik & unorganik
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
-                            <div class="flex justify-center">
-                                <img class=" mx-5 max-h-[80px]" src="/images/kepul/Teamwork.png" />
-                            </div>
-                            <p class="mt-10">
-                                Gratis penjemputan sampah
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col items-center bg-gradient-to-b from-gray-100 to-white p-8 rounded text-center">
-                            <div class="flex justify-center">
-                                <img class=" mx-5 max-h-[80px]" src="/images/kepul/Rice.png" />
-                            </div>
-                            <p class="mt-10">
-                                Jual sampah mudah & cepat
-                            </p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -224,12 +183,12 @@
 
         <div class="p-5 lg:p-20 bg-gradient-to-b from-kepul-primary to-kepul-primary lg:to-white rounded-lg">
             <div class="flex flex-col items-center align-center">
-                <p class="text-white font-medium text-4xl lg:text-5xl">{!!$sections5[0]->title1!!}</p>
+                <p class="text-white font-medium text-4xl lg:text-5xl">{!! $sections5->title1 !!}</p>
 
                 <p class="mt-10 px-10 text-white text-center">
-                    {!!$sections5[0]->desc1!!}
+                    {!! $sections5->desc1 !!}
                 </p>
-    
+
                 <div class="mt-[50px] aligns-center">
                     <a
                         class="bg-transparent hover:bg-white text-white font-semibold hover:text-kepul-primary py-2 px-4 border-2 border-white hover:border-transparent rounded-lg">
@@ -239,8 +198,8 @@
 
             </div>
 
-            <div class="flex  hidden lg:block">
-                <img class="max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections5[0]->image1)}}"/>
+            <div class="flex  hidden lg:block md:block">
+                <img class="max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections5->image1) }}" />
             </div>
         </div>
 

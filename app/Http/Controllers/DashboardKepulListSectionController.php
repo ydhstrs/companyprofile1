@@ -35,8 +35,7 @@ class DashboardKepulListSectionController extends Controller
     public function create()
     {
         return view('admin.kepul.listsection.create', [
-            'sections' => Section::where('withlist', 1)->get(),
-
+            'sections' => Section::where('withlist', 1)->where('typelanding','kepul')->get(),
         ]);
     }
 
