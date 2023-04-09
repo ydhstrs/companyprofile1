@@ -57,11 +57,11 @@
             <div class="lg:basis-1/2 ">
                 <div>
                     <p class="font-bold text-4xl lg:text-6xl">
-                        Ubah sampah jadi berkah hanya di <span class="text-kepul-primary"> Kepul</span>
+                        {!!$sections1[0]->title1!!}
                     </p>
 
                     <p class="mt-2">
-                        Aplikasi penjual sampah daur ulang nomor 1 di kota Medan
+                        {!!$sections1[0]->subtitle1!!}
                     </p>
                 </div>
                 <div class="flex flex-row mt-5">
@@ -80,7 +80,7 @@
 
             <div class="hidden basis-1/2 lg:block">
                 <div class="flex justify-center ">
-                    <img class=" mx-5 max-h-[700px] justify-self-end" src="/images/kepul/mockup.png" />
+                    <img class=" mx-5 max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections1[0]->image1) }}" />
                 </div>
             </div>
 
@@ -93,22 +93,18 @@
             {{-- LEFT --}}
             <div class="hidden basis-1/2 lg:block">
                 <div class="flex justify-center ">
-                    <img class=" mx-5 max-h-[700px] justify-self-end" src="/images/kepul/sampah-logam.png" />
+                    <img class=" mx-5 max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections2[0]->image1)}}" />
                 </div>
             </div>
             {{-- RIGHT --}}
             <div class="lg:basis-1/2 lg:mr-20">
                 <div>
                     <p class="font-medium text-3xl lg:text-6xl">
-                        Barang bekas menumpuk? <span class="text-kepul-primary"> Kepul</span>-in aja
+                        {!!$sections2[0]->title1!!}
                     </p>
 
                     <p class="mt-10">
-                        Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang.
-                        Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang
-                        bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada
-                        pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60
-                        jenis sampah sampah organik dan non-organik.
+                        {!!$sections2[0]->desc1!!}
                     </p>
 
                     <div class="mt-[50px]">
@@ -129,15 +125,12 @@
             <div class="lg:basis-1/2 lg:mr-20">
                 <div>
                     <p class="font-medium text-4xl lg:text-6xl">
-                        Kenapa harus <span class="text-kepul-primary"> Kepul?</span>
+                        {!!$sections3[0]->title1!!}
                     </p>
 
                     <p class="mt-10">
-                        Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang.
-                        Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang
-                        bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada
-                        pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60
-                        jenis sampah sampah organik dan non-organik.
+                        
+                        {!!$sections3[0]->desc1!!}
                     </p>
                 </div>
             </div>
@@ -145,7 +138,7 @@
             {{-- RIGHT --}}
             <div class="hidden lg:block">
                 <div class="flex justify-end ">
-                    <img class=" mx-5 max-h-[600px] justify-self-end" src="/images/kepul/calendar.png" />
+                    <img class=" mx-5 max-h-[600px] justify-self-end" src="{{ asset('storage/' . $sections3[0]->image1)}}" />
                 </div>
             </div>
         </div>
@@ -158,17 +151,11 @@
             <div class="lg:mr-20">
                 <div>
                     <p class="font-medium text-4xl lg:text-6xl text-center">
-                        Program <br> <span class="text-kepul-primary"> Kepul?</span>
+                        {!!$sections4[0]->title1!!}
                     </p>
 
                     <p class="mt-10 lg:px-10 lg:px-20 text-center">
-                        Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang.
-                        Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang
-                        bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada
-                        pengepul
-                        besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis
-                        sampah
-                        sampah organik dan non-organik.
+                        {!!$sections4[0]->desc1!!}
                     </p>
 
                     <div class="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -237,14 +224,10 @@
 
         <div class="p-5 lg:p-20 bg-gradient-to-b from-kepul-primary to-kepul-primary lg:to-white rounded-lg">
             <div class="flex flex-col items-center align-center">
-                <p class="text-white font-medium text-4xl lg:text-5xl">Try for free</p>
+                <p class="text-white font-medium text-4xl lg:text-5xl">{!!$sections5[0]->title1!!}</p>
 
                 <p class="mt-10 px-10 text-white text-center">
-                    Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi
-                    ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata
-                    pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar,
-                    ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah
-                    organik dan non-organik.
+                    {!!$sections5[0]->desc1!!}
                 </p>
     
                 <div class="mt-[50px] aligns-center">
@@ -257,7 +240,7 @@
             </div>
 
             <div class="flex  hidden lg:block">
-                <img class="max-h-[700px] justify-self-end" src="/images/kepul/try-free.png" />
+                <img class="max-h-[700px] justify-self-end" src="{{ asset('storage/' . $sections5[0]->image1)}}"/>
             </div>
         </div>
 
