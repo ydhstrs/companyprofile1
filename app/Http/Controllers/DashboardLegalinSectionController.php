@@ -22,7 +22,7 @@ class DashboardLegalinSectionController extends Controller
     public function index()
     {
         return view('admin.legalin.section.index', [
-            'sections' => Section::where("typelanding", "main")->get()
+            'sections' => Section::where("typelanding", "legalin")->get()
         ]);
     }
 
@@ -33,7 +33,7 @@ class DashboardLegalinSectionController extends Controller
      */
     public function create()
     {
-        return view('admin.main.section.create');
+        return view('admin.legalin.section.create');
     }
 
     /**
@@ -70,7 +70,7 @@ class DashboardLegalinSectionController extends Controller
 
         Section::create($validatedData);
 
-        return redirect('/dashboard/main/section')->with('success', 'Berita Baru Telah Ditambahkan');
+        return redirect('/dashboard/legalin/section')->with('success', 'Berita Baru Telah Ditambahkan');
     }
 
     /**
@@ -81,7 +81,7 @@ class DashboardLegalinSectionController extends Controller
      */
     public function show(Section $section)
     {
-        return view('admin.main.section.show', [
+        return view('admin.legalin.section.show', [
             'section' => $section,
         ]);
     }
@@ -94,7 +94,7 @@ class DashboardLegalinSectionController extends Controller
      */
     public function edit(Section $section)
     {
-        return view('admin.main.section.edit', [
+        return view('admin.legalin.section.edit', [
             'section' => $section,
         ]);
     }
@@ -143,14 +143,9 @@ class DashboardLegalinSectionController extends Controller
 
         Section::where('id', $section->id)->update($validatedData);
 
-        return redirect('/dashboard/main/section')->with('success', 'Section Baru Telah Diubah');
+        return redirect('/dashboard/legalin/section')->with('success', 'Section Baru Telah Diubah');
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Isimateris  $isimateris
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Section $section)
     {
         if ($section->image1) {
@@ -161,6 +156,6 @@ class DashboardLegalinSectionController extends Controller
         }
         Section::destroy($section->id);
 
-        return redirect('/dashboard/main/section')->with('success', 'Section Baru Telah Dihapus');
+        return redirect('/dashboard/legalin/section')->with('success', 'Section Baru Telah Dihapus');
     }
 }

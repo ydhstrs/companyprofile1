@@ -1,8 +1,56 @@
-@extends('main')
-@extends('legalinnav')
+@extends('mainBlank')
 
 @section('contents')
-    <header id=""
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+                    <div class="h-10 self-center mx-4">
+                        <img class="h-10 self-center" src="/images/legalinlogo.png" />
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-6 lg:hidden">
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#footer" class="text-gray-800 py-2 mx-8 group-hover:text-fourth1  text-lg">Contact
+                                    Us</a>
+                            </li>
+                            <li class="group">
+                                <a href="#section4" class="text-gray-800 py-2 mx-8 group-hover:text-fourth1  text-lg">Our
+                                    Team</a>
+                            </li>
+                            <li class="group">
+                                <a href="#section5"
+                                    class="text-gray-800 py-2 mx-8 group-hover:text-fourth1  text-lg">Office</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer"
+                                    class="text-white bg-gray-800 px-8 rounded-lg py-2 mx-8 group-hover:text-fourth1  text-lg">Call</a>
+                            </li>
+                            {{-- <li class="group">
+                                <a href="#"
+                                    class="text-base text-black py-2 mx-8 group-hover:text-fourth1">Contact</a>
+                            </li> --}}
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header id="section1" id=""
         class=" text-center md:pt-36 lg:text-left bg-[url('/public/images/legalinbanner.png')] 2xl:h-screen bg-cover lg:min-h-screen pb-10">
 
 
@@ -11,18 +59,18 @@
         <div class="container mx-auto px-1 sm:px-8 lg:grid lg:grid-cols-2  lg:gap-x-8 ">
             <div class="mb-8 lg:mt-2  2xl:mt-40 xl:mr-12">
                 <h1 class="text-gray-700 md:text-xl lg:text-3xl 2xl:text-6xl col-start-1 font-medium">
-                    Semua bisa
+                    {{ $sections1[0]->title1 }}
 
                 </h1>
                 <h1 class="text-gray-700  md:text-xl lg:text-3xl 2xl:text-6xl col-start-1 font-medium">
-                    di legalin.idn
+                    {{ $sections1[0]->title2 }}
+
                 </h1>
 
-                @foreach ($bio as $item)
-                    <p class="text-gray-600  font-Epilogue lg:text-md 2xl:text-lg ">
-                        {{ $item->text }}
-                    </p>
-                @endforeach
+                <p class="text-gray-600  font-Epilogue lg:text-md 2xl:text-lg ">
+                    {{ $sections1[0]->desc1 }}
+
+                </p>
             </div>
 
 
@@ -35,25 +83,25 @@
 
 
 
-    <section id="strength" class=" ">
 
-    </section>
 
-    <section class=" py-10 ">
+    <section id="section2" class=" py-10 ">
         <div class="lg:grid lg:grid-cols-2 lg:gap-4 md:flex md:flex-row md:mx-auto container px-1 sm:px-8 lg:gap-x-8">
 
             <div class="col-span-1">
 
-                <div class="mx-4 w-full overflow-hidden">
-                    <h4 class="align-middle  text-gray-600 text-2xl lg:pl-10 pb-8 mx-10">About Us </h4>
-
+                <div class="inline-flex items-center justify-left w-full mx-4  ">
+                    <h4 class="text-center align-middle text-gray-700 font-thin mx-10 lg:pl-10">
+                        {{ $sections2[0]->title1 }}
+                    </h4>
+                    <hr class="w-64 h-0.5 bg-gray-200 border-0 rounded dark:bg-gray-700">
                 </div>
-
                 <div class="mx-4 relative flex pb-1 items-center">
                     <div class=" h-full flex">
 
-                        <h1 class="align-middle  text-gray-600 mx-10 text-5xl lg:pl-10 font-normal">Selamat datang di
-                            legalin.idn</h1>
+                        <h1 class="align-middle  text-gray-600 mx-10 text-5xl lg:pl-10 font-normal">
+                            {{ $sections2[0]->title2 }}
+                        </h1>
 
                     </div>
                 </div>
@@ -61,14 +109,8 @@
 
             <div class="col-span-1 ">
                 <p class="mx-10 text-left font-light text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi magni, dicta tenetur numquam
-                    sequi minima nulla iste est eveniet delectus? Illum magnam illo distinctio! Nostrum temporibus earum aut
-                    enim, harum cupiditate placeat atque quas! Facilis doloremque exercitationem, quas maxime tempore
-                    pariatur et ipsum consequatur nihil, sapiente atque quasi a, magni aliquam expedita corporis est
-                    impedit? Saepe quam, voluptates tempora dolorem neque quibusdam non quos dicta a dolores beatae eaque
-                    ullam, exercitationem quasi sequi necessitatibus voluptas incidunt, quod inventore voluptatum minus.
-                    Aliquid neque dolorum deleniti cumque, fugiat ipsam delectus quibusdam labore iure harum nesciunt maxime
-                    hic, reiciendis placeat eos voluptates.
+                    {{ $sections2[0]->desc1 }}
+
                 </p>
                 <div class="py-16">
                     <a href="#" target="blank"
@@ -82,7 +124,7 @@
     </section>
 
 
-    <section class=" bg-[url('/public/images/Rectangle4.png')] bg-cover bg-center ">
+    <section id="section3" class=" bg-[url('/public/images/Rectangle4.png')] bg-cover bg-center ">
         <div class="">
 
             <div class="container px-1 sm:px-8 pt-10">
@@ -90,13 +132,13 @@
 
                 <div class="inline-flex items-center justify-center w-full gap-4">
                     <h4 class="text-center align-middle text-gray-700 font-thin">
-                        Service
+                        {{ $sections3[0]->title1 }}
                     </h4>
                     <hr class="w-64 h-0.5 bg-gray-200 border-0 rounded dark:bg-gray-700">
                 </div>
             </div>
             <h1 class="text-center align-middle text-gray-700 font-thin">
-                Bidang Keahlian
+                {{ $sections3[0]->title2 }}
             </h1>
 
         </div>
@@ -104,16 +146,17 @@
         <div class="">
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-20 ">
-                @foreach ($articles as $item)
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-200">
+                @foreach ($listsections3 as $item)
+                    <div class="max-w-sm rounded  shadow-lg bg-gray-200 h-48">
 
-                        <img class="w-32 mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
+                        <img class=" h-16  mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
                             alt="Sunset in the mountains">
 
                         <div class="px-4 py-4">
                             <div class="font-bold text-xl mb-2 text-gray-700 text-center">{{ $item->title }}</div>
                             <p class="text-gray-700 text-xs">
-                                {{ $item->excerpt }}
+                                {{ strip_tags($item->isi) }}
+
                             </p>
                         </div>
 
@@ -124,7 +167,7 @@
             </div>
         </div>
     </section>
-    <section class=" bg-gray-200 my-8">
+    <section id="section4" class=" bg-gray-200 my-8">
         <div class="lg:grid lg:grid-cols-2 lg:gap-4 md:flex md:flex-row md:mx-auto container px-1 sm:px-8 lg:gap-x-8">
 
             <div class="col-span-1">
@@ -136,20 +179,15 @@
             <div class="col-span-1">
                 <div class="mx-10 mt-10 inline-flex items-center w-full gap-4 pb-4">
                     <h4 class="text-center align-middle text-gray-700 font-thin text-md">
-                        Our Team
+                        {{ $sections4[0]->title1 }}
+
                     </h4>
                     <hr class="w-64 h-0.5 bg-gray-200 border-0 rounded dark:bg-gray-700">
                 </div>
-                <h1 class="align-middle text-gray-600 mx-10 text-5xl pb-10 font-normal">Temui team kami</h1>
+                <h1 class="align-middle text-gray-600 mx-10 text-5xl pb-10 font-normal"> {{ $sections4[0]->title2 }}
+                </h1>
                 <p class="mx-10 text-left font-light text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi magni, dicta tenetur numquam
-                    sequi minima nulla iste est eveniet delectus? Illum magnam illo distinctio! Nostrum temporibus earum aut
-                    enim, harum cupiditate placeat atque quas! Facilis doloremque exercitationem, quas maxime tempore
-                    pariatur et ipsum consequatur nihil, sapiente atque quasi a, magni aliquam expedita corporis est
-                    impedit? Saepe quam, voluptates tempora dolorem neque quibusdam non quos dicta a dolores beatae eaque
-                    ullam, exercitationem quasi sequi necessitatibus voluptas incidunt, quod inventore voluptatum minus.
-                    Aliquid neque dolorum deleniti cumque, fugiat ipsam delectus quibusdam labore iure harum nesciunt maxime
-                    hic, reiciendis placeat eos voluptates.
+                    {{ $sections4[0]->desc1 }}
                 </p>
                 <div class="py-16">
                     <a href="#" target="blank"
@@ -161,19 +199,19 @@
         </div>
 
     </section>
-        <section class=" bg-cover bg-center ">
+    <section id="section5" class=" bg-cover bg-center ">
         <div class="">
 
             <div class="container px-1 sm:px-8 pt-10">
                 <div class="inline-flex items-center justify-center w-full gap-4">
                     <h4 class="text-center align-middle text-gray-700 font-thin text-md">
-                        People Said
+                        {{ $sections5[0]->title1 }}
                     </h4>
                     <hr class="w-48 h-0.5 bg-gray-200 border-0 rounded dark:bg-gray-700">
                 </div>
             </div>
             <h1 class="text-center align-middle text-gray-700 font-thin text-6xl">
-               Testimonial Client
+                {{ $sections5[0]->title2 }}
             </h1>
 
         </div>
@@ -181,16 +219,17 @@
         <div class="">
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-20 ">
-                @foreach ($articles as $item)
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-200">
+                @foreach ($listsections5 as $item)
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gray-200 h-72">
 
-                        <img class="w-32 mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
+                        <img class="w-32 h-32 object-cover mx-auto pt-4 overflow-hidden " src="{{ asset('/storage/' . $item->image) }}"
                             alt="Sunset in the mountains">
 
                         <div class="px-4 py-4">
                             <div class="font-bold text-xl mb-2 text-gray-700 text-center">{{ $item->title }}</div>
                             <p class="text-gray-700 text-xs">
-                                {{ $item->excerpt }}
+                                {{ strip_tags($item->isi) }}
+
                             </p>
                         </div>
 
@@ -203,14 +242,14 @@
         </div>
     </section>
 
- <section id="footer">
+    <section id="footer">
         <div class=" bg-zinc-800">
             @foreach ($contacts as $item)
                 <div
                     class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16 pt-28">
                     <div class="col-span-1 m-auto">
-                    <h5 class="text-white">Contact Us</h5>
-                        
+                        <h5 class="text-white">Contact Us</h5>
+
                         <p class="text-white md:mr-32">FORMING AN ECOSYSTEM WITHIN A BUSINESS THAT PROVIDES MUTUAL BENEFITS
                             AND SYNERGIES WITH OTHER BUSSINESES,
                         </p>

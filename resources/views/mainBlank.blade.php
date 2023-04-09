@@ -8,7 +8,7 @@
     <title>{{ config('app.name', 'By.Afita') }}</title>
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     @vite('resources/css/app.css')
-    @vite('resources/css/slide.css')
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide.min.css">
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,700&display=swap" rel="stylesheet">
 </head>
 

@@ -35,7 +35,7 @@ class DashboardMainListSectionController extends Controller
     public function create()
     {
         return view('admin.main.listsection.create', [
-            'sections' => Section::where('withlist', 1)->get(),
+            'sections' => Section::where('withlist', 1)->where('typelanding', "main")->get(),
 
         ]);
     }

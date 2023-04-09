@@ -8,14 +8,14 @@
     <title>{{ config('app.name', 'By.Afita') }}</title>
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     @vite('resources/css/app.css')
-    @vite('resources/css/slide.css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide.min.css">
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header Section Start -->
     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
- <div class="container">
+        <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="mb-2 sm:mb-0 flex flex-row
   ">

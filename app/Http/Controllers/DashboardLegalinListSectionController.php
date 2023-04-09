@@ -22,8 +22,8 @@ class DashboardLegalinListSectionController extends Controller
     // }
     public function index()
     {
-        return view('admin.main.listsection.index', [
-            'listsections' => ListSection::where("typelanding", "main")->get()
+        return view('admin.legalin.listsection.index', [
+            'listsections' => ListSection::where("typelanding", "legalin")->get()
         ]);
     }
 
@@ -34,8 +34,8 @@ class DashboardLegalinListSectionController extends Controller
      */
     public function create()
     {
-        return view('admin.main.listsection.create', [
-            'sections' => Section::where('withlist', 1)->get(),
+        return view('admin.legalin.listsection.create', [
+            'sections' => Section::where('withlist', 1)->where('typelanding', "legalin")->get(),
 
         ]);
     }
@@ -67,7 +67,7 @@ class DashboardLegalinListSectionController extends Controller
 
         ListSection::create($validatedData);
 
-        return redirect('/dashboard/main/listsection')->with('success', 'Berita Baru Telah Ditambahkan');
+        return redirect('/dashboard/legalin/listsection')->with('success', 'Berita Baru Telah Ditambahkan');
     }
 
     /**
@@ -78,7 +78,7 @@ class DashboardLegalinListSectionController extends Controller
      */
     public function show(ListSection $listsection)
     {
-        return view('admin.main.listsection.show', [
+        return view('admin.legalin.listsection.show', [
             'listsection' => $listsection,
         ]);
     }
@@ -91,9 +91,9 @@ class DashboardLegalinListSectionController extends Controller
      */
     public function edit(ListSection $listsection)
     {
-        return view('admin.main.listsection.edit', [
+        return view('admin.legalin.listsection.edit', [
             'listsection' => $listsection,
-            'sections' => Section::where('withlist', 1)->get(),
+            'sections' => Section::where('withlist', 1)->where('typelanding', "legalin")->get(),
 
         ]);
     }
@@ -138,7 +138,7 @@ class DashboardLegalinListSectionController extends Controller
 
 
 
-        return redirect('/dashboard/main/listsection')->with('success', 'Section Baru Telah Diubah');
+        return redirect('/dashboard/legalin/listsection')->with('success', 'Section Baru Telah Diubah');
     }
     /**
      * Remove the specified resource from storage.
@@ -154,6 +154,6 @@ class DashboardLegalinListSectionController extends Controller
 
         ListSection::destroy($listsection->id);
 
-        return redirect('/dashboard/main/listsection')->with('success', 'Section Telah Dihapus');
+        return redirect('/dashboard/legalin/listsection')->with('success', 'Section Telah Dihapus');
     }
 }

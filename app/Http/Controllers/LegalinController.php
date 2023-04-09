@@ -2,30 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banner;
-use App\Models\About;
-use App\Models\Article;
-use App\Models\Bio;
+
 use Illuminate\Http\Request;
-use App\Models\Materi;
-use App\Models\Strength;
+use App\Models\ListSection;
+use App\Models\Section;
 use App\Models\Contact;
-use App\Models\Tool;
-use App\Models\Testimonial;
+
 
 class LegalinController extends Controller
 {
     public function index()
     {
         return view('sublanding.legalin.welcome', [
-            "banner" => Banner::all(),
-            "articles" => Article::latest()->get(),
-            "strengths" => Strength::all(),
+            "sections1" => Section::where("typelanding", "legalin")->where("typesection", 1)->get(),
+            "sections2" => Section::where("typelanding", "legalin")->where("typesection", 2)->get(),
+            "sections3" => Section::where("typelanding", "legalin")->where("typesection", 3)->get(),
+            "listsections3" => ListSection::where("typelanding", "legalin")->where("id_section", 13)->get(),
+            "sections4" => Section::where("typelanding", "legalin")->where("typesection", 4)->get(),
+            "sections5" => Section::where("typelanding", "legalin")->where("typesection", 5)->get(),
+            "listsections5" => ListSection::where("typelanding", "legalin")->where("id_section", 15)->get(),
             "contacts" => Contact::all(),
-            "testimonials" => Testimonial::all(),
-            "bio" => Bio::all(),
-            "tools" => Tool::all(),
-            "about" => About::all(),
 
         ]);
     }
