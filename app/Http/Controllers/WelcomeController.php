@@ -7,7 +7,8 @@ use App\Models\About;
 use App\Models\Article;
 use App\Models\Bio;
 use Illuminate\Http\Request;
-use App\Models\Materi;
+use App\Models\ListSection;
+use App\Models\Section;
 use App\Models\Strength;
 use App\Models\Contact;
 use App\Models\Tool;
@@ -18,14 +19,16 @@ class WelcomeController extends Controller
     public function index()
     {
         return view('welcome', [
-            "banner" => Banner::all(),
-            "articles" => Article::latest()->get(),
-            "strengths" => Strength::all(),
+            "sections1" => Section::where("typelanding", "main")->where("typesection", 1)->get(),
+            "sections2" => Section::where("typelanding", "main")->where("typesection", 2)->get(),
+            "listsections2" => ListSection::where("typelanding", "main")->where("id_section", 2)->get(),
+            "sections3" => Section::where("typelanding", "main")->where("typesection", 3)->get(),
+            "listsections3" => ListSection::where("typelanding", "main")->where("id_section", 3)->get(),
+            "sections4" => Section::where("typelanding", "main")->where("typesection", 4)->get(),
+            "listsections4" => ListSection::where("typelanding", "main")->where("id_section", 5)->get(),
+            "sections5" => Section::where("typelanding", "main")->where("typesection", 5)->get(),
+            "listsections5" => ListSection::where("typelanding", "main")->where("id_section", 6)->get(),
             "contacts" => Contact::all(),
-            "testimonials" => Testimonial::all(),
-            "bio" => Bio::all(),
-            "tools" => Tool::all(),
-            "about" => About::all(),
 
         ]);
     }

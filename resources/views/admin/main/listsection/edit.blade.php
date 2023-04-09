@@ -21,44 +21,47 @@
                     </div>
 
                     <div class="block w-full overflow-x-auto p-8">
-                        <form method="post" action="/dashboard/about/{{ $about->id }}"
+                        <form method="post" action="/dashboard/main/listsection/{{ $listsection->slug }}"
                             enctype="multipart/form-data">
                             @csrf
                             @method('put')
                             <div class="mb-6">
-                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
-                                <input type="text" id="email" name="email"
+                                <label for="id_section"
+                                    class="block mb-2 text-sm font-medium text-gray-900">Section</label>
+                                <select class="form-select" name="id_section" id="id_section"
+                                    class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg">
+                                    @foreach ($sections as $item)
+                                        <option value="{{ $item->id }}">{{ $item->typesection }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Title</label>
+                                <input required type="text" id="title" name="title"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg"
-                                    value="{{ $about->email }}">
+                                    value="{{ $listsection->title }}">
                             </div>
                             <div class="mb-6">
                                 <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900">Tiktok</label>
-                                <input type="text" id="tiktok" name="tiktok"
+                                    class="block mb-2 text-sm font-medium text-gray-900">Subtitle</label>
+                                <input type="text" id="subtitle" name="subtitle"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg"
-                                    value="{{ $about->tiktok }}">
+                                    value="{{ $listsection->subtitle }}">
                             </div>
                             <div class="mb-6">
-                                <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900">Linkedin</label>
-                                <input type="text" id="linkedin" name="linkedin"
+                                <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Slug</label>
+                                <input required type="text" id="slug" name="slug"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg"
-                                    value="{{ $about->linkedin }}">
+                                    value="{{ $listsection->slug }}">
                             </div>
+
                             <div class="mb-6">
-                                <label for="text"
-                                    class="block mb-2 text-sm font-medium text-gray-900">Instagram</label>
-                                <input type="text" id="instagram" name="instagram"
-                                    class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg"
-                                    value="{{ $about->instagram }}">
-                            </div>
-                            <div class="mb-6">
-                                @if ($about->image)
-                                    <img src="{{ asset('/storage/' . $about->image) }}" class="img-preview w-56">
+                                @if ($listsection->image)
+                                    <img src="{{ asset('/storage/' . $listsection->image) }}" class="img-preview w-56">
                                 @else
                                     <img class="img-preview w-56">
                                 @endif
-                                <input type="hidden" name="oldImage" value="{{ $about->image }}">
+                                <input type="hidden" name="oldImage" value="{{ $listsection->image }}">
 
                                 <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload
                                     file</label>
@@ -75,24 +78,14 @@
                                     </div>
                                 @enderror
                             </div>
-                            <div class="mb-6 w-full">
-
-                                <iframe src="{{ asset('/storage/' . $about->cv) }}" frameBorder="0" scrolling="auto"
-                                    height="700px" width="50%"></iframe>
-                                <input type="hidden" name="oldCv" value="{{ $about->cv }}">
-
-
-                                <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Upload
-                                    CV</label>
-                                <input
-                                    class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:placeholder-gray-400"
-                                    aria-describedby="file_input_help" id="cv" name="cv" type="file">
-
-                            </div>
                             <div class="mb-6">
-                                <label for="isi" class="block mb-2 text-sm font-medium text-gray-900">Isi</label>
-                                <textarea id="isi" name="isi"
-                                    class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg"> {{ $about->isi }}</textarea>
+                                <label class="block">
+                                    <span class="text-gray-700">Isi</span>
+                                    <textarea id="editor" class="block w-full mt-1 rounded-md" name="isi" rows="3">{{ $listsection->isi }}</textarea>
+                                </label>
+                                @error('description')
+                                    <div class="text-sm text-red-600">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <button type="submit"
@@ -106,6 +99,41 @@
     </div>
 
 </x-app-layout>
+<script>
+    const title = document.querySelector("#title");
+    const slug = document.querySelector("#slug");
+
+    title.addEventListener("keyup", function() {
+        let preslug = title.value;
+        preslug = preslug.replace(/ /g, "-");
+        slug.value = preslug.toLowerCase();
+    });
+</script>
+<script>
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result
+        }
+    }
+</script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: '{{ route('image.upload') . '?_token=' . csrf_token() }}',
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 <script>
     const title = document.querySelector("#title");
     const slug = document.querySelector("#slug");

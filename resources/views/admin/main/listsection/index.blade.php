@@ -53,6 +53,10 @@
                             </th>
                             <th
                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Section
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
                                 Title
                             </th>
                             <th
@@ -78,6 +82,9 @@
                                         {{ $loop->iteration }}</td>
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        {{ $item->section->typesection }}</td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                                         {{ $item->title }}</td>
 
                                     <td
@@ -87,7 +94,7 @@
                                     <td
                                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                                         {{ $item->excerpt }}</td>
-                                        {{-- STart Di Komen Dulu Keknya Ga Tepakek --}}
+                                    {{-- STart Di Komen Dulu Keknya Ga Tepakek --}}
                                     {{-- <td class="text-center">
                                         @if ($item->status == 0)
                                             <form action="{{ route('project.addToMain', $item->slug) }}" method="POST">
@@ -125,11 +132,11 @@
                                             </form>
                                         @endif
                                     </td> --}}
-                                        {{-- END Di Komen Dulu Keknya Ga Tepakek --}}
+                                    {{-- END Di Komen Dulu Keknya Ga Tepakek --}}
 
                                     <td class="flex flex-wrap gap-2">
 
-                                        <a href="/dashboard/article/{{ $item->slug }}">
+                                        <a href="/dashboard/main/listsection/{{ $item->slug }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-700">
                                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -138,7 +145,7 @@
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                             </svg>
                                         </a>
-                                        <a href="/dashboard/article/{{ $item->slug }}/edit">
+                                        <a href="/dashboard/main/listsection/{{ $item->slug }}/edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor"
                                                 class="w-6 h-6 text-yellow-600 hover:bg-yellow-300">
@@ -151,7 +158,7 @@
 
                     </div>
                     <div>
-                        <form action="/dashboard/article/{{ $item->slug }}" method="post">
+                        <form action="/dashboard/main/listsection/{{ $item->slug }}" method="post">
                             @method('delete')
                             @csrf
                             <button class="" onclick="return confirm('Apakah Kamu Yakin Ingin Menghapus?') ">

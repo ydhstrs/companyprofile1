@@ -53,7 +53,7 @@ class DashboardMainListSectionController extends Controller
             'id_section' => 'max:11',
             'typelanding' => 'max:255',
             'subtitle' => 'max:255',
-            'slug' => 'unique:articles',
+            'slug' => 'unique:list_sections',
             'image' => 'image|file',
             'isi' => '',
 
@@ -76,10 +76,10 @@ class DashboardMainListSectionController extends Controller
      * @param  \App\Models\Isimateris  $isimateris
      * @return \Illuminate\Http\Response
      */
-    public function show(Section $section)
+    public function show(ListSection $listsection)
     {
-        return view('admin.main.section.show', [
-            'section' => $section,
+        return view('admin.main.listsection.show', [
+            'listsection' => $listsection,
         ]);
     }
 
@@ -89,10 +89,12 @@ class DashboardMainListSectionController extends Controller
      * @param  \App\Models\Isimateris  $isimateris
      * @return \Illuminate\Http\Response
      */
-    public function edit(Section $section)
+    public function edit(ListSection $listsection)
     {
-        return view('admin.main.section.edit', [
-            'section' => $section,
+        return view('admin.main.listsection.edit', [
+            'listsection' => $listsection,
+            'sections' => Section::where('withlist', 1)->get(),
+
         ]);
     }
 
@@ -103,44 +105,40 @@ class DashboardMainListSectionController extends Controller
      * @param  \App\Models\Isimateris  $isimateris
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Section $section)
+    public function update(Request $request, ListSection $listsection)
     {
-
-        $validatedData = $request->validate([
-
-            'title1' => 'max:255',
-            'title2' => 'max:255',
-            'title3' => 'max:255',
-            'desc1' => '',
-            'desc2' => '',
-            'desc3' => '',
-            'subtitle1' => 'max:255',
-            'subtittle2' => 'max:255',
-            'subtittle3' => 'max:255',
-            'subdesc1' => '',
-            'subdesc2' => '',
-            'subdesc3' => '',
-        ]);
-
-        if ($request->file('image1')) {
-            if ($section->oldImage1) {
-                Storage::delete($section->oldImage1);
-            }
-
-            $validatedData['image1'] = $request->file('image1')->store('section-images');
+        if ($request->slug != $listsection->slug) {
+            $validatedData = $request->validate([
+                'title' => 'max:255',
+                'id_section' => 'max:11',
+                'subtitle' => 'max:255',
+                'slug' => 'unique:list_sections',
+                'image' => 'image|file',
+                'isi' => '',
+            ]);
+        } else {
+            $validatedData = $request->validate([
+                'title' => 'max:255',
+                'id_section' => 'max:11',
+                'subtitle' => 'max:255',
+                'image' => 'image|file',
+                'isi' => '',
+            ]);
         }
-        if ($request->file('image2')) {
-            if ($section->oldImage2) {
-                Storage::delete($section->oldImage2);
+        if ($request->file('image')) {
+            if ($listsection->oldImage) {
+                Storage::delete($listsection->oldImage);
             }
-
-            $validatedData['image2'] = $request->file('image2')->store('section-images');
+            $validatedData['image'] = $request->file('image')->store('listsection-images');
         }
 
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->isi, 20));
 
-        Section::where('id', $section->id)->update($validatedData);
+        ListSection::where('slug', $listsection->slug)->update($validatedData);
 
-        return redirect('/dashboard/main/section')->with('success', 'Section Baru Telah Diubah');
+
+
+        return redirect('/dashboard/main/listsection')->with('success', 'Section Baru Telah Diubah');
     }
     /**
      * Remove the specified resource from storage.
@@ -148,16 +146,14 @@ class DashboardMainListSectionController extends Controller
      * @param  \App\Models\Isimateris  $isimateris
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Section $section)
+    public function destroy(ListSection $listsection)
     {
-        if ($section->image1) {
-            Storage::delete($section->image1);
+        if ($listsection->image) {
+            Storage::delete($listsection->image);
         }
-        if ($section->image2) {
-            Storage::delete($section->image2);
-        }
-        Section::destroy($section->id);
 
-        return redirect('/dashboard/main/section')->with('success', 'Section Baru Telah Dihapus');
+        ListSection::destroy($listsection->id);
+
+        return redirect('/dashboard/main/listsection')->with('success', 'Section Telah Dihapus');
     }
 }

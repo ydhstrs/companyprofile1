@@ -37,7 +37,7 @@
                             </div>
                             <div class="mb-6">
                                 <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Title</label>
-                                <input type="text" id="title" name="title"
+                                <input required type="text" id="title" name="title"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
                             </div>
                             <div class="mb-6">
@@ -48,7 +48,7 @@
                             </div>
                             <div class="mb-6">
                                 <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Slug</label>
-                                <input type="text" id="slug" name="slug"
+                                <input required type="text" id="slug" name="slug"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg ">
                             </div>
                             <div class="mb-6">

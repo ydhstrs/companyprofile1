@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->string('image')->nullable();
             $table->string('excerpt')->nullable();
-            $table->text('isi');
+            $table->text('isi')->nullable();
             $table->timestamps();
         });
     }

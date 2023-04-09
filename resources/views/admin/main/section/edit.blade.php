@@ -48,18 +48,18 @@
                         <div class="mb-6">
                             <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Desc 1
                             </label>
-                            <textarea readonly class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->desc1 }}</textarea>
+                            <textarea id="desc1" name="desc1" class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->desc1 }}</textarea>
 
                         </div>
                         <div class="mb-6">
                             <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Desc 2
                             </label>
-                            <textarea readonly class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->desc2 }}</textarea>
+                            <textarea id="desc2" name="desc2"  class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->desc2 }}</textarea>
                         </div>
                         <div class="mb-6">
                             <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Desc 3
                             </label>
-                            <textarea readonly class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->desc3 }}</textarea>
+                            <textarea id="desc3" name="desc3"  class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->desc3 }}</textarea>
 
                         </div>
                         <div class="mb-6">
@@ -83,18 +83,18 @@
                         <div class="mb-6">
                             <label for="text" class="block mb-2 text-sm font-medium text-gray-900">SubDesc 1
                             </label>
-                            <textarea readonly class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->subdesc1 }}</textarea>
+                            <textarea id="subdesc1" name="subdesc1"   class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->subdesc1 }}</textarea>
                         </div>
                         <div class="mb-6">
                             <label for="text" class="block mb-2 text-sm font-medium text-gray-900">SubDesc 2
                             </label>
-                            <textarea readonly class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->subdesc2 }}</textarea>
+                            <textarea id="subdesc2" name="subdesc2"  class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->subdesc2 }}</textarea>
 
                         </div>
                         <div class="mb-6">
                             <label for="text" class="block mb-2 text-sm font-medium text-gray-900">SubDesc 3
                             </label>
-                            <textarea readonly class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->subdesc3 }}</textarea>
+                            <textarea id="subdesc3" name="subdesc3" class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg "> {{ $section->subdesc3 }}</textarea>
 
                         </div>
                         <div class="mb-6">

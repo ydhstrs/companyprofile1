@@ -8,6 +8,8 @@ use App\Models\Banner;
 use App\Models\Bio;
 use App\Models\Article;
 use App\Models\Contact;
+use App\Models\Section;
+use App\Models\ListSection;
 use App\Models\User;
 
 
@@ -71,6 +73,236 @@ class DatabaseSeeder extends Seeder
             'twitter' => '#',
             'youtube' => '#'
 
+        ]);
+
+        Section::create([
+            'id' => 1,
+            'typelanding' => 'main',
+            'typesection' => 1,
+            'title1' => 'Synergy for',
+            'title2' => 'Better Future',
+            'desc1' => 'Kami berkomitmen untuk selalu memberikan manfaat dan kebaikan di dalam seluruh aspek kehidupan di masyarakat, membentuk ekosistem di dalam bisnis group yang saling bersinergi hingga kehadiran kami dapat dirasakan manfaatnya, serta ikut berperan dalam mendorong pertumbuhan ekonomi di masyarakat untuk masa depan yang lebih baik.',
+            'withlist' => 0
+
+        ]);
+        Section::create([
+            'id' => 2,
+            'typelanding' => 'main',
+            'typesection' => 2,
+            'withlist' => 1
+
+        ]);
+        Section::create([
+            'id' => 3,
+            'typelanding' => 'main',
+            'typesection' => 3,
+            'title1' => 'Vision',
+            'title2' => 'Mission',
+            'desc1' => 'Membentuk ekosistem di dalam bisnis yang saling memberi manfaat dan bersinergi terhadap bisnis lainnya, mengedepankan teknologi agar bisnis berjalan lebih efektif dan efisien, serta ikut berperan dalam mendorong tumbuhnya perekonomian untuk masa depan yang lebih baik',
+            'withlist' => 1
+
+        ]);
+        Section::create([
+            'id' => 5,
+            'typelanding' => 'main',
+            'typesection' => 4,
+            'title1' => 'Aktivitas Terbaru',
+            'desc1' => 'Selamat datang di aktivitas terbaru Lunnizom Group.\r\nKami menyajikan aktivitas terbaru meliputi seluruh lini bisnis sebagai langkah yang membawa Lunnizom Group lebih dekat dengan publik',
+            'withlist' => 1
+
+        ]);
+        Section::create([
+            'id' => 6,
+            'typelanding' => 'main',
+            'typesection' => 5,
+            'title1' => 'Partner Kami',
+            'withlist' => 1
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 3,
+            'title' => 'mission1',
+            'slug' => 'mission1',
+            'image' => 'listsection-images\/7zaTbv9XKGksWlDhmAOlq1IlPtjnT499r0B63uro.png',
+            'excerpt' => 'Sebagai infrastuktur yang memfasilitasi terjadinya interaksi antara seluruh lini bisnis grup dan mem...',
+            'isi' => 'Sebagai infrastuktur yang memfasilitasi terjadinya interaksi antara seluruh lini bisnis grup dan memberikan modal sebagai penggerak ekosistem bisnis.',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 3,
+            'title' => 'mission2',
+            'slug' => 'mission2',
+            'image' => 'listsection-images\/XeWdhrgae4rwTYLvYyADzhtJRMo5eW3worN9WGd7.png',
+            'excerpt' => 'Membangun sumber daya manusia yang unggul, berkompeten dan berintegritas hingga selalu menghadirkan...',
+            'isi' => 'Membangun sumber daya manusia yang unggul, berkompeten dan berintegritas hingga selalu menghadirkan inovasi.',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 3,
+            'title' => 'mission3',
+            'slug' => 'mission3',
+            'image' => 'listsection-images\/Syc9FaLow5KthzIEXFdWZTMcTD6HUrAj7dFjYoMx.png',
+            'excerpt' => 'Memberikan akses inklusif di dalam ekosistem kepada siapa saja yang dapat dan ingin berpartisipasi.',
+            'isi' => 'Memberikan akses inklusif di dalam ekosistem kepada siapa saja yang dapat dan ingin berpartisipasi.',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 3,
+            'title' => 'mission4',
+            'slug' => 'mission4',
+            'image' => 'listsection-images\/g2KOgsNAKUHv1PamAvqiQeWjwgqDhaqFogTjMQX5.png',
+            'excerpt' => 'Membentuk tata kelola manajemen yang baik dan saling bersinergi untuk di setiap lini bisnis, hingga...',
+            'isi' => 'Membentuk tata kelola manajemen yang baik dan saling bersinergi untuk di setiap lini bisnis, hingga memberikan hasil yang optimal',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 3,
+            'title' => 'mission5',
+            'slug' => 'mission5',
+            'image' => 'listsection-images\/0k34oXv0r3uiGT9vkCcLuSRD12XV1k65Rdvo1lr8.png',
+            'excerpt' => 'Menciptakan budaya kerja yang kaya akan kolaborasi, saling memberi manfaat dan berfokus kepada kebai...',
+            'isi' => 'Menciptakan budaya kerja yang kaya akan kolaborasi, saling memberi manfaat dan berfokus kepada kebaikan untuk menuju tujuan bersama.',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 5,
+            'title' => 'Latest Article',
+            'slug' => 'latest-article',
+            'image' => 'listsection-images\/3gk4ons4dJx0OcyLtdHOZWRxxg2XbHGPMylCsNye.png',
+            'excerpt' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other...',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 5,
+            'title' => 'Latest Article 2',
+            'slug' => 'latest-article-2',
+            'image' => 'listsection-images\/At26spJvY0umGnSnf27eeHpW5n2vrvmiUMoI5MW7.png',
+            'excerpt' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other...',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 5,
+            'title' => 'Latest Article 3',
+            'slug' => 'latest-article-3',
+            'image' => 'listsection-images\/C0QcrGR1lQyqrpIFjTgbadwAj7z9Qz585XIipdCv.png',
+            'excerpt' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other...',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 5,
+            'title' => 'Latest Article 4',
+            'slug' => 'latest-article-4',
+            'image' => 'listsection-images\/2UHbyxRKF063SsU6S2hQLezkqTuAxSMxZj8K9aYn.png',
+            'excerpt' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other...',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 6,
+            'title' => 'partner1',
+            'slug' => 'partner1',
+            'image' => 'listsection-images\/2UHbyxRKF063SsU6S2hQLezkqTuAxSMxZj8K9aYn.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 6,
+            'title' => 'partner2',
+            'slug' => 'partner2',
+            'image' => 'listsection-images\/YzZ6XvcvDsqsiQWvsxAfp0ZZqE9s9qFpKUwBUYOq.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 6,
+            'title' => 'partner3',
+            'slug' => 'partner3',
+            'image' => 'listsection-images\/ovipwjNFeBHz9cGnlbfk0wPTVyIMJ1K4CmLYkOjm.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 6,
+            'title' => 'partner4',
+            'slug' => 'partner4',
+            'image' => 'listsection-images\/gqCMgk6IFmptgqzaBwbLRHiOFwdzI07W88XtHcrL.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 6,
+            'title' => 'partner5',
+            'slug' => 'partner5',
+            'image' => 'listsection-images\/39SlbUc0hdRO88luXenYVlZ2QVp658lkXVbyxv6l.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '1',
+            'slug' => '1',
+            'image' => 'listsection-images\/vivbKapA66BT9DFgYdE2WoM5XW1nVV6GIVLhbMOa.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '2',
+            'slug' => '2',
+            'image' => 'listsection-images\/weDeLDbJ66EAGPl381kvTlG3YSv8bIWrHA7Ey2I1.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '3',
+            'slug' => '3',
+            'image' => 'listsection-images\/F2PjErfWbt1lA5TQtdC941R9glaUAyDenjUceEjT.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '4',
+            'slug' => '4',
+            'image' => 'listsection-images\/IafDSxk7VVEJDaNlay8tP3IwzzQYZ2biOIW5NHZK.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '5',
+            'slug' => '5',
+            'image' => 'listsection-images\/fzsX1bFH52Ry4JA6nKN1OHtpk44SyIe3CyPmkiNg.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '6',
+            'slug' => '6',
+            'image' => 'listsection-images\/pS2xrjMkiu43ElLYjVj0TqbpR03ynnqXPSgW7Ph1.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '7',
+            'slug' => '7',
+            'image' => 'listsection-images\/z6LoshVsgTCtwzgd5uDKZYdiaLRS9AUgb5MOJHTc.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '8',
+            'slug' => '8',
+            'image' => 'listsection-images\/GM4PYQVtdUtXpyIdtjxQQfhgAWcOUktWWFaw4PFP.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '9',
+            'slug' => '9',
+            'image' => 'listsection-images\/smZ8zRNCIuSyLwrlvVikgPv3lTVEMVdLGT32mndp.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'main',
+            'id_section' => 2,
+            'title' => '10',
+            'slug' => '10',
+            'image' => 'listsection-images\/w2tMgDx4oUJCzAhKNCUEY9QoradqP3DmjjtWD68r.png',
         ]);
     }
 }

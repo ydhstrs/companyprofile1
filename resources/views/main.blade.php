@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <title>{{ config('app.name', 'By.Afita') }}</title>
-  <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <title>{{ config('app.name', 'By.Afita') }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
     @vite('resources/css/app.css')
     @vite('resources/css/slide.css')
-<link href="https://fonts.googleapis.com/css?family=Amiri:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amiri:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -40,12 +40,16 @@
                                     class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Portofolio</a>
                             </li>
                             <li class="group">
-                                <a href="/works"
-                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Our Partner</a>
+                                <a href="#section4"
+                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Aktivitas Terbaru</a>
                             </li>
                             <li class="group">
-                                <a href="/about"
-                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Contact Us</a>
+                                <a href="#section5"
+                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Partner</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer"
+                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Kontak</a>
                             </li>
                             {{-- <li class="group">
                                 <a href="#"

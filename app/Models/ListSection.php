@@ -21,6 +21,10 @@ class ListSection extends Model
     ];
     public function section()
     {
-        return $this->belongsTo(Section::class, 'id', 'id_section');
+        return $this->belongsTo(Section::class, 'id_section', 'id');
+    }
+    public function  getRouteKeyName()
+    {
+        return 'slug';
     }
 }
