@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class DashboardKepulSectionController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -53,8 +53,8 @@ class DashboardKepulSectionController extends Controller
             'desc2' => '',
             'desc3' => '',
             'subtitle1' => 'max:255',
-            'subtittle2' => 'max:255',
-            'subtittle3' => 'max:255',
+            'subtitle2' => 'max:255',
+            'subtitle3' => 'max:255',
             'subdesc1' => '',
             'subdesc2' => '',
             'subdesc3' => '',
@@ -117,8 +117,8 @@ class DashboardKepulSectionController extends Controller
             'desc2' => '',
             'desc3' => '',
             'subtitle1' => 'max:255',
-            'subtittle2' => 'max:255',
-            'subtittle3' => 'max:255',
+            'subtitle2' => 'max:255',
+            'subtitle3' => 'max:255',
             'subdesc1' => '',
             'subdesc2' => '',
             'subdesc3' => '',

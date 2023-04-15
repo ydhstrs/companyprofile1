@@ -12,7 +12,6 @@ use App\Models\Section;
 use App\Models\ListSection;
 use App\Models\User;
 
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -34,18 +33,18 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('12345678'),
         ]);
         Banner::create([
-            'image' => 'banner-images/bHsrAlFp3e6M3gDMx6FFrQ49NFG1UqRw4O0Nkhmx.png'
+            'image' => 'banner-images/bHsrAlFp3e6M3gDMx6FFrQ49NFG1UqRw4O0Nkhmx.png',
         ]);
         Bio::create([
-            'text' => 'A Fast learner, Ambitious and Motivated, with working experience as a UI/UX Designer. Having Skilled in Wireframing, User Flow, Prototyping, Hands-On Design Research, and User Experience to ensure delivery solutions that are creatively useful and have a significant impact on users.'
+            'text' => 'A Fast learner, Ambitious and Motivated, with working experience as a UI/UX Designer. Having Skilled in Wireframing, User Flow, Prototyping, Hands-On Design Research, and User Experience to ensure delivery solutions that are creatively useful and have a significant impact on users.',
         ]);
 
         Article::create([
             'title' => 'KAIA',
-            'slug'  => 'kaia',
+            'slug' => 'kaia',
             'excerpt' => 'KAIKAIA is the final project I made in Apple Developer Academy with four other teammates. We finishe...',
             'image' => 'project-images/RZ0kMP1wa4tfmASbzEUANkAE1MkAuxn0rHy52nyK.png',
-            'isi'   => "<div>KAIKAIA is the final project I made in Apple Developer Academy with four other teammates. We finished this project in 3 months. The objective of making KAIA is because we all feel
+            'isi' => "<div>KAIKAIA is the final project I made in Apple Developer Academy with four other teammates. We finished this project in 3 months. The objective of making KAIA is because we all feel
             the same problem: money management, all of my teammates are first job, and half of us can’t manage our money well, and we don’t know about money literacy because we never learn it in school. So we
             can see that it is a real problem, especially in Indonesia.<br><br><strong>The Problem<br></strong>Planning and controlling personal finance is an important thing to do. It helps you to manage good
             financial behavior and leads you to financial wellness. Planning and controlling your personal finance will also help ensure you meet your future goals and gives you the confidence to weather any
@@ -61,7 +60,7 @@ class DatabaseSeeder extends Seeder
             all of the design processes, from made the design system, such as font and color, connecting all the prototype pages, and designed the primary logo. The list of the pages that I created was as
             follows:<br>Sign Up and Sign In Page<br>Connect Bank Account Page<br>Choose Budget Page<br>Budgeting Set by App and Manually Page<br>Add Budget Page<br>Transaction Page<br>Track Expenses Manually
             Page <br><br><strong>Process</strong><br>Our next plan is to dig deeper into financial wellness, managing, controlling, and planning money. We also want to understand people's habits in order to
-            manage their money.</div>"
+            manage their money.</div>",
         ]);
 
         Contact::create([
@@ -71,8 +70,7 @@ class DatabaseSeeder extends Seeder
             'tiktok' => '#',
             'linkedin' => '#',
             'twitter' => '#',
-            'youtube' => '#'
-
+            'youtube' => '#',
         ]);
 
         Section::create([
@@ -82,15 +80,13 @@ class DatabaseSeeder extends Seeder
             'title1' => 'Synergy for',
             'title2' => 'Better Future',
             'desc1' => 'Kami berkomitmen untuk selalu memberikan manfaat dan kebaikan di dalam seluruh aspek kehidupan di masyarakat, membentuk ekosistem di dalam bisnis group yang saling bersinergi hingga kehadiran kami dapat dirasakan manfaatnya, serta ikut berperan dalam mendorong pertumbuhan ekonomi di masyarakat untuk masa depan yang lebih baik.',
-            'withlist' => 0
-
+            'withlist' => 0,
         ]);
         Section::create([
             'id' => 2,
             'typelanding' => 'main',
             'typesection' => 2,
-            'withlist' => 1
-
+            'withlist' => 1,
         ]);
         Section::create([
             'id' => 3,
@@ -99,8 +95,7 @@ class DatabaseSeeder extends Seeder
             'title1' => 'Vision',
             'title2' => 'Mission',
             'desc1' => 'Membentuk ekosistem di dalam bisnis yang saling memberi manfaat dan bersinergi terhadap bisnis lainnya, mengedepankan teknologi agar bisnis berjalan lebih efektif dan efisien, serta ikut berperan dalam mendorong tumbuhnya perekonomian untuk masa depan yang lebih baik',
-            'withlist' => 1
-
+            'withlist' => 1,
         ]);
         Section::create([
             'id' => 5,
@@ -108,15 +103,14 @@ class DatabaseSeeder extends Seeder
             'typesection' => 4,
             'title1' => 'Aktivitas Terbaru',
             'desc1' => 'Selamat datang di aktivitas terbaru Lunnizom Group.\r\nKami menyajikan aktivitas terbaru meliputi seluruh lini bisnis sebagai langkah yang membawa Lunnizom Group lebih dekat dengan publik',
-            'withlist' => 1
-
+            'withlist' => 1,
         ]);
         Section::create([
             'id' => 6,
             'typelanding' => 'main',
             'typesection' => 5,
             'title1' => 'Partner Kami',
-            'withlist' => 1
+            'withlist' => 1,
         ]);
 
         // Kepul
@@ -153,7 +147,7 @@ class DatabaseSeeder extends Seeder
             'typesection' => 4,
             'desc1' => 'Kepul merupakan sebuah inovasi dalam upaya optimalisasi jual beli sampah yang dapat didaur ulang. Aplikasi ini digunakan oleh masyarakat yang ingin menjual sampah kepada para pengepul, mereka yang bermata pencaharian dengan membeli sampah dari masyarakat untuk kemudian dijual kembali kepada pengepul besar, ataupun pabrik daur ulang sampah. Di kepul, masyarakat bisa menjual lebih dari 60 jenis sampah sampah organik dan non-organik.',
             'title1' => 'Program <br> <span class="text-kepul-primary"> Kepul?</span>',
-            'withlist' => 1
+            'withlist' => 1,
         ]);
         Section::create([
             'id' => 11,
@@ -209,7 +203,6 @@ aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia
 Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.',
             'withlist' => 1,
             'image1' => 'listsection-images/e3BL04ub5eH1vTuYShWzNaqj7sPVSJlcJ4SrM11j.png',
-
         ]);
         Section::create([
             'id' => 15,
@@ -218,8 +211,70 @@ Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
             'title1' => 'People Said',
             'title2' => 'Testimonial Client',
             'withlist' => 1,
-
         ]);
+
+        Section::create([
+            'id' => 26,
+            'typelanding' => 'foundation',
+            'typesection' => 1,
+            'title1' => 'Memberi Manfaat',
+            'title2' => 'Untuk Negeri',
+            'desc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'subtitle1' => 'Save Children',
+            'subtitle2' => 'Scholarship',
+            'subtitle3' => 'Bedah Rumah',
+            'subdesc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'subdesc2' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'subdesc3' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'withlist' => 0,
+        ]);
+
+        Section::create([
+            'id' => 27,
+            'typelanding' => 'foundation',
+            'typesection' => 2,
+            'title1' => 'OUR GOAL',
+            'title2' => 'FOR INDONESIA',
+            'withlist' => 1,
+        ]);
+
+        Section::create([
+            'id' => 28,
+            'typelanding' => 'foundation',
+            'typesection' => 3,
+            'title1' => 'OUR PURPOSE',
+            'desc1' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum molestias possimus, sapiente aspernatur officia cupiditate vel illum? Est modi sint sed nostrum tempora cupiditate unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum molestias possimus, sapiente aspernatur officia cupiditate vel illum? Est modi sint sed nostrum tempora cupiditate unde?',
+            'withlist' => 0,
+        ]);
+
+        Section::create([
+            'id' => 29,
+            'typelanding' => 'foundation',
+            'typesection' => 4,
+            'title1' => 'OUR GOAL',
+            'title2' => 'FOR INDONESIA',
+            'desc1' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum molestias possimus, sapiente aspernatur officia cupiditate vel illum? Est modi sint sed nostrum tempora cupiditate unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum molestias possimus',
+            'withlist' => 1,
+        ]);
+
+        Section::create([
+            'id' => 30,
+            'typelanding' => 'foundation',
+            'typesection' => 5,
+            'title1' => 'Our Goal For Indonesia',
+            'subtitle1' => 'Join Us To Make Better Future',
+            'desc1' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum molestias possimus, sapiente aspernatur officia cupiditate vel illum? Est modi sint sed nostrum tempora cupiditate unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum molestias possimus',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 31,
+            'typelanding' => 'foundation',
+            'typesection' => 6,
+            'title1' => 'RECENTLY',
+            'subtitle1' => 'ADD',
+            'withlist' => 1,
+        ]);
+
         ListSection::create([
             'typelanding' => 'legalin',
             'id_section' => 13,
@@ -571,6 +626,126 @@ Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
             'title' => '10',
             'slug' => '10',
             'image' => 'listsection-images\/w2tMgDx4oUJCzAhKNCUEY9QoradqP3DmjjtWD68r.png',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 27,
+            'title' => 'Our Goal For Indonesia',
+            'slug' => 'our-goal-for-indonesia',
+            'image' => 'listsection-images/0gvuAuoRJp86tNShCOtAUS1inloY1FdsNNjeF5AR.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 27,
+            'title' => 'Our Goal For Indonesia2',
+            'slug' => 'our-goal-for-indonesia2',
+            'image' => 'listsection-images/ChIh0nbiLWa2F30XjfbDPbg5FIYdjacRyCpvb7pq.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 27,
+            'title' => 'Our Goal For Indonesia3',
+            'slug' => 'our-goal-for-indonesia3',
+            'image' => 'listsection-images/iWIaMnq9BbXotoUZWYAabIUhSyHUJINd5daDgkn4.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 27,
+            'title' => 'Our Goal For Indonesia4',
+            'slug' => 'our-goal-for-indonesia4',
+            'image' => 'listsection-images/DGBwmhU4LIho617ZOdRXcM4I4fLj7Ql7k2EDIBHS.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 29,
+            'title' => 'foundationmission1',
+            'slug' => 'foundationmission1',
+            'image' => 'listsection-images/dE5SwHLpl6DeENmnO8GpInHSPvrLvpC5pN0kWS18.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 29,
+            'title' => 'foundationmission2',
+            'slug' => 'foundationmission2',
+            'image' => 'listsection-images/xHkvl13M7rLbAivM7P7ErrBP3ulZgyeA2xk8vGVX.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 29,
+            'title' => 'foundationmission3',
+            'slug' => 'foundationmission3',
+            'image' => 'listsection-images/hf53vHxg8Y53mZXl70tSWYFLSbAjkRpTVswk3N5q.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 29,
+            'title' => 'foundationmission4',
+            'slug' => 'foundationmission4',
+            'image' => 'listsection-images/PKsbB6TNrIwfi1wrxYZhpG63HIxn68gC1RVGeXYD.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 31,
+            'title' => 'Our Goal For Indonesia21',
+            'slug' => 'our-goal-for-indonesia21',
+            'image' => 'listsection-images/1Hhy8052X573juwISKsH7PIKa4ojO1qh2E0H3fg7.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 31,
+            'title' => 'Our Goal For Indonesia22',
+            'slug' => 'our-goal-for-indonesia2',
+            'image' => 'listsection-images/GVf8LlEyfYVgwtpke0GB24FatWr5xq8oonbZ0tlk.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 31,
+            'title' => 'Our Goal For Indonesia23',
+            'slug' => 'our-goal-for-indonesia23',
+            'image' => 'listsection-images/nGV9vu1OM3iD4uhT9kXLzaq4GfsVO7AiSp1lHf9L.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 31,
+            'title' => 'Our Goal For Indonesia24',
+            'slug' => 'our-goal-for-indonesia4',
+            'image' => 'listsection-images/d1c7SBdcxmdLgn5aM3dAc9anJIaz327YSxpThunx.png',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+        ListSection::create([
+            'typelanding' => 'foundation',
+            'id_section' => 31,
+            'title' => 'Our Goal For Indonesia25',
+            'slug' => 'our-goal-for-indonesia25',
+            'image' => 'listsection-images/xuq41FmXdcV1Bkxl2oqNyTEWNI7uwk20n1eKD9IG.jpg',
+            'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
+            'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
         ]);
     }
 }

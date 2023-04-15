@@ -87,10 +87,10 @@
                                     </div>
                                 </button>
                                 <x-slot name="content">
-                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
+                                    <x-dropdown-link :href="'/dashboard/indomarket/section'">
                                         {{ __('Section') }}
                                     </x-dropdown-link>
-                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
+                                    <x-dropdown-link :href="'/dashboard/indomarket/listsection'">
                                         {{ __('List Section') }}
                                     </x-dropdown-link>
                                 </x-slot>
@@ -218,14 +218,11 @@
                                     </div>
                                 </button>
                                 <x-slot name="content">
-                                    <x-dropdown-link :href="'/dashboard/foundation/article'">
-                                        {{ __('Article') }}
+                                    <x-dropdown-link :href="'/dashboard/foundation/section'">
+                                        {{ __('Section') }}
                                     </x-dropdown-link>
-                                    <x-dropdown-link :href="'/dashboard/foundation/mission'">
-                                        {{ __('Mission') }}
-                                    </x-dropdown-link>
-                                    <x-dropdown-link :href="'/dashboard/foundation/vision'">
-                                        {{ __('Vision') }}
+                                    <x-dropdown-link :href="'/dashboard/foundation/listsection'">
+                                        {{ __('List Section') }}
                                     </x-dropdown-link>
                                 </x-slot>
                             </x-slot>

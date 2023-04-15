@@ -1,23 +1,72 @@
-@extends('main')
+@extends('mainBlank')
 
 @section('contents')
+    <header class="absolute top-0 left-0 w-full flex items-center z-10 bg-black bg-opacity-30">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+                    <div class="h-10 self-center mx-4">
+                        <img class="h-10 self-center" src="/images/LUNNIZOMFOUNDATION.png" />
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-6 lg:hidden">
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#sections2"
+                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Donation</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections3" class="text-white  py-2 mx-8 group-hover:text-fourth1  text-lg">About
+                                    Us</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections6"
+                                    class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Feature</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer"
+                                    class="text-white px-8 rounded-lg py-2 mx-8 group-hover:text-fourth1  text-lg">Contact</a>
+                            </li>
+                            {{-- <li class="group">
+                                <a href="#"
+                                    class="text-base text-black py-2 mx-8 group-hover:text-fourth1">Contact</a>
+                            </li> --}}
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
     <header id="" class=" text-center md:pt-36 lg:text-left bg-[url('/public/images/foundationbanner.png')] pb-6">
         {{-- 2xl:h-screen lg:min-h-fit TEMPALTE JAGA2 MANA TAU TEPAKEK --}}
         <div class="container mx-auto px-1 sm:px-8 lg:grid lg:grid-cols-2  lg:gap-x-8 ">
             <div class="mb-8 lg:mt-2  2xl:mt-40 xl:mr-12">
                 <h1 class="text-white md:text-xl lg:text-3xl 2xl:text-6xl col-start-1">
-                    Memberi Manfaat
+                    {{ $sections1->title1 }}
 
                 </h1>
                 <h1 class="text-white md:text-xl lg:text-3xl 2xl:text-6xl col-start-1">
-                    Untuk Negeri
+                    {{ $sections1->title2 }}
+
                 </h1>
 
-                @foreach ($bio as $item)
-                    <p class="text-white  font-Epilogue lg:text-md 2xl:text-lg font-light">
-                        {{ $item->text }}
-                    </p>
-                @endforeach
+                <p class="text-white  font-Epilogue lg:text-md 2xl:text-lg font-light">
+                    {{ $sections1->desc1 }}
+
+                </p>
                 <div class="py-16">
                     <a href="#" target="blank"
                         class="text-lg text-white bg-cyan-400  py-4 px-9 rounded-xl hover:shadow-md hover:opacity-80 transition duration-500 ease-in-out shadow-xl">
@@ -37,13 +86,8 @@
                             <img src="images/Vector3.png">
                         </div>
                         <div class="col-span-4">
-                            <h5 class="text-white">Save Children</h5>
-                            <p class="text-xs text-white text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repellat, aliquid atque iusto natus quos ad
-                                velit mollitia error magnam! Quisquam aliquam eos voluptatem enim labore optio eaque
-                                maxime nam
-                                libero?</p>
+                            <h5 class="text-white">{{ $sections1->subtitle1 }}</h5>
+                            <p class="text-xs text-white text-justify">{{ $sections1->subdesc1 }}</p>
                         </div>
                     </div>
                 </div>
@@ -53,13 +97,9 @@
                             <img src="images/Vector3.png">
                         </div>
                         <div class="col-span-4">
-                            <h5 class="text-white ">Save Children</h5>
-                            <p class="text-xs text-white text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repellat, aliquid atque iusto natus quos ad
-                                velit mollitia error magnam! Quisquam aliquam eos voluptatem enim labore optio eaque
-                                maxime nam
-                                libero?</p>
+                            <h5 class="text-white">{{ $sections1->subtitle2 }}</h5>
+                            <p class="text-xs text-white text-justify">{{ $sections1->subdesc2 }}</p>
+
                         </div>
                     </div>
                 </div>
@@ -69,13 +109,9 @@
                             <img src="images/Vector3.png">
                         </div>
                         <div class="col-span-4">
-                            <h5 class="text-white">Save Children</h5>
-                            <p class="text-xs text-white text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repellat, aliquid atque iusto natus quos ad
-                                velit mollitia error magnam! Quisquam aliquam eos voluptatem enim labore optio eaque
-                                maxime nam
-                                libero?</p>
+                            <h5 class="text-white">{{ $sections1->subtitle3 }}</h5>
+                            <p class="text-xs text-white text-justify">{{ $sections1->subdesc3 }}</p>
+
                         </div>
                     </div>
                 </div>
@@ -88,224 +124,121 @@
 
 
 
-    <section id="strength" class=" ">
 
-    </section>
 
-    <section class="py-10 ">
-        </div>
+    <section id="sections2" class="py-10 ">
 
         <div class="mx-4 relative flex pb-1 pt-12 items-center">
-            <span class="flex-shrink mx-4 text-slate-800 font-light text-4xl">OUR GOAL <br> FOR INDONESIA</span>
+            <span class="flex-shrink mx-4 text-slate-800 font-light text-4xl">{{ $sections2->title1 }} <br>
+                {{ $sections2->title2 }}</span>
             <span class="  items-end h-1 flex-grow bg-slate-900 lg:w-1/3"></span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-1 p-10">
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-lg bg-slate-100 px-4 pt-4 ">
-                <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-                    <img class="" src="images/Rectangle73.png" alt="Sunset in the mountains">
-                </div>
+            @foreach ($listsections2 as $item)
+                <div class="max-w-sm rounded-xl overflow-hidden shadow-lg bg-slate-100 px-4 pt-4 ">
+                    <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
 
-                <div class="px-4 py-4">
-                    <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                    <p class="text-gray-700 text-xs">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quam quia facere voluptas voluptate
-                        ducimus quaerat libero repudiandae dolores numquam?
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4">
-                    <a style="    
+                        <img class="" src="{{ asset('storage/' . $item->image) }}" alt="Sunset in the mountains">
+                    </div>
+
+                    <div class="px-4 py-4">
+                        <div class="font-bold text-xl mb-2">{{ $item->title }}</div>
+                        <p class="text-gray-700 text-xs">
+                            {{ strip_tags($item->isi) }}
+
+                        </p>
+                    </div>
+                    <div class="pt-4 pb-2 px-4">
+                        <a style="    
                     color: #fff;
                     box-shadow: 0px 3px 3px #818e94;"
-                        href="#"
-                        class="inline-block bg-cyan-600 rounded-xl px-4 py-2 text-sm font-semibold text-white mb-2">Donate
-                        Now</a>
-                </div>
+                            href="#"
+                            class="inline-block bg-cyan-600 rounded-xl px-4 py-2 text-sm font-semibold text-white mb-2">Donate
+                            Now</a>
+                    </div>
 
-            </div>
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-lg bg-slate-100 px-4 pt-4 ">
-                <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-
-                    <img class="" src="images/kepul.jpg" alt="Sunset in the mountains">
                 </div>
-                <div class="px-4 py-4">
-                    <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                    <p class="text-gray-700 text-xs">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias nesciunt est eligendi sequi,
-                        natus neque doloremque.
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4">
-                    <a style="    
-                    color: #fff;
-                    box-shadow: 0px 3px 3px #818e94;"
-                        href="#"
-                        class="inline-block bg-cyan-400 rounded-xl px-4 py-2 text-sm font-semibold text-white mb-2">Donate
-                        Now</a>
-                </div>
-            </div>
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-lg bg-slate-100 px-4 pt-4 ">
-                <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-
-                    <img class="" src="images/market.jpg" alt="Sunset in the mountains">
-                </div>
-                <div class="px-4 py-4">
-                    <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                    <p class="text-gray-700 text-xs">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat exercitationem perspiciatis
-                        neque odio, voluptatem quibusdam repudiandae maiores assumenda, alias a? Asperiores, magni? Neque,
-                        amet?
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4">
-                    <a style="    
-                    color: #fff;
-                    box-shadow: 0px 3px 3px #818e94;"
-                        href="#"
-                        class="inline-block bg-cyan-400 rounded-xl px-4 py-2 text-sm font-semibold text-white mb-2">Donate
-                        Now</a>
-                </div>
-
-            </div>
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-lg bg-slate-100 px-4 pt-4 ">
-                <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-                    <img class="" src="images/yt.png" alt="Sunset in the mountains">
-                </div>
-                <div class="px-4 py-4">
-                    <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                    <p class="text-gray-700 text-xs">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorum numquam suscipit, quisquam
-                        quod voluptatem temporibus nemo excepturi aliquam fugiat non eaque eos accusantium, magni harum ad.
-                        Cumque, dolore dolor.
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4">
-                    <a style="    
-                    color: #fff;
-                    box-shadow: 0px 3px 3px #818e94;"
-                        href="#"
-                        class="inline-block bg-cyan-400 rounded-xl px-4 py-2 text-sm font-semibold text-white mb-2">Donate
-                        Now</a>
-                </div>
-
-            </div>
-            {{-- @endforeach --}}
+            @endforeach
 
         </div>
+        {{-- @endforeach --}}
 
-        </div>
 
-        </div>
-        </div>
     </section>
-    <section class=" bg-[url('/public/images/ourpurpose.png')] bg-cover bg-center ">
+    <section id="sections3" class=" bg-[url('/public/images/ourpurpose.png')] bg-cover bg-center ">
         <div class=" bg-sky-700 bg-opacity-40  pb-16 pt-20">
 
             <div class="lg:grid lg:grid-cols-2 lg:gap-2 md:flex md:flex-row container px-1 sm:px-4 lg:gap-x-2 ">
 
                 <div class="py-10">
                     <h1 class="text-left align-middle font-bold text-white text-9xl">
-                        OUR PURPOSE
+                        {{ $sections3->title1 }}
                     </h1>
 
                 </div>
 
                 <div class="pt-32 pb-20">
-                    <h5 class="font-light text-white ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eius
-                        quam soluta iure perferendis enim quia ad tempore laudantium amet rem rerum perspiciatis impedit,
-                        inventore, obcaecati consequatur molestias voluptates, modi aliquam accusantium fuga voluptatibus!
-                        Veritatis optio dolores veniam dolor. Deleniti aut harum nisi! Aspernatur, quisquam. Modi accusamus
-                        rerum optio eum!</h5>
+                    <h5 class="font-light text-white "> {{ $sections3->desc1 }}</h5>
 
                 </div>
             </div>
         </div>
     </section>
-    <section id="strength" class="py-32">
+    <section id="sections4" class="py-32">
         <div class="container relative flex pb-1 pt-12 items-center">
-            <span class="flex-shrink mx-4 text-slate-800 font-light text-4xl">OUR GOAL <br> FOR INDONESIA<br>&nbsp</span>
+            <span class="flex-shrink mx-4 text-slate-800 font-light text-4xl">{{ $sections4->title1 }} <br>
+                {{ $sections4->title2 }} <br>&nbsp</span>
             <span class="  items-end h-1 flex-grow bg-slate-900 lg:w-1/3"></span>
         </div>
-        <h4 class="text-center text-2xl text-gray-800 mx-10">Vision</h4>
-        <p class="mx-44 font-light text-center text-xl ">
+        <h4 class="container text-left text-2xl text-gray-800 mx-10">{{ $sections4->subtitle1 }}</h4>
+        <p class="container mx-10 font-light text-xl ">
             Forming an ecosystem within a business that provides mutual benefits and synergies with other
             bussineses, promotes technology so that business run more effectively and efficiently, and play a role
             in encouraging economic growth for a better future.
         </p>
 
         <div class="container relative pb-5 pt-16">
-            <h4 class="text-left text-2xl text-gray-800 py-12">Mission</h4>
+            <h4 class="text-left text-2xl text-gray-800 py-12">{{ $sections4->subtitle2 }}</h4>
+
 
         </div>
         <div class="lg:grid relative container lg:grid-cols-4 gap-4  md:flex md:flex-row md:text-center">
-            <div class="">
-                <div class="py-28 max-w-sm rounded overflow-hidden  items-center shadow-md bg-gray-100">
-                    <img class="w-20 mx-auto" src="/images/Together3.png" alt="Sunset in the mountains">
+            @foreach ($listsections4 as $item)
+                <div class="">
+                    <div class="py-28 max-w-sm rounded overflow-hidden  items-center shadow-md bg-gray-100">
+                        <img class="w-20 mx-auto" src="{{ asset('storage/' . $item->image) }}"
+                            alt="Sunset in the mountains">
+                    </div>
+                    <div class="px-6 py-4">
+                        <p class="text-gray-600 text-base text-center font-light font-Amiri">
+                            {{ strip_tags($item->isi) }}
+
+                        </p>
+                    </div>
                 </div>
-                <div class="px-6 py-4">
-                    <p class="text-gray-600 text-base text-center font-light font-Amiri">
-                        Building superior human resources, competent and with integrity so that they always present
-                        innovation.
-                    </p>
-                </div>
-            </div>
-            <div class="">
-                <div class="py-28 max-w-sm rounded overflow-hidden  items-center shadow-md bg-gray-100">
-                    <img class="w-20 mx-auto" src="/images/Together3.png" alt="Sunset in the mountains">
-                </div>
-                <div class="px-6 py-4">
-                    <p class="text-gray-600 text-base text-center font-light font-Amiri">
-                        Building superior human resources, competent and with integrity so that they always present
-                        innovation.
-                    </p>
-                </div>
-            </div>
-            <div class="">
-                <div class="py-28 max-w-sm rounded overflow-hidden  items-center shadow-md bg-gray-100">
-                    <img class="w-20 mx-auto" src="/images/Together3.png" alt="Sunset in the mountains">
-                </div>
-                <div class="px-6 py-4">
-                    <p class="text-gray-600 text-base text-center font-light font-Amiri">
-                        Building superior human resources, competent and with integrity so that they always present
-                        innovation.
-                    </p>
-                </div>
-            </div>
-            <div class="">
-                <div class="py-28 max-w-sm rounded overflow-hidden  items-center shadow-md bg-gray-100">
-                    <img class="w-20 mx-auto" src="/images/Together3.png" alt="Sunset in the mountains">
-                </div>
-                <div class="px-6 py-4">
-                    <p class="text-gray-600 text-base text-center font-light font-Amiri">
-                        Building superior human resources, competent and with integrity so that they always present
-                        innovation.
-                    </p>
-                </div>
-            </div>
+            @endforeach
         </div>
 
     </section>
-    <section class=" bg-[url('/public/images/Frame93.png')] bg-cover bg-center pb-10">
+    <section id="sections5" class=" bg-[url('/public/images/Frame93.png')] bg-cover bg-center pb-10">
         <div class="py-10">
             <h1 class="text-center align-middle  text-white text-3xl">
-                Our Goal For Indonesia
+                {{ $sections5->title1 }}
             </h1>
 
         </div>
 
         <div class="pb-20 container">
-            <h5 class="font-light text-white ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eius
-                quam soluta iure perferendis enim quia ad tempore laudantium amet rem rerum perspiciatis impedit,
-                inventore, obcaecati consequatur molestias voluptates, modi aliquam accusantium fuga voluptatibus!
-                Veritatis optio dolores veniam dolor. Deleniti aut harum nisi! Aspernatur, quisquam. Modi accusamus
-                rerum optio eum!</h5>
+            <h5 class="font-light text-white text-center">{{ $sections5->desc1 }}</h5>
 
         </div>
         <center>
             <div class="center">
                 <div class="py-28 max-w-sm overflow-hidden  items-center shadow-md bg-blue-400 bg-opacity-50 rounded-lg">
                     <div class="px-4">
-                        <p class="text-white font-light text-xl py-2">Join Us To Make Better Future</p>
+                        <p class="text-white font-light text-xl py-2"> {{ $sections5->subtitle1 }}
+                        </p>
                         <a style="    
                     box-shadow: 0px 3px 3px #818e94;" href="#"
                             class="inline-block text-cyan-400 rounded-xl px-4 py-2 text-lg font-bold bg-white ">Donate
@@ -316,79 +249,36 @@
             </div>
         </center>
     </section>
-    <section>
+    <section id="sections6">
         <div class="container mx-4 relative flex  pt-12 items-center ">
-            <span class="flex-shrink mx-4 text-slate-800 font-light text-4xl">RECENTLY <br> ADD<br>&nbsp</span>
+            <span class="flex-shrink mx-4 text-slate-800 font-light text-4xl">{{ $sections6->title1 }} <br>
+                {{ $sections6->title2 }}<br>&nbsp</span>
             <span class="  items-end h-1 flex-grow bg-slate-900 lg:w-1/3"></span>
         </div>
         <div class=" lg:grid lg:grid-cols-3 lg:gap-2 md:flex md:flex-row container px-1 sm:px-4 lg:gap-x-2 pb-24">
             <div class="col-span-2 lg:grid lg:grid-cols-2 lg:gap-2 md:flex md:flex-row container px-1 sm:px-4 lg:gap-x-2 ">
-                <div class="max-w-sm rounded-xl overflow-hidden px-4 pt-4 ">
-                    <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
+                @foreach ($listsections6->skip(1) as $item)
+                    <div class="max-w-sm rounded-xl overflow-hidden px-4 pt-4 ">
+                        <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
 
-                        <img class="" src="images/kepul.jpg" alt="Sunset in the mountains">
+                            <img class="" src="{{ asset('/storage/' . $item->image) }}"
+                                alt="Sunset in the mountains">
+                        </div>
+                        <div class="">
+                            <div class="font-bold text-xl mb-2">{{ $item->title }}</div>
+                            <p class="text-gray-700 text-xs">
+                                {{ strip_tags($item->isi) }}
+
+                            </p>
+                        </div>
+
                     </div>
-                    <div class="">
-                        <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias nesciunt est eligendi
-                            sequi,
-                            natus neque doloremque.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="max-w-sm rounded-xl overflow-hidden px-4 pt-4 ">
-                    <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-
-                        <img class="" src="images/kepul.jpg" alt="Sunset in the mountains">
-                    </div>
-                    <div class="">
-                        <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias nesciunt est eligendi
-                            sequi,
-                            natus neque doloremque.
-                        </p>
-                    </div>
-                </div>
-                <div class="max-w-sm rounded-xl overflow-hidden px-4 pt-4 ">
-                    <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-
-                        <img class="" src="images/kepul.jpg" alt="Sunset in the mountains">
-                    </div>
-                    <div class="">
-                        <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias nesciunt est eligendi
-                            sequi,
-                            natus neque doloremque.
-                        </p>
-                    </div>
-
-
-                </div>
-                <div class="max-w-sm rounded-xl overflow-hidden px-4 pt-4 ">
-                    <div class="min-w-fit h-64 overflow-hidden rounded-xl mx-auto">
-
-                        <img class="" src="images/kepul.jpg" alt="Sunset in the mountains">
-                    </div>
-                    <div class="">
-                        <div class="font-bold text-xl mb-2">Our Goal For Indonesia</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias nesciunt est eligendi
-                            sequi,
-                            natus neque doloremque.
-                        </p>
-                    </div>
-
-
-                </div>
+                @endforeach
 
             </div>
             <div class="col-span-1">
-                <div  class="rounded-lg block overflow-hidden">
-                <img src="/images/Rectangle_47.png" class=" h-[768px] object-cover">
+                <div class="rounded-lg block overflow-hidden">
+                    <img src="{{ asset('/storage/' . $listsections6[0]->image) }}" class=" h-[768px] object-cover">
                 </div>
             </div>
 
@@ -397,8 +287,8 @@
     <section id="footer">
         <div class=" bg-cyan-400">
             @foreach ($contacts as $item)
-
-                <div class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16 pt-28">
+                <div
+                    class="lg:grid lg:grid-cols-2 lg:gap-24 md:flex md:flex-row md:mx-auto px-1 sm:px-8 lg:gap-x-16 pt-28">
                     <div class="col-span-1 m-auto">
                         <h5 class="text-white text-4xl font-light">REACH US</h5>
                         <p class="text-white md:mr-32">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere

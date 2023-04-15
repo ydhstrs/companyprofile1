@@ -26,6 +26,8 @@ use App\Http\Controllers\DashboardMainSectionController;
 use App\Http\Controllers\DashboardMainListSectionController;
 use App\Http\Controllers\DashboardLegalinSectionController;
 use App\Http\Controllers\DashboardLegalinListSectionController;
+use App\Http\Controllers\DashboardFoundationSectionController;
+use App\Http\Controllers\DashboardFoundationListSectionController;
 use App\Http\Controllers\DashboardKepulListSectionController;
 use App\Http\Controllers\DashboardKepulSectionController;
 
@@ -79,6 +81,8 @@ Route::middleware('auth')->group(function () {
     // Route::post('/dashboard/project/delToMain/{slug}', [DashboardProjectController::class, 'delToMain'])->name('project.delToMain');
     Route::resource('/dashboard/legalin/section', DashboardLegalinSectionController::class);
     Route::resource('/dashboard/legalin/listsection', DashboardLegalinListSectionController::class);
+    Route::resource('/dashboard/foundation/section', DashboardFoundationSectionController::class);
+    Route::resource('/dashboard/foundation/listsection', DashboardFoundationListSectionController::class);
     Route::resource('/dashboard/kepul/section', DashboardKepulSectionController::class);
     Route::resource('/dashboard/kepul/listsection', DashboardKepulListSectionController::class);
 

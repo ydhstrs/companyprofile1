@@ -14,14 +14,14 @@
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full px-4 max-w-full flex-grow flex-1">
                                 <h3 class="font-semibold text-lg text-blueGray-700">
-                                    Detail Main Section
+                                    Edit Legalin Section
                                 </h3>
                             </div>
                         </div>
                     </div>
 
                     <div class="block w-full overflow-x-auto p-8">
-                        <form method="post" action="/dashboard/main/section/{{ $section->id }}"
+                        <form method="post" action="/dashboard/legalin/section/{{ $section->id }}"
                             enctype="multipart/form-data">
                             @csrf
                             @method('put')
