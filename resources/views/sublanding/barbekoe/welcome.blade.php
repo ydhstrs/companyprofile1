@@ -1,18 +1,64 @@
-@extends('main')
+@extends('mainBlank')
 
 @section('contents')
+    <header class="absolute top-0 left-0 w-full flex items-center z-10 bg-transparent">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+                    <div class="h-10 self-center mx-4">
+                        <img class="h-10 self-center" src="/images/LUNNIZOMFOUNDATION.png" />
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-6 lg:hidden">
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#sections3"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Download App</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections2" class="text-black  py-2 mx-8 group-hover:text-fourth1  text-lg">Our Menu</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections4"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Our Team</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Contact Us</a>
+                            </li>
+                            {{-- <li class="group">
+                                <a href="#"
+                                    class="text-base text-black py-2 mx-8 group-hover:text-fourth1">Contact</a>
+                            </li> --}}
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
     <header id="" class=" text-center md:pt-36 lg:text-left pb-10">
 
 
         <div class="container">
             <div class="col-span-1 mx-auto  w-auto">
-                <img class="mx-auto" src="images/barbekoelogo.png">
-                <p class="text-center text-black text-sm pt-6 pb-10">BUKANKAH REZEKI TIDAK PERNAH SALAH ALAMAT?</p>
-                <img class="  object-cover" src="images/barbekoebanner.png">
-                <p class="text-center text-black text-xl py-6 font-bold">OUR STORY</p>
-                <p class="text-center text-black text-sm pb-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Officia asperiores tenetur quibusdam qui, consectetur cumque hic vitae ipsum quod aliquam quae quam
-                    omnis reprehenderit commodi architecto explicabo incidunt veniam culpa.</p>
+                <img class="mx-auto" src="{{ asset('/storage/' . $sections1->image1) }}">
+                <p class="text-center text-black text-sm pt-6 pb-10">{{ $sections1->desc1 }}</p>
+                <img class="  object-cover" src="{{ asset('/storage/' . $sections1->image2) }}">
+                <p class="text-center text-black text-xl py-6 font-bold">{{ $sections1->title2 }}</p>
+                <p class="text-center text-black text-sm pb-10">{{ $sections1->desc2 }}</p>
 
 
             </div>
@@ -26,21 +72,14 @@
     </header> <!-- end of header -->
 
 
-
-
-    <section id="strength" class=" ">
-
-    </section>
-
-    <section class=" bg-gray-100 rounded-lg shadow-xl my-4 lg:mx-4">
+    <section id="sections2" class=" bg-gray-100 rounded-lg shadow-xl my-4 lg:mx-4">
         <div class="lg:grid lg:grid-cols-5 lg:gap-4 sm:flex md:flex-row sm:mx-auto  container py-6">
 
             <div class="col-span-1 bg-[url('/public/images/barbecuan.png')] bg-cover bg-center py-24">
-                <h5 class="text-white text-5xl font-bold mx-6">Cuan<br>Series</h5>
+                <h5 class="text-white text-5xl font-bold mx-6">{{ $sections2->subtitle1 }}<br>{{ $sections2->subtitle2 }}
+                </h5>
                 <p class=" text-left font-light text-white mx-6">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi magni, dicta tenetur numquam
-                    sequi minima nulla iste est eveniet delectus? Illum magnam illo distinctio! Nostrum temporibus earum aut
-                    enim, harum cupiditate placeat atque quas!
+                    {{ $sections2->subdesc1 }}
                 </p>
                 <div class="pt-8 pb-6">
                     <a href="#" target="blank"
@@ -49,17 +88,11 @@
                 </div>
             </div>
 
-            <div class="col-span-4 lg:pt-48">
-                <h1 class="font-black text-5xl mx-10 pb-10">OUR <br> SIGNATURE</h1>
+            <div class="col-span-4 lg:pt-32">
+                <h1 class="font-black text-5xl mx-10 pb-10">{{ $sections2->title1 }}<br>{{ $sections2->title2 }}</h1>
                 <p class=" font-light text-black mx-10">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi magni, dicta tenetur numquam
-                    sequi minima nulla iste est eveniet delectus? Illum magnam illo distinctio! Nostrum temporibus earum aut
-                    enim, harum cupiditate placeat atque quas! Facilis doloremque exercitationem, quas maxime tempore
-                    pariatur et ipsum consequatur nihil, sapiente atque quasi a, magni aliquam expedita corporis est
-                    impedit? Saepe quam, voluptates tempora dolorem neque quibusdam non quos dicta a dolores beatae eaque
-                    ullam, exercitationem quasi sequi necessitatibus voluptas incidunt, quod inventore voluptatum minus.
-                    Aliquid neque dolorum deleniti cumque, fugiat ipsam delectus quibusdam labore iure harum nesciunt maxime
-                    hic, reiciendis placeat eos voluptates.
+                    {{ $sections2->desc1 }}
+
                 </p>
 
             </div>
@@ -70,53 +103,48 @@
     </section>
 
 
-    <section class="">
 
 
-        <div class="">
+    <div class="">
 
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 p-20 ">
-                @foreach ($articles as $item)
-                    <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:p-20 p-4">
+            @foreach ($listsections2 as $item)
+                <div class="relative rounded-lg overflow-hidden shadow-lg cursor-pointer">
 
-                        <img class="object-cover w-full h-48 mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
-                            alt="Sunset in the mountains">
+                    <img class="object-cover w-full h-48 mx-auto rounded-lg " src="{{ asset('/storage/' . $item->image) }}"
+                        alt="Barbekoe">
 
-                        <div class="absolute top-16 left-0 px-6 py-4">
-                            <div class="text-xl tracking-tight text-black font-bold">{{ $item->title }}</div>
-                            <p class="leading-normal text-black font-thin">
-                                {{ $item->excerpt }}
-                            </p>
-                        </div>
-
-
+                    <div class="absolute top-28 left-0 px-6 py-4">
+                        <div class="text-xl tracking-tight text-white font-bold">{{ $item->title }}</div>
+                        <p class="leading-normal text-white font-thin">
+                            {{ $item->subtitle }}
+                        </p>
                     </div>
 
-                    {{-- @endforeach --}}
-                @endforeach
 
-            </div>
+                </div>
+
+                {{-- @endforeach --}}
+            @endforeach
+
         </div>
+    </div>
     </section>
-    <section class="  my-8">
-        <h1 class="align-middle text-center text-black font-semibold text-5xl py-10 ">LATEST PROMO</h1>
+    <section id="sections3" class="my-8">
+        <h1 class="align-middle text-center text-black font-semibold text-5xl py-10 ">{{ $sections3->title1 }}</h1>
 
         <div class="lg:grid lg:grid-cols-2 md:flex md:flex-row md:mx-auto container px-1 sm:px-8 ">
+            @foreach ($listsections3 as $item)
+                <div class="col-span-1">
 
-            <div class="col-span-1">
+                    <img src="{{ asset('/storage/' . $item->image) }}" class="w-full h-full">
 
-                <img src="/images/Rectangle6.png" class="w-full h-full">
+                </div>
+            @endforeach
 
-            </div>
-
-            <div class="col-span-1">
-
-                <img src="/images/Rectangle6.png" class="w-full h-full">
-
-            </div>
 
         </div>
-        <h5 class=" text-center text-black font-thin text-xl py-10 ">ONLY ON</h5>
+        <h5 class=" text-center text-black font-thin text-xl py-10 ">{{ $sections3->desc1 }}</h5>
         <h5 class=" text-center text-black font-bold text-2xl py-10 ">DOWNLOAD NOW</h5>
         <div class="inline-flex items-center flex-wrap justify-center w-full gap-4">
             <img class="" src="images/playstoreitam.png">
@@ -124,14 +152,13 @@
         </div>
 
     </section>
-    <section class="">
+    <section id="sections4" class="">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20">
 
             <div class="col-span-1">
-                <h5 class=" text-black font-bold text-3xl py-4 ">MEET <br> OUR TEAM</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat quasi ullam minima delectus laudantium
-                    voluptate nemo molestias nihil, enim, nostrum quae aspernatur id sequi eos eius aperiam dignissimos
-                    aliquam sit.</p>
+                <h5 class=" text-black font-bold text-3xl py-4 ">{{ $sections4->title1 }} <br>{{ $sections4->title2 }}
+                </h5>
+                <p>{{ $sections4->desc1 }}</p>
             </div>
             <div class="col-span-2">
                 <div class="splide">
@@ -153,44 +180,43 @@
                     </div>
                     <div class="splide__track  mb-10">
                         <div class="splide__list gap-x-4 mb-10">
-                            <div class="leading-1 w-full rounded-xl shadow splide__slide 2xl:h-96 mb-10 max-w-sm">
-                                <img src="/images/Rectangle6.png" class="h-64 object-cover w-fit rounded-t-xl">
-                                <div class="p-4">
+                                @foreach ($listsections4 as $item)
+                                <div class="leading-1 w-full rounded-xl shadow splide__slide 2xl:h-96 mb-10 max-w-sm">
+                                    <img src="{{ asset('/storage/' . $item->image) }}" class="h-64 object-cover w-fit rounded-t-xl">
+                                    <div class="p-4">
 
-                                    <p class="text-black text-2xl font-semibold ">
-                                        Lunnizom
-                                    </p>
-                                    <p class="text-black text-2xl font-light ">
-                                        Foundation
-                                    </p>
-                                    <div class="inline-flex align-midle place-items-center gap-2">
-
-                                        <img src="/images/instagramitam.png" class="h-6">
-                                        <p class="text-black text-2xl font-light ">
-                                            asasasa
+                                        <p class="text-black text-2xl font-semibold ">
+                                            {{ $item->title }}
                                         </p>
+                                        <p class="text-black text-2xl font-light ">
+                                            {{ $item->subtitle }}
+
+                                        </p>
+                                        <div class="inline-flex align-midle place-items-center gap-2">
+
+                                            <img src="/images/instagramitam.png" class="h-6">
+                                            <p class="text-black text-2xl font-light ">
+                                                {{ strip_tags($item->isi) }}
+
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
-
-
-
                         </div>
-                    </div>
                 </div>
             </div>
 
 
         </div>
     </section>
-    <section class="my-8 bg-gray-100">
+    <section id="sections5" class="my-8 bg-gray-100">
 
-        <h5 class="text-center text-black font-bold text-4xl py-4 ">WHAT PEOPLE SAID <br> ABOUT US</h5>
-        <p class="text-center font-light text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Doloribus
-            adipisci quas impedit officiis vero dolorum quasi nostrum voluptatibus quos quisquam!</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20 ">
-            @foreach ($articles as $item)
+        <h5 class="text-center text-black font-bold text-4xl py-4 ">{{ $sections5->title1 }} <br> {{ $sections5->title2 }}</h5>
+        <p class="text-center font-light text-black">{{ $sections5->desc1 }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20  place-items-center">
+            @foreach ($listsections5 as $item)
                 <div class="max-w-sm overflow-hidden shadow-lg bg-white rounded-xl">
 
                     <img class="w-full h-64 object-cover mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
@@ -198,30 +224,27 @@
 
 
                 </div>
-                {{-- @endforeach --}}
             @endforeach
         </div>
     </section>
-    <section class="my-8">
+    <section id="sections6"  class="my-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20">
             <div class="col-span-2">
-                <img src="/images/barbemap.png" class="h-96">
+                <img src="{{ asset('/storage/' . $sections6->image1) }}" class="h-96">
             </div>
 
             <div class="col-span-1">
-                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">HOW TO GET<br>HERE</h5>
-                <p class="text-left font-light text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Doloribus
-                    adipisci quas impedit officiis vero dolorum quasi nostrum voluptatibus quos quisquam!</p>
+                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">{{ $sections6->title1 }}<br>{{ $sections6->title2 }}</h5>
+                <p class="text-left font-light text-black">{{ $sections6->desc1 }}</p>
             </div>
         </div>
     </section>
-            <section id="partner">
+    <section id="sections7">
         <div class="pt-20">
-            <h4 class="text-center pb-16 text-black text-4xl font-bold">OUR PARTNER</h4>
-            <div class="flex justify-center gap-24 mx-auto mb-40">
-                @foreach ($tools as $item)
-                    <img class="h-16" src="{{ asset('storage/' . $item->image) }}" alt="Lunnizoom Partner" />
+            <h4 class="text-center pb-16 text-black text-4xl font-bold">{{ $sections7->title1 }}</h4>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 p-10 mb-20 mx-auto  place-items-center">
+                @foreach ($listsections7 as $item)
+                    <img class="h-28" src="{{ asset('storage/' . $item->image) }}" alt="Barbekoe Partner" />
                 @endforeach
 
             </div>

@@ -28,6 +28,8 @@ use App\Http\Controllers\DashboardLegalinSectionController;
 use App\Http\Controllers\DashboardLegalinListSectionController;
 use App\Http\Controllers\DashboardFoundationSectionController;
 use App\Http\Controllers\DashboardFoundationListSectionController;
+use App\Http\Controllers\DashboardBarbekoeSectionController;
+use App\Http\Controllers\DashboardBarbekoeListSectionController;
 use App\Http\Controllers\DashboardKepulListSectionController;
 use App\Http\Controllers\DashboardKepulSectionController;
 
@@ -83,6 +85,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dashboard/legalin/listsection', DashboardLegalinListSectionController::class);
     Route::resource('/dashboard/foundation/section', DashboardFoundationSectionController::class);
     Route::resource('/dashboard/foundation/listsection', DashboardFoundationListSectionController::class);
+    Route::resource('/dashboard/barbekoe/section', DashboardBarbekoeSectionController::class);
+    Route::resource('/dashboard/barbekoe/listsection', DashboardBarbekoeListSectionController::class);
     Route::resource('/dashboard/kepul/section', DashboardKepulSectionController::class);
     Route::resource('/dashboard/kepul/listsection', DashboardKepulListSectionController::class);
 

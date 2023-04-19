@@ -275,6 +275,76 @@ Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
             'withlist' => 1,
         ]);
 
+
+        Section::create([
+            'id' => 33,
+            'typelanding' => 'barbekoe',
+            'typesection' => 1,
+            'title2' => 'Our Story',
+            'desc1' => 'Bukankah Rezeki Tidak Pernah Salah Alamat ?',
+            'desc2' => 'Forming an ecosystem within a  business that provides mutual benefits and synergies with other bussineses, promotes technology so that business run more effectively and efficiently, and play a role in encouraging economic growth for a better future.',
+            'image1' => 'section-images/howHs3B9eDVgKa8lpydO9PLJaQ4QbPAL9p2zhSho.png',
+            'image2' => 'section-images/Igt2n69awaM5NuOds5qNhxFIvksyGgprnTz6QmE9.png',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 34,
+            'typelanding' => 'barbekoe',
+            'typesection' => 2,
+            'title1' => 'OUR',
+            'title2' => 'SIGNATURE',
+            'subtitle1' => 'CUAN',
+            'subtitle2' => 'SERIES',
+            'desc1' => 'Forming an ecosystem within a  business that provides mutual benefits and synergies with other bussineses, promotes technology so that business run more effectively and efficiently, and play a role in encouraging economic growth for a better future.',
+            'subdesc1' => 'Forming an ecosystem within a  business that provides mutual benefits and synergies with other bussineses.',
+            'withlist' => 1,
+        ]);
+
+        Section::create([
+            'id' => 35,
+            'typelanding' => 'barbekoe',
+            'typesection' => 3,
+            'title1' => 'LATEST PROMO',
+            'desc1' => 'ONLY ON',
+            'withlist' => 1,
+        ]);
+
+        Section::create([
+            'id' => 36,
+            'typelanding' => 'barbekoe',
+            'typesection' => 4,
+            'title1' => 'MEET',
+            'title2' => 'OUR TEAM',
+            'desc1' => 'Forming an ecosystem within a  business that provides mutual benefits and synergies with other bussineses, promotes technology so that business run more effectively and efficiently, and play a role in encouraging economic growth for a better future.',
+            'withlist' => 1,
+        ]);
+
+        Section::create([
+            'id' => 37,
+            'typelanding' => 'barbekoe',
+            'typesection' => 5,
+            'title1' => 'WHAT PEOPLE SAID',
+            'title2' => 'ABOUT US',
+            'desc1' => 'Forming an ecosystem within a  business that provides mutual benefits and synergies with other bussineses.',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 38,
+            'typelanding' => 'barbekoe',
+            'typesection' => 6,
+            'title1' => 'HOW TO GET HERE',
+            'desc1' => 'Forming an ecosystem within a  business that provides mutual benefits and synergies with other bussineses,',
+            'image1' => 'section-images/03z4757tcCjvZOGTl98rE6pDMfZzAJTWWnmr0U1V.png',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 39,
+            'typelanding' => 'barbekoe',
+            'typesection' => 7,
+            'title1' => 'OUR PARTNER',
+            'withlist' => 1,
+        ]);
+
         ListSection::create([
             'typelanding' => 'legalin',
             'id_section' => 13,
@@ -746,6 +816,149 @@ Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
             'image' => 'listsection-images/xuq41FmXdcV1Bkxl2oqNyTEWNI7uwk20n1eKD9IG.jpg',
             'isi' => 'Forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses, forming an ecosystem within a &nbsp;business that provides mutual benefits and synergies with other bussineses',
             'excerpt' => ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi sequi fugiat illo eum mole...',
+        ]);
+
+
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 34,
+            'title' => 'CHICKEN',
+            'subtitle' => 'CURRY KATSU',
+            'slug' => 'chicken',
+            'image' => 'listsection-images/SKQW5ar6gomzYsIiKWgjvLD4lAEHdCgGEfVzlljR.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 34,
+            'title' => 'CHICKEN',
+            'subtitle' => 'CORDONBLEU',
+            'slug' => 'chicken2',
+            'image' => 'listsection-images/KI7wmluddg7CjZdjRQc0UDdDEaXlqPkf7dE1xaQ7.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 34,
+            'title' => 'BURGERKOE',
+            'subtitle' => 'ORIGINAL BARBEKOE',
+            'slug' => 'burgerkoe',
+            'image' => 'listsection-images/pdgqRH9VRN0EjvCeSsGKVRycqz9q6BQme3kZXiwd.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 34,
+            'title' => 'NASI GORENG',
+            'subtitle' => 'DAGING SAPI',
+            'slug' => 'nasigoreng',
+            'image' => 'listsection-images/h9DTPV5WDf9tgddXNNpiTRS8UDhaDFFQpJiDJOe7.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 34,
+            'title' => 'INDOMIE',
+            'subtitle' => 'BARBEKOE',
+            'slug' => 'indomiee',
+            'image' => 'listsection-images/q7YjThXMgx1IMEFXIJBLAdSXJbD8uqjOepM1w0Bo.png',
+        ]);
+
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 35,
+            'title' => 'promobarbekoe1',
+            'slug' => 'promobarbekoe1',
+            'image' => 'listsection-images/NnCULbEzWFOS44KijoQeyWXVBW8H7WOd8u3ijnYV.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 35,
+            'title' => 'promobarbekoe2',
+            'slug' => 'promobarbekoe2',
+            'image' => 'listsection-images/U2MkXlJsEaMqVKP5Zm9pGAmrcwGwB8lhMiHOabbb.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 36,
+            'title' => 'BADOK',
+            'subtitle' => 'EXCEUTIVE MANAGER',
+            'slug' => 'badok',
+            'excerpt' => '@badokece',
+            'isi' => '@badokece',
+            'image' => 'listsection-images/ZZERM90ynXrqVghBGaXw0J37X0QrTBmbbvUPT7iX.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 36,
+            'title' => 'DITA',
+            'subtitle' => 'COOKER',
+            'slug' => 'dita',
+            'excerpt' => '@ditakece',
+            'isi' => '@ditakece',
+            'image' => 'listsection-images/BRO5YzaAbROo6XsrXMzZ9Tx2mxwfMYa0xwO8TE7H.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 36,
+            'title' => 'KIKI',
+            'subtitle' => 'HELPER',
+            'slug' => 'kiki',
+            'excerpt' => '@kikikece',
+            'isi' => '@kikikece',
+            'image' => 'listsection-images/6JiJzEzYR2v247FzJOpavvm3nB5qruUE5To8tEga.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 37,
+            'title' => 'testi1',
+            'slug' => 'testi1',
+            'image' => 'listsection-images/0dbgzOUwr9CxGUborUWb4rCdPvyUVk6kCxH5Lh9i.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 37,
+            'title' => 'testi2',
+            'slug' => 'testi2',
+            'image' => 'listsection-images/YrPhJiVnrSAwA6ghudY4LnY3xhEqWHQIS3hgooJW.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 37,
+            'title' => 'testi3',
+            'slug' => 'testi3',
+            'image' => 'listsection-images/6y7TKSL8ylxljdLXQiXxFLJD2m9eolxS1X0wJ6uB.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 39,
+            'title' => 'barbekoesponsor1',
+            'slug' => 'barbekoesponsor1',
+            'image' => 'listsection-images/7YqSz9lpucOBJ0GNlMb0Z55Cf0PUJX0N83msUKlC.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 39,
+            'title' => 'barbekoesponsor2',
+            'slug' => 'barbekoesponsor2',
+            'image' => 'listsection-images/n8WSkQOxLRyMk5jeQRMKYLYYJlhqAFkROk6fGFI7.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 39,
+            'title' => 'barbekoesponsor3',
+            'slug' => 'barbekoesponsor3',
+            'image' => 'listsection-images/JDiLmP0TRQdwMCUcOYeJQ22WzGBzPYmHvVQPfjyM.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 39,
+            'title' => 'barbekoesponsor4',
+            'slug' => 'barbekoesponsor4',
+            'image' => 'listsection-images/LQn5gKvDP2FTFxaMBhOvvVTJwER7bBPKlTJRzG2N.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'barbekoe',
+            'id_section' => 39,
+            'title' => 'barbekoesponsor5',
+            'slug' => 'barbekoesponsor5',
+            'image' => 'listsection-images/6x0dtpFm4jRNPICmpEDyzp2dtIlP3HwcDhylB9ax.png',
         ]);
     }
 }
