@@ -30,6 +30,12 @@ use App\Http\Controllers\DashboardFoundationSectionController;
 use App\Http\Controllers\DashboardFoundationListSectionController;
 use App\Http\Controllers\DashboardBarbekoeSectionController;
 use App\Http\Controllers\DashboardBarbekoeListSectionController;
+use App\Http\Controllers\DashboardSaramodaSectionController;
+use App\Http\Controllers\DashboardSaramodaListSectionController;
+use App\Http\Controllers\DashboardIndopropertiSectionController;
+use App\Http\Controllers\DashboardIndopropertiListSectionController;
+use App\Http\Controllers\DashboardIndomarketSectionController;
+use App\Http\Controllers\DashboardIndomarketListSectionController;
 use App\Http\Controllers\DashboardKepulListSectionController;
 use App\Http\Controllers\DashboardKepulSectionController;
 
@@ -87,6 +93,12 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dashboard/foundation/listsection', DashboardFoundationListSectionController::class);
     Route::resource('/dashboard/barbekoe/section', DashboardBarbekoeSectionController::class);
     Route::resource('/dashboard/barbekoe/listsection', DashboardBarbekoeListSectionController::class);
+    Route::resource('/dashboard/indoproperti/section', DashboardIndopropertiSectionController::class);
+    Route::resource('/dashboard/indoproperti/listsection', DashboardIndopropertiListSectionController::class);
+    Route::resource('/dashboard/indomarket/section', DashboardIndomarketSectionController::class);
+    Route::resource('/dashboard/indomarket/listsection', DashboardIndomarketListSectionController::class);
+    Route::resource('/dashboard/saramoda/section', DashboardSaramodaSectionController::class);
+    Route::resource('/dashboard/saramoda/listsection', DashboardSaramodaListSectionController::class);
     Route::resource('/dashboard/kepul/section', DashboardKepulSectionController::class);
     Route::resource('/dashboard/kepul/listsection', DashboardKepulListSectionController::class);
 

@@ -10,6 +10,11 @@
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/css/splide.min.css">
     <link href="https://fonts.googleapis.com/css?family=Amiri:400,700&display=swap" rel="stylesheet">
+        <style>
+        html {
+	scroll-behavior: smooth;
+}
+    </style>
 </head>
 
 <body>

@@ -1,11 +1,58 @@
-@extends('main')
+@extends('mainBlank')
 
 @section('contents')
-    <header id="" class=" text-center md:pt-36 lg:text-left 2xl:h-full lg:min-h-full  pb-6">
+    <header class="bg-white absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+                    <div class="h-10 self-center mx-4">
+                        <img class="h-6 object-center items-center  self-center" src="/images/INDOMARKET.png" />
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-6 lg:hidden">
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#sections1" class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer" class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections4"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Shop</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer"
+                                    class="text-black 8 rounded-lg py-2 mx-8 group-hover:text-fourth1  text-lg">Contact</a>
+                            </li>
+                            {{-- <li class="group">
+                                <a href="#"
+                                    class="text-base text-black py-2 mx-8 group-hover:text-fourth1">Contact</a>
+                            </li> --}}
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header id="sections1" class=" text-center md:pt-36 lg:text-left 2xl:h-full lg:min-h-full  pb-6">
         {{-- 2xl:h-screen lg:min-h-fit TEMPALTE JAGA2 MANA TAU TEPAKEK --}}
         <div class="">
-            <div class="col-span-1 mx-auto w-auto">
-                <img class=" object-cover" src="images/indomarketbanner.png">
+            <div class=" mx-auto w-auto">
+                <img class="h-[700px] w-full object-cover" src="{{ asset('/storage/' . $sections1->image1) }}">
             </div>
 
 
@@ -17,55 +64,21 @@
         <div class="">
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4 px-20 ">
+                @foreach ($listsections1 as $item)
                 <div class="max-w-sm rounded overflow-hidden grid grid-cols-2">
                     <div class="place-self-center ">
-                        <img class="w-12 bg-center self-center " src="images/Free.png" alt="Sunset in the mountains">
+                        <img class="w-12 bg-center self-center " src="{{ asset('/storage/' . $item->image) }}" alt="Sunset in the mountains">
                     </div>
                     <div class="px-4 py-4">
-                        <div class="font-bold text-sm mb-2 text-black ">FREE DELIVERY</div>
+                        <div class="font-bold text-sm mb-2 text-black ">{{ $item->title }}</div>
                         <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit.
+                            {{ $item->subtitle }}
                         </p>
                     </div>
 
                 </div>
-                <div class="max-w-sm rounded overflow-hidden grid grid-cols-2">
-                    <div class="place-self-center ">
-                        <img class="w-12 bg-center self-center " src="images/Secure.png" alt="Sunset in the mountains">
-                    </div>
-                    <div class="px-4 py-4">
-                        <div class="font-bold mb-2 text-black text-sm">SECURE PAYMENY</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="max-w-sm rounded overflow-hidden grid grid-cols-2">
-                    <div class="place-self-center ">
-                        <img class="w-12 bg-center self-center " src="images/Chat.png" alt="Sunset in the mountains">
-                    </div>
-                    <div class="px-4 py-4">
-                        <div class="font-bold text-sm mb-2 text-black ">REAL TIME SUPPORT</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="max-w-sm rounded overflow-hidden grid grid-cols-2">
-                    <div class="place-self-center ">
-                        <img class="w-12 bg-center self-center " src="images/arrow.png" alt="Sunset in the mountains">
-                    </div>
-                    <div class="px-4 py-4">
-                        <div class="font-bold text-sm mb-2 text-black ">24 HOURS RETURN</div>
-                        <p class="text-gray-700 text-xs">
-                            Lorem ipsum dolor sit.
-                        </p>
-                    </div>
-
-                </div>
-                {{-- @endforeach --}}
+              
+                @endforeach
 
             </div>
         </div>
@@ -75,61 +88,49 @@
     </header> <!-- end of header -->
 
 
-    <section id="strength" class="py-10">
+    <section id="sections2" class="py-10">
         <div class="container px-1 sm:px-8 py-10">
             <h4 class="text-center align-middle text-black font-light text-md">
-                Shop by <span class="font-bold">Category</span>
+                {{ $sections2->title1 }} <span class="font-bold">{{ $sections2->title2 }}</span>
             </h4>
-            <h5 class="text-center align-middle text-black font-light text-sm"">Lorem ipsum dolor sit.</h5>
+            <h5 class="text-center align-middle text-black font-light text-sm"">{{ $sections2->desc1 }}</h5>
 
         </div>
 
 
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-5 container gap-4 px-10">
-            <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark1.png" alt="Sunset in the mountains">
-                <p class="text-center py-4 text-sm">Vegetables</p>
-            </div>
+                @foreach ($listsections2 as $item)
 
-            <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark2.png" alt="Sunset in the mountains">
-                <p class="text-center py-4 text-sm">Snack</p>
+            <div class="col-span-1">
+                <img class="w-64 h-64 object-cover mx-auto rounded-xl" src="{{ asset('/storage/' . $item->image) }}" alt="Indo Market">
 
+                <p class="text-center py-4 text-sm">{{ $item->title }}</p>
             </div>
-            <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark3.png" alt="Sunset in the mountains">
-                <p class="text-center py-4 text-sm">Food & Groceries</p>
-            </div>
-            <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark4.png" alt="Sunset in the mountains">
-                <p class="text-center py-4 text-sm">Froozen Food</p>
-            </div>
-            <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark5.png" alt="Sunset in the mountains">
-                <p class="text-center py-4 text-sm">Utilities</p>
-            </div>
+                @endforeach
+
+           
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 container gap-4 px-10">
             <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark21.png" alt="Sunset in the mountains">
+                <img class="w-fit mx-auto rounded-xl h-72  object-cover" src="{{ asset('/storage/' . $sections2->image1) }}" alt="Indo Market">
             </div>
 
             <div class="">
-                <img class="w-fit mx-auto rounded-xl" src="images/mark22.png" alt="Sunset in the mountains">
+                <img class="w-fit mx-auto rounded-xl h-72 object-cover" src="{{ asset('/storage/' . $sections2->image2) }}" alt="Indo Market">
 
             </div>
 
         </div>
 
     </section>
-    <section id="strength" class="py-10">
+    <section id="sections3" class="py-10">
         <div class="container px-1 sm:px-8 py-10">
             <h4 class="text-center align-middle text-black font-light text-md">
-                Deals of <span class="font-bold">the Day</span>
+               {{  $sections3->title1 }} <span class="font-bold">{{  $sections3->title2 }}</span>
             </h4>
-            <h5 class="text-center align-middle text-black font-light text-sm"">Lorem ipsum dolor sit.</h5>
+            <h5 class="text-center align-middle text-black font-light text-sm">{{  $sections3->desc1 }}</h5>
 
         </div>
 
@@ -137,17 +138,18 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 p-20 ">
-            @foreach ($articles as $item)
+            @foreach ($listsections3 as $item)
                 <div class="py-10 rounded-xl grid grid-cols-2 border-2 border-black">
                     <div class="">
                         <img class="h-72 mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
                             alt="Sunset in the mountains">
                     </div>
                     <div class="px-4 py-4">
-                        <div class="font-bold text-xl mb-2 text-gray-700 ">{{ $item->title }}</div>
-                        <p class="text-gray-700 text-xs">
-                            {{ $item->excerpt }}
-                        </p>
+                        <div class="font-bold text-xl mb-2 text-gray-800 ">{{ $item->title }}</div>
+                        <article class="text-sm">
+                            {!! $item->isi  !!}
+
+                        </article>
                     </div>
 
                 </div>
@@ -157,13 +159,13 @@
         </div>
 
     </section>
-    <section id="strength" class="py-10">
+    <section id="sections4" class="py-10">
         <div class="container px-1 sm:px-8 py-10">
             <h4 class="text-center align-middle text-black font-light text-md">
 
-                Featured <span class="font-bold">Product</span>
+                {{  $sections4->title1 }} <span class="font-bold">{{  $sections4->title2 }}</span>
             </h4>
-            <h5 class="text-center align-middle text-black font-light text-sm"">Lorem ipsum dolor sit.</h5>
+            <h5 class="text-center align-middle text-black font-light text-sm">{{  $sections4->desc1 }}</h5>
 
         </div>
 
@@ -171,17 +173,17 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-16 p-20 ">
-            @foreach ($articles as $item)
+            @foreach ($listsections4 as $item)
                 <div class="py-10 rounded-xl bg-gray-50 shadow-lg">
                     <div class="">
-                        <img class="h-72 mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
+                        <img class="h-56 w-auto mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
                             alt="Sunset in the mountains">
                     </div>
                     <div class="px-4 py-4">
-                        <div class="font-bold text-xl mb-2 text-gray-700 ">{{ $item->title }}</div>
-                        <p class="text-gray-700 text-xs">
+                        <div class="font-light text-xl mb-2 text-center">{{ $item->title }}</div>
+                        <article class="text-md text-center">
                             {{ $item->excerpt }}
-                        </p>
+                        </article>
                     </div>
 
                 </div>
@@ -191,11 +193,9 @@
         </div>
 
     </section>
-    <section class=" bg-[url('/public/images/botbannermark.png')] bg-cover bg-center py-8">
-        <h1 class="text-center pt-10 pb-8 text-7xl font-light text-white">Live <span class="font-bold">Healthy</span></h1>
-        <p class="text-center pt-10 pb-8 text-sm font-light text-white lg:mx-96">Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Obcaecati quidem molestias, fugit tenetur, repellendus aliquam ullam, facere aliquid adipisci
-            eaque eveniet officiis ipsum sapiente esse ut ratione reiciendis recusandae tempora.</p>
+    <section id="sections5" class=" bg-[url('/public/images/botbannermark.png')] bg-cover bg-center py-8">
+        <h1 class="text-center pt-10 pb-8 text-7xl text-white"><span class="font-light"> {{ $sections5->title1 }}</span> <span class="font-bold">{{ $sections5->title2 }} </span></h1>
+        <p class="text-center pt-10 pb-8 text-sm font-light text-white lg:mx-96">{{ $sections5->desc1 }} </p>
         <div class="inline-flex items-center flex-wrap justify-center w-full gap-4">
             <img class="h-26" src="images/playstore.png">
             <img class="h-32" src="images/appstore.png">

@@ -1,11 +1,77 @@
-@extends('main')
+@extends('mainBlank')
 
 @section('contents')
-    <header id="" class=" text-center md:pt-36 lg:text-left 2xl:h-screen lg:min-h-fit  pb-6">
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+                    <div class="h-10 self-center mx-4">
+                        <img class="h-6 self-center text-center" src="/images/SARAMODA.png" />
+                    </div>
+
+                </div>
+                <div class="flex items-center ">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-6 lg:hidden">
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#sections3"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1 font-serif text-lg">Collection</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections4"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1 font-serif text-lg">Catalogue</a>
+                            </li>
+                            <li class="group">
+                                <a href="#footer"
+                                    class="text-black py-2 mx-8 group-hover:text-fourth1 font-serif text-lg">Contact</a>
+                            </li>
+                            {{-- <li class="group">
+                                <a href="#"
+                                    class="text-base text-black py-2 mx-8 group-hover:text-fourth1">Contact</a>
+                            </li> --}}
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="" class=" text-center lg:text-left 2xl:h-screen lg:min-h-fit  pb-6 ">
+        <div class="relative overflow-hidden shadow-lg cursor-pointer ">
+
+            <img class="object-cover w-full mx-auto" loading="eager" src="{{ asset('/storage/' . $sections1->image2) }}"
+                alt="Saramoda">
+
+            <div class="absolute top-0  px-6  bg-gray-600 bg-opacity-50 w-full h-full  justify-center items-center">
+                <img class=" m-auto  w-[800px] mb-8 lg:pt-32 md:pt-20 sm:pt-4" loading="eager"
+                    src="{{ asset('/storage/' . $sections1->image1) }}" alt="Saramoda">
+                <h2 class="text-center font-serif font-light tracking-wider">{{ $sections1->title1 }}</h2>
+                <div class="py-8 text-center">
+                    <a href="#sections2"
+                        class="text-lg text-black border-zinc-900 border-2 py-4 px-9 hover:shadow-md hover:opacity-80 hover:bg-slate-500 transition duration-500 ease-in-out shadow-xl font-serif">
+                        GET START</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section> <!-- end of header -->
+
+    <section id="sections2" class=" text-center md:pt-36 lg:text-left mt-96 pb-6">
         {{-- 2xl:h-screen lg:min-h-fit TEMPALTE JAGA2 MANA TAU TEPAKEK --}}
         <div class="container">
+            <h1 class="text-center font-serif text-4xl tracking-widest font-light py-8">{{ $sections2->title1 }}</h1>
             <div class="col-span-1 mx-auto h-[600px] w-auto">
-                <img class="h-[600px] w-[1500px]  object-cover" src="images/bannersara.png">
+                <img class="h-[600px] w-[1500px]  object-cover" src="{{ asset('/storage/' . $sections2->image1) }}">
             </div>
 
 
@@ -18,45 +84,36 @@
             <span class="items-end  h-0.5 flex-grow bg-gray-500 lg:w-1/3"></span>
         </div>
 
-    </header> <!-- end of header -->
+    </section> <!-- end of header -->
 
-
-
-
-    <section id="strength" class="py-10">
+    <section id="sections3" class="py-10">
         <div class="container justify-start flex flex-row">
-            <h1 class="text-7xl font-serif font-light text-black mx-4">FOR YOUR <br> ESSENTIAL <br> SYTLE</h1>
+            <h1 class="text-7xl font-serif font-light text-black mx-4">{{ $sections3->title1 }} <br>
+                {{ $sections3->title2 }} <br> {{ $sections3->title3 }}</h1>
         </div>
 
 
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 container gap-1 px-10">
-            <div class="">
-                <img class="mt-10 h-96 mx-auto" src="images/sara1.png" alt="Sunset in the mountains">
+        <div class="gap-1 px-10">
+            <div class="container">
+                <img class="mt-10  mx-auto w-screen" loading="lazy" src="{{ asset('/storage/' . $sections3->image1) }}"
+                    alt="Sunset in the mountains">
 
             </div>
 
-            <div class="">
-                <img class="h-[425px] mx-auto" src="images/sara2.png" alt="Sunset in the mountains">
-
-            </div>
-            <div class="">
-                <img class="mt-6 h-[400px] mx-auto" src="images/sara3.png" alt="Sunset in the mountains">
-
-            </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 container gap-1 px-10 sm:mb-4">
 
             <div class="">
-                <img class="mt-10 h-96 mx-auto" src="images/sara4.png" alt="Sunset in the mountains">
+                <img class="mt-10 h-96 mx-auto" loading="lazy" src="{{ asset('/storage/' . $sections3->image2) }}"
+                    alt="Sunset in the mountains">
 
             </div>
 
             <div class="col-span-2  place-self-center lg:mx-32 sm:m-8">
-                <h3 class="text-left text-4xl text-black font-serif font-thin">FOUR YOUR <br> ESSENTIAL STYLE</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sunt ex cumque perspiciatis dolore
-                    error ipsa ducimus, neque porro, doloremque, officiis veniam. Reprehenderit consequatur, veritatis eius
-                    inventore dolorem iure aspernatur.</p>
+                <h3 class="text-left text-4xl text-black font-serif font-thin">{{ $sections3->subtitle1 }} <br>
+                    {{ $sections3->subtitle2 }} </h3>
+                <p>{{ $sections3->subdesc1 }}</p>
                 <div class="py-8 text-center">
                     <a href="#" target="blank"
                         class="text-lg text-black border-zinc-900 border-2 py-4 px-9 hover:shadow-md hover:opacity-80 hover:bg-slate-500 transition duration-500 ease-in-out shadow-xl font-serif">
@@ -68,7 +125,7 @@
 
     </section>
 
-    <section class="py-10 ">
+    <section id="sections4" class="py-10 ">
         </div>
 
 
@@ -77,82 +134,33 @@
         </div>
         <div
             class="flex flex-row text-center justify-center container lg:gap-48 my-auto md:gap-16 font-serif text-black font-light">
-            <h5 class="invisible sm:visible">Essential</h5>
-            <h5 class="sm:text-center">Essential</h5>
-            <h5 class="invisible sm:visible">Essential</h5>
+            <h5 class="invisible sm:visible">{{ $sections4->title1 }} </h5>
+            <h5 class="sm:text-center">{{ $sections4->title2 }}</h5>
+            <h5 class="invisible sm:visible">{{ $sections4->title3 }}</h5>
         </div>
         <div class="mx-4 relative flex pb-1 pt-12 items-center">
             <span class="items-end  h-0.5 flex-grow bg-gray-500 lg:w-1/3"></span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-1 p-10">
-            <div class="max-w-sm  overflow-hidden  px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-                    <img class="object-cover h-[500px]" src="images/Rectangle73.png" alt="Sunset in the mountains">
-                </div>
+            @foreach ($listsections4 as $item)
+                <div class="max-w-sm  overflow-hidden  px-4 pt-4 ">
+                    <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
+                        <img class="object-cover h-[500px]" src="{{ asset('/storage/' . $item->image) }}" alt="sara moda">
+                    </div>
 
-                <div class="px-4 py-4">
-                    <p class="text-gray-700 text-xs">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quam quia facere voluptas voluptate
-                        ducimus quaerat libero repudiandae dolores numquam?
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4 flex flex-warp justify-between bottom-0">
-                    <p class="text-sm font-light font-serif">Essential</p>
-                    <p class="text-sm font-light font-serif">Rp50</p>
-                </div>
+                    <div class="px-4 py-4">
+                        <article class="text-gray-700 text-xs">
+                            {!! $item->isi !!}
+                        </article>
+                    </div>
+                    <div class="pt-4 pb-2 px-4 flex flex-warp justify-between bottom-0">
+                        <p class="text-sm font-light font-serif">{{ $item->title }}</p>
+                        <p class="text-sm font-light font-serif">{{ $item->subtitle }}</p>
+                    </div>
 
-            </div>
-            <div class="max-w-sm  overflow-hidden  px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-                    <img class="object-cover h-[500px]" src="images/saraproduk1.png" alt="Sunset in the mountains">
                 </div>
-                <div class="px-4 py-4">
-                    <p class="text-gray-700 text-xs">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias nesciunt est eligendi sequi,
-                        natus neque doloremque.
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4 flex flex-warp justify-between align-text-bottom object-bottom origin-bottom">
-                    <p class="text-sm font-light font-serif align-text-bottom">Essentsial</p>
-                    <p class="text-sm font-light font-serif align-text-bottom">Rp50</p>
-                </div>
-            </div>
-            <div class="max-w-sm overflow-hidden px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-                    <img class="object-cover h-[500px]" src="images/market.jpg" alt="Sunset in the mountains">
-                </div>
-                <div class="px-4 py-4">
-                    <p class="text-gray-700 text-xs">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos fugiat exercitationem perspiciatis
-                        neque odio, voluptatem quibusdam repudiandae maiores assumenda, alias a? Asperiores, magni? Neque,
-                        amet?
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4 flex flex-warp justify-between">
-                    <p class="text-sm font-light font-serif">Essential</p>
-                    <p class="text-sm font-light font-serif">Rp50</p>
-                </div>
-
-            </div>
-            <div class="max-w-sm overflow-hidden px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-
-                    <img class="object-cover h-[500px]" src="images/yt.png" alt="Sunset in the mountains">
-                </div>
-                <div class="px-4 py-4">
-                    <p class="text-gray-700 text-xs">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorum numquam suscipit, quisquam
-                        quod voluptatem temporibus nemo excepturi aliquam fugiat non eaque eos accusantium, magni harum ad.
-                        Cumque, dolore dolor.
-                    </p>
-                </div>
-                <div class="pt-4 pb-2 px-4 flex flex-warp justify-between">
-                    <p class="text-sm font-light font-serif">Essential</p>
-                    <p class="text-sm font-light font-serif">Rp50</p>
-                </div>
-
-            </div>
+            @endforeach
             {{-- @endforeach --}}
 
         </div>
@@ -162,11 +170,12 @@
         </div>
         </div>
     </section>
-    <section id="summer" class="py-10">
+    <section id="sections5" class="py-10">
         <div class="container justify-start flex flex-row">
-            <h1 class="text-7xl font-serif font-light text-black mx-4">SUMMER <br> COLLECTION</h1>
+            <h1 class="text-7xl font-serif font-light text-black mx-4">{{ $sections5->title1 }} <br>
+                {{ $sections5->title2 }}</h1>
         </div>
-        <div class="lg:ml-16  splide">
+        <div class="lg:ml-56  splide ">
             <div class="splide__arrows">
                 <button class="bg-gray-900 shadow splide__arrow splide__arrow--prev">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -184,66 +193,45 @@
                 </button>
             </div>
             <div class=" splide__track  mb-10">
-                <div class="splide__list gap-x-4 mb-10">
-                    <div class="leading-1 w-full splide__slide  h-[500]  mb-10 lg:max-w-lg">
-                        <img class="h-[500] " src="images/Rectangle183.png" alt="Sunset in the mountains">
+                <div class="splide__list gap-x-4 mb-10 ">
+                    @foreach ($listsections5 as $item)
+                        <div class="leading-1 w-full splide__slide  h-[500]  mb-10 lg:max-w-lg">
+                            <img class="h-[500px] object-cover w-[500px]" src="{{ asset('/storage/' . $item->image) }}"
+                                alt="Sunset in the mountains">
 
-                    </div>
-
-                    <div class="leading-1 w-full splide__slide  h-[500]  mb-10 lg:max-w-lg">
-                        <img class="h-[500]  " src="images/Rectangle193.png" alt="Sunset in the mountains">
-
-                    </div>
-                    <div class="leading-1 w-full splide__slide  h-[500]  mb-10 lg:max-w-lg">
-                        <img class="h-[500]  " src="images/Rectangle203.png" alt="Sunset in the mountains">
-
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
+    </section>
+    <section id="sections6" class="py-10">
+
         <div class="container">
             <div class="col-span-1 m-auto min-w-fit min-h-full">
-                <img src="images/bannersara.png">
+                <img src="{{ asset('/storage/' . $sections6->image1) }}">
             </div>
 
 
         </div> <!-- end of container -->
- <div class="grid grid-cols-1 md:grid-cols-4 gap-1 p-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-1 p-10">
+                    @foreach ($listsections6 as $item)
+
             <div class="max-w-sm  overflow-hidden  px-4 pt-4 ">
                 <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-                    <img class="object-cover h-[500px]" src="images/Rectangle73.png" alt="Sunset in the mountains">
+                    <img class="object-cover h-[500px]" src="{{ asset('/storage/' . $item->image) }}" alt="Sunset in the mountains">
                 </div>
 
             </div>
-            <div class="max-w-sm  overflow-hidden  px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-                    <img class="object-cover h-[500px]" src="images/saraproduk1.png" alt="Sunset in the mountains">
-                </div>
-
-            </div>
-            <div class="max-w-sm overflow-hidden px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-                    <img class="object-cover h-[500px]" src="images/market.jpg" alt="Sunset in the mountains">
-                </div>
-
-
-            </div>
-            <div class="max-w-sm overflow-hidden px-4 pt-4 ">
-                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
-
-                    <img class="object-cover h-[500px]" src="images/yt.png" alt="Sunset in the mountains">
-                </div>
-
-
-            </div>
-            {{-- @endforeach --}}
+           
+            @endforeach
 
         </div>
-                        <div class="py-8 text-center">
-                    <a href="#" target="blank"
-                        class="text-lg text-black border-zinc-900 border-2 py-4 px-9 hover:shadow-md hover:opacity-80 hover:bg-slate-500 transition duration-500 ease-in-out shadow-xl font-serif">
-                        Shop Now</a>
-                </div>
+        <div class="py-8 text-center">
+            <a href="#" target="blank"
+                class="text-lg text-black border-zinc-900 border-2 py-4 px-9 hover:shadow-md hover:opacity-80 hover:bg-slate-500 transition duration-500 ease-in-out shadow-xl font-serif">
+                Shop Now</a>
+        </div>
     </section>
 
 
