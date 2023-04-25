@@ -1,241 +1,220 @@
 @extends('main')
 
 @section('contents')
-    <header id="" class=" text-center lg:text-left pb-10">
+    <div class=" bg-gradient-to-r from-white to-gray-200 py-10">
+        <section id="sections1" class="mb-8">
+            <img class="w-screen   object-cover" src="{{ asset('/storage/' . $sections1->image1) }}">
 
-
-        <div class="">
-
-            <img class="w-screen   object-cover" src="images/propertibanner.png">
-
-
-
-        </div>
+        </section>
 
 
 
 
 
-
-    </header> <!-- end of header -->
-
-
-
-
-    <section id="strength" class="bg-gradient-to-r from-white to-gray-200 py-10">
-        <div class="mx-4 relative flex pb-1 pt-12 items-center">
-            <span class="flex-shrink mx-4 text-black font-bold text-6xl">Find Your Comfort</span>
-            <span class="  items-end h-0.5 flex-grow bg-black lg:w-1/3"></span>
-        </div>
-        <span class="mx-8 text-black font-bold text-6xl">House</span>
-        <hr class="w-full h-0.5 border-0 rounded bg-black my-10">
-
-
-    </section>
-
-    <section class=" bg-gray-100 rounded-lg shadow-xl my-4 lg:mx-4">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-4 sm:flex md:flex-row sm:mx-auto  container py-6">
-
-
-            <div class="col-span-1">
-                <h1 class=" text-2xl font-light">Our Value</h1>
-                <h5 class="font-black text-6xl  pb-10">Value We Give <br>to You</h5>
-                <div class="border-2 border-black rounded-full my-2">
-                    <h5 class="text-black pt-4 pb-2 px-32">Find Your Comfort House</h5>
-                    <p class="text-black pb-2 font-light px-32">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Commodi porro corporis aperiam amet dolor obcaecati autem magnam qui, minus delectus.</p>
-                </div>
-                <div class="border-2 border-black rounded-full my-2">
-                    <h5 class="text-black pt-4 pb-2 px-32">Find Your Comfort House</h5>
-
-                </div>
-                <div class="border-2 border-black rounded-full my-2">
-                    <h5 class="text-black pt-4 pb-2 px-32">Find Your Comfort House</h5>
-
-                </div>
-                <div class="border-2 border-black rounded-full my-2">
-                    <h5 class="text-black pt-4 pb-2 px-32">Find Your Comfort House</h5>
-
-                </div>
-                <div class="border-2 border-black rounded-full my-2">
-                    <h5 class="text-black pt-4 pb-2 px-32">Find Your Comfort House</h5>
-
-                </div>
-
+        <section id="sections3" class=" py-10">
+            <div class="mx-4 relative flex pb-1 pt-12 items-center">
+                <span class="flex-shrink mx-4 text-black font-bold text-6xl">{{ $sections2->title1 }}</span>
+                <span class="  items-end h-0.5 flex-grow bg-black lg:w-1/3"></span>
             </div>
+            <span class="mx-8 text-black font-bold text-6xl">{{ $sections2->title2 }}</span>
 
-            <div class="col-span-1">
-                <img class="w-screen rounded-3xl border-black border-2 object-cover" src="images/ip1.png">
+
+            <div class="">
+
+                <img class="w-screen   object-cover" src="{{ asset('/storage/' . $sections2->image1) }}">
+
 
 
             </div>
+        </section>
+        <section>
 
-
-
-
-        </div>
-
-    </section>
-
-
-    <section class="">
-
-
-        <div class="">
 
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4 p-20 ">
-                @foreach ($articles as $item)
-                    <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
 
-                        <img class="object-cover w-full h-48 mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
-                            alt="Sunset in the mountains">
 
-                        <div class="absolute top-16 left-0 px-6 py-4">
-                            <div class="text-xl tracking-tight text-black font-bold">{{ $item->title }}</div>
+                <div class=" col-span-1">
+                    @foreach ($listsections3 as $item)
+                        <button class="left-0 px-6 py-4" id="parent{{ $item->id }}">
+                            <img class="object-cover rounded-xl h-72 w-48 mx-auto border-black border-2"
+                                src="{{ asset('/storage/' . $item->image) }}" alt="Sunset in the mountains">
+                            <h2 class="text-xl tracking-tight text-black font-bold">{{ $item->title }}</h2>
                             <p class="leading-normal text-black font-thin">
-                                {{ $item->excerpt }}
+                                {{ $item->subtitle }}
                             </p>
+                        </button>
+                    @endforeach
+
+                </div>
+                <div class="col-span-4 bg-gradient-to-b from-black via-black to-zinc-600 rounded-xl p-16">
+                    <div class="splide">
+                        <div class="splide__arrows">
+                            <button class="bg-gray-900 shadow splide__arrow splide__arrow--prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </button>
+                            <button class="bg-gray-900 shadow splide__arrow splide__arrow--next">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </button>
                         </div>
+                        <div class="splide__track  mb-10">
+                            <div class="splide__list  mb-10">
+                                @foreach ($listsections3 as $item)
+                                    <div id="" class="splide__slide mt-1 rounded-md ">
+                                        <h1 class="font-light text-white border-2 rounded-lg border-white px-2 w-96 mb-8">
+                                            {{ $item->title }}</h1>
 
-
-                    </div>
-
-                    {{-- @endforeach --}}
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-    <section class="  my-8">
-        <h1 class="align-middle text-center text-black font-semibold text-5xl py-10 ">LATEST PROMO</h1>
-
-        <div class="lg:grid lg:grid-cols-2 md:flex md:flex-row md:mx-auto container px-1 sm:px-8 ">
-
-            <div class="col-span-1">
-
-                <img src="/images/Rectangle6.png" class="w-full h-full">
-
-            </div>
-
-            <div class="col-span-1">
-
-                <img src="/images/Rectangle6.png" class="w-full h-full">
-
-            </div>
-
-        </div>
-        <h5 class=" text-center text-black font-thin text-xl py-10 ">ONLY ON</h5>
-        <h5 class=" text-center text-black font-bold text-2xl py-10 ">DOWNLOAD NOW</h5>
-        <div class="inline-flex items-center flex-wrap justify-center w-full gap-4">
-            <img class="" src="images/playstoreitam.png">
-            <img class="" src="images/appstoreitam.png">
-        </div>
-
-    </section>
-    <section class="">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20">
-
-            <div class="col-span-1">
-                <h5 class=" text-black font-bold text-3xl py-4 ">MEET <br> OUR TEAM</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat quasi ullam minima delectus laudantium
-                    voluptate nemo molestias nihil, enim, nostrum quae aspernatur id sequi eos eius aperiam dignissimos
-                    aliquam sit.</p>
-            </div>
-            <div class="col-span-2">
-                <div class="splide">
-                    <div class="splide__arrows">
-                        <button class="bg-gray-900 shadow splide__arrow splide__arrow--prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </button>
-                        <button class="bg-gray-900 shadow splide__arrow splide__arrow--next">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-6 h-6 text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="splide__track  mb-10">
-                        <div class="splide__list gap-x-4 mb-10">
-                            <div class="leading-1 w-full rounded-xl shadow splide__slide 2xl:h-96 mb-10 max-w-sm">
-                                <img src="/images/Rectangle6.png" class="h-64 object-cover w-fit rounded-t-xl">
-                                <div class="p-4">
-
-                                    <p class="text-black text-2xl font-semibold ">
-                                        Lunnizom
-                                    </p>
-                                    <p class="text-black text-2xl font-light ">
-                                        Foundation
-                                    </p>
-                                    <div class="inline-flex align-midle place-items-center gap-2">
-
-                                        <img src="/images/instagramitam.png" class="h-6">
-                                        <p class="text-black text-2xl font-light ">
-                                            asasasa
-                                        </p>
+                                        <article class="text-white trix-editor">{!! $item->isi !!}
+                                        </article>
                                     </div>
-                                </div>
+                                @endforeach
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
 
 
-        </div>
-    </section>
-    <section class="my-8 bg-gray-100">
+        </section>
+        <section id="sections4" class="  rounded-lg  my-4 lg:mx-4">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-4 sm:flex  sm:mx-auto  container py-6">
 
-        <h5 class="text-center text-black font-bold text-4xl py-4 ">WHAT PEOPLE SAID <br> ABOUT US</h5>
-        <p class="text-center font-light text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Doloribus
-            adipisci quas impedit officiis vero dolorum quasi nostrum voluptatibus quos quisquam!</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20 ">
-            @foreach ($articles as $item)
-                <div class="max-w-sm overflow-hidden shadow-lg bg-white rounded-xl">
 
-                    <img class="w-full h-64 object-cover mx-auto pt-4" src="{{ asset('/storage/' . $item->image) }}"
-                        alt="Sunset in the mountains">
+                <div class="col-span-1">
+                    <h1 class=" text-2xl font-light">{{ $sections4->title1 }}</h1>
+                    <h5 class="font-black text-6xl  pb-10">{{ $sections4->title2 }} </h5>
+                    @foreach ($listsections4 as $item)
+                        <div class="border-2 border-black rounded-full my-2">
+                            <div class="grid grid-cols-5">
+                                <div class="col-span-4">
+                                    <h5 class="text-black pt-4 pb-2 px-32">{{ $item->title }}</h5>
+                                    <article id="value-{{ $item->id }}"
+                                        class="hidden text-black pb-2 font-light px-32">
+                                        {!! $item->isi !!}</article>
+                                </div>
+                                <div class="col-span-1 m-auto">
+                                    <button data-id="{{ $item->id }}"
+                                        onclick="showHide('value-{{ $item->id }}');">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+
+
+                <div class="col-span-1">
+                    <img class="w-screen rounded-3xl h-[700px]  border-black border-2 object-cover"
+                        src="{{ asset('/storage/' . $sections4->image1) }}">
 
 
                 </div>
-                {{-- @endforeach --}}
-            @endforeach
-        </div>
-    </section>
-    <section class="my-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20">
-            <div class="col-span-2">
-                <img src="/images/barbemap.png" class="h-96">
+
+
+
+
             </div>
+
+        </section>
+
+
+        <section class="bg-black  mt-8">
+            <h1 class="align-middle text-center text-white font-semibold text-5xl pt-10 ">{{ $sections5->title1 }}</h1>
+            <p class="text-center text-white font-light my-8">{{ $sections5->desc1 }}</p>
 
             <div class="col-span-1">
-                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">HOW TO GET<br>HERE</h5>
-                <p class="text-left font-light text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Doloribus
-                    adipisci quas impedit officiis vero dolorum quasi nostrum voluptatibus quos quisquam!</p>
-            </div>
-        </div>
-    </section>
-    <section id="partner">
-        <div class="pt-20">
-            <h4 class="text-center pb-16 text-black text-4xl font-bold">OUR PARTNER</h4>
-            <div class="flex justify-center gap-24 mx-auto mb-40">
-                @foreach ($tools as $item)
-                    <img class="h-16" src="{{ asset('storage/' . $item->image) }}" alt="Lunnizoom Partner" />
-                @endforeach
+
+                <img src="{{ asset('/storage/' . $sections5->image1) }}"
+                    class=" w-screen h-[600px] object-cover border-white border-2 rounded-2xl container">
 
             </div>
 
-        </div>
-    </section>
+
+            <h5 class=" text-center text-white  text-xl py-10 ">{{ $sections5->subtitle1 }}</h5>
+            <h5 class=" text-center text-white font-thin text-lg py-10 lg:mx-96 lg:px-32">{{ $sections5->subdesc1 }}</h5>
+
+
+        </section>
+        <section class="">
+            <div class="bg-gradient-to-b from-black via-black">
+                <div class="relative overflow-hidden  cursor-pointer ">
+
+                    <img src="{{ asset('/storage/' . $sections6->image1) }}"
+                        class="  h-full  border-black border-2 rounded-3xl container">
+
+                    <div class="absolute top-0  px-6   w-full h-full  justify-center items-center ">
+                        <div class="grid grid-cols-3">
+                            <div class="col-span-1"></div>
+                            <div class="col-span-1"></div>
+                            <div
+                                class="bg-black max-w-sm right-10 col-span-1 rounded-xl border-white border-2 px-8 md:pb-16 pb-4 md:pt-4">
+                                <h2 class=" text-white md:text-2xl text-xs">{{ $sections6->title1 }}</h2>
+                                <h1 class=" text-white md:text-5xl text-sm">{{ $sections6->title2 }}</h1>
+
+                                <h4 class=" text-white md:text-2xl  text-sm pt-2">{{ $sections6->subtitle1 }}</h4>
+                                <h5 class=" text-white md:text-sm   text-xs font-light">{{ $sections6->subdesc1 }}</h5>
+                                <h4 class=" text-white md:text-2xl  text-sm pt-2">{{ $sections6->subtitle2 }}</h4>
+                                <h5 class=" text-white md:text-sm  text-xs  font-light">{{ $sections6->subdesc2 }}</h5>
+                                <h4 class=" text-white md:text-2xl  text-sm pt-2">{{ $sections6->subtitle3 }}</h4>
+                                <h5 class=" text-white md:text-sm   text-xs font-light">{{ $sections6->subdesc3 }}</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <section class="py-28">
+                <div class="">
+                    <span class="mx-8 text-black font-bold text-6xl">{{ $sections7->title1 }}</span>
+                    <div class="mx-4 relative flex pb-1  items-center">
+                        <span class="flex-shrink mx-4 text-black font-light text-3xl">{{ $sections7->title2 }}</span>
+                        <span class="  items-end h-0.5 flex-grow bg-black lg:w-1/3"></span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-20 ">
+                        @foreach ($listsections7 as $item)
+                            <div class="max-w-sm  overflow-hidden  px-4 pt-4 ">
+                                <div class="min-w-fit h-[500px] overflow-hidden mx-auto">
+                                    <img class="object-cover h-[500px]" src="{{ asset('/storage/' . $item->image) }}"
+                                        alt="sara moda">
+                                </div>
+
+
+                                <div class="pt-4 pb-2 px-4 flex flex-warp justify-between bottom-0">
+                                    <article class="text-black text-xs">
+                                        {!! $item->isi !!}
+                                    </article>
+                                    <p class="text-xs font-light font-serif py-4 px-2 rounded-full border-2 border-black">{{ $item->title }}</p>
+                                    <p class="text-xs font-light font-serif py-4 px-2 rounded-full border-2 border-black">{{ $item->subtitle }}</p>
+                                </div>
+
+                            </div>
+                            {{-- @endforeach --}}
+                        @endforeach
+
+                    </div>
+                </div>
+            </section>
+    </div>
     <section id="footer">
         <div class=" bg-zinc-800">
             @foreach ($contacts as $item)
@@ -351,6 +330,7 @@
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/js/splide.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
         var splide = new Splide('.splide', {
             type: 'loop',
@@ -359,6 +339,13 @@
 
         splide.mount();
     </script>
+    <script>
+        function showHide(id) {
+            $("#" + id).toggle("hidden");
+        }
+        //hamburger
+    </script>
+
     {{-- <script>
         function gallery() {
             this.index = 0;

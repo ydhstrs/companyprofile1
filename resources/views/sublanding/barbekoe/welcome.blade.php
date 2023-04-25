@@ -23,19 +23,20 @@
                         class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#sections3"
-                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Download App</a>
+                                <a href="#sections3" class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Download
+                                    App</a>
                             </li>
                             <li class="group">
-                                <a href="#sections2" class="text-black  py-2 mx-8 group-hover:text-fourth1  text-lg">Our Menu</a>
+                                <a href="#sections2" class="text-black  py-2 mx-8 group-hover:text-fourth1  text-lg">Our
+                                    Menu</a>
                             </li>
                             <li class="group">
-                                <a href="#sections4"
-                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Our Team</a>
+                                <a href="#sections4" class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Our
+                                    Team</a>
                             </li>
                             <li class="group">
-                                <a href="#footer"
-                                    class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Contact Us</a>
+                                <a href="#footer" class="text-black py-2 mx-8 group-hover:text-fourth1  text-lg">Contact
+                                    Us</a>
                             </li>
                             {{-- <li class="group">
                                 <a href="#"
@@ -180,9 +181,10 @@
                     </div>
                     <div class="splide__track  mb-10">
                         <div class="splide__list gap-x-4 mb-10">
-                                @foreach ($listsections4 as $item)
+                            @foreach ($listsections4 as $item)
                                 <div class="leading-1 w-full rounded-xl shadow splide__slide 2xl:h-96 mb-10 max-w-sm">
-                                    <img src="{{ asset('/storage/' . $item->image) }}" class="h-64 object-cover w-fit rounded-t-xl">
+                                    <img src="{{ asset('/storage/' . $item->image) }}"
+                                        class="h-64 object-cover w-fit rounded-t-xl">
                                     <div class="p-4">
 
                                         <p class="text-black text-2xl font-semibold ">
@@ -202,9 +204,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
-                            </div>
+                            @endforeach
                         </div>
+                    </div>
                 </div>
             </div>
 
@@ -213,7 +215,8 @@
     </section>
     <section id="sections5" class="my-8 bg-gray-100">
 
-        <h5 class="text-center text-black font-bold text-4xl py-4 ">{{ $sections5->title1 }} <br> {{ $sections5->title2 }}</h5>
+        <h5 class="text-center text-black font-bold text-4xl py-4 ">{{ $sections5->title1 }} <br>
+            {{ $sections5->title2 }}</h5>
         <p class="text-center font-light text-black">{{ $sections5->desc1 }}</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20  place-items-center">
             @foreach ($listsections5 as $item)
@@ -227,14 +230,15 @@
             @endforeach
         </div>
     </section>
-    <section id="sections6"  class="my-8">
+    <section id="sections6" class="my-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-20">
             <div class="col-span-2">
                 <img src="{{ asset('/storage/' . $sections6->image1) }}" class="h-96">
             </div>
 
             <div class="col-span-1">
-                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">{{ $sections6->title1 }}<br>{{ $sections6->title2 }}</h5>
+                <h5 class="text-left text-black font-bold text-4xl py-4 lg:pt-28">
+                    {{ $sections6->title1 }}<br>{{ $sections6->title2 }}</h5>
                 <p class="text-left font-light text-black">{{ $sections6->desc1 }}</p>
             </div>
         </div>
@@ -374,6 +378,7 @@
 
         splide.mount();
     </script>
+
     {{-- <script>
         function gallery() {
             this.index = 0;

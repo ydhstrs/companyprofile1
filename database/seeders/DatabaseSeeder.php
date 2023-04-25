@@ -345,6 +345,175 @@ Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
             'withlist' => 1,
         ]);
 
+
+        Section::create([
+            'id' => 21,
+            'typelanding' => 'indomarket',
+            'typesection' => 1,
+            'image1' => 'section-images/gpI8qF9Sp8Ek3bZ36p0j9yPa0nQV64qiUxQqvbE9.jpg',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 22,
+            'typelanding' => 'indomarket',
+            'typesection' => 2,
+            'title1' => 'Shop by',
+            'title2' => 'Category',
+            'desc1' => 'Lorem ipsum Dolus it',
+            'image1' => 'section-images/jxZnfuyuRWpzcV3ncT8Y3EWaTF7iOQEOnKVwX4l4.jpg',
+            'image1' => 'section-images/dHK3QDN5PQlLyr2fMIrkfC2Rekqzvc5gqtYrEoMO.jpg',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 23,
+            'typelanding' => 'indomarket',
+            'typesection' => 3,
+            'title1' => 'Deals of',
+            'title2' => 'the Day',
+            'desc1' => 'Lorem Ipsum Dolores itt',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 24,
+            'typelanding' => 'indomarket',
+            'typesection' => 4,
+            'title1' => 'Featured',
+            'title2' => 'Product',
+            'desc1' => 'Lorem Ipsum Dolores itt',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 25,
+            'typelanding' => 'indomarket',
+            'typesection' => 5,
+            'title1' => 'Live',
+            'title2' => 'Healthy',
+            'desc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 16,
+            'typelanding' => 'saramoda',
+            'typesection' => 1,
+            'title1' => 'WELCOME TO SARAMODA',
+            'image1' => 'section-images/WNq4NPhrxOnSD02gluXqM8pES0n6YnaVjuzDQz05.jpg',
+            'image2' => 'section-images/WNq4NPhrxOnSD02gluXqM8pES0n6YnaVjuzDQz05.jpg',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 17,
+            'typelanding' => 'saramoda',
+            'typesection' => 2,
+            'title1' => 'SARAMODA',
+            'image1' => 'section-images/3vfGWt3es9PMWMmqwpDoyUWUczyGvToTUD2IzBAN.jpg',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 18,
+            'typelanding' => 'saramoda',
+            'typesection' => 3,
+            'title1' => 'FOR YOUR',
+            'title2' => 'ESSENTIAL',
+            'subtitle1' => 'FOR YOUR',
+            'subtitle2' => 'ESSENTIAL STYLE',
+            'subdesc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+            'image1' => 'section-images/KhM9wFZV9CwV1BZENADKx6iVeE2lCF4HmAj77Pv3.png',
+            'image2' => 'section-images/7eGHdGahKR87WsR4xWR8DjFuY1wkTMeFN42UMSQe.png',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 19,
+            'typelanding' => 'saramoda',
+            'typesection' => 4,
+            'title1' => 'Essential',
+            'title2' => 'Essential',
+            'title3' => 'Essential',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 20,
+            'typelanding' => 'saramoda',
+            'typesection' => 5,
+            'title1' => 'SUMMER',
+            'title2' => 'COLLECTION',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 201,
+            'typelanding' => 'saramoda',
+            'typesection' => 6,
+            'image1' => 'section-images/I9E9DqnNRLVKl7olkGkM5rgIcv9UCzJ0WgEjQldz.jpg',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 42,
+            'typelanding' => 'indoproperti',
+            'typesection' => 1,
+            'title1' => 'BETTER PLACE',
+            'title2' => 'BETTER FUTURE',
+            'image1' => 'section-images/mOtjoGTvEfxUkNTKU8U1vQNGcrmnDsRrDA2Om9Ws.png',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 43,
+            'typelanding' => 'indoproperti',
+            'typesection' => 2,
+            'title1' => 'Find Your Comfort',
+            'title2' => 'House',
+            'image1' => 'section-images/wq9KHPUFa40KnOl8TU40nTMgFFoFSCUXURkdv0jE.png',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 44,
+            'typelanding' => 'indoproperti',
+            'typesection' => 3,
+
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 45,
+            'typelanding' => 'indoproperti',
+            'typesection' => 4,
+            'title1' => 'Our Value',
+            'title2' => 'Value We Give to You',
+            'image1' => 'section-images/RZhw7a7NS1SwiUKNi79pjeb74vW4Nh9umlSHnX73.jpg',
+            'withlist' => 1,
+        ]);
+        Section::create([
+            'id' => 46,
+            'typelanding' => 'indoproperti',
+            'typesection' => 5,
+            'title1' => 'Meet Our Team',
+            'desc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti',
+            'subtitle1' => 'Find Your Comfort House',
+            'subdesc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti',
+            'image1' => 'section-images/qEdgy2zUGGc48j6UPatB3cM3f20kqCL2d7FEvHaM.jpg',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 47,
+            'typelanding' => 'indoproperti',
+            'typesection' => 6,
+            'title1' => 'Jl. Gagak Hitam',
+            'title2' => 'No.25',
+            'subtitle1' => 'Location',
+            'subtitle2' => 'Location',
+            'subtitle3' => 'Location',
+            'subdesc1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'subdesc2' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'subdesc3' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'image1' => 'section-images/Ncel4v0qsFeiwr14MICvWz5VJNI9IMcp2eQJGwUK.png',
+            'withlist' => 0,
+        ]);
+        Section::create([
+            'id' => 48,
+            'typelanding' => 'indoproperti',
+            'typesection' => 7,
+            'title1' => 'Latest',
+            'title2' => 'From Lunnizom Indo Properti',
+            'withlist' => 1,
+        ]);
+
         ListSection::create([
             'typelanding' => 'legalin',
             'id_section' => 13,
@@ -959,6 +1128,346 @@ Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque
             'title' => 'barbekoesponsor5',
             'slug' => 'barbekoesponsor5',
             'image' => 'listsection-images/6x0dtpFm4jRNPICmpEDyzp2dtIlP3HwcDhylB9ax.png',
+        ]);
+
+
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 21,
+            'title' => 'FREE DELIVERY',
+            'subtitle' => 'Lorem Ipsum Dolores',
+            'slug' => 'free-delivery',
+            'image' => 'listsection-images/h65AUIiftPCRrzB4zbjAAY0Fb3n8SAa2hgcZx53w.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 21,
+            'title' => 'SECURE PAYMENT',
+            'subtitle' => 'Lorem Ipsum Dolores',
+            'slug' => 'secure-payment',
+            'image' => 'listsection-images/2J1EgJfUReI6mPbCvu6xS2zKrnnSPx96pvOIB8d3.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 21,
+            'title' => 'REAL TIME SUPPORT',
+            'subtitle' => 'Lorem Ipsum Dolores',
+            'slug' => 'real-time-support',
+            'image' => 'listsection-images/9ziMfvBuPtVbT8jarddqMaQ0u4eshAqYtH2vd1RG.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 21,
+            'title' => '24 HOURS RETURN',
+            'subtitle' => 'Lorem Ipsum Dolores itt',
+            'slug' => '24-hours-return',
+            'image' => 'listsection-images/opmf5qcvQdBDkoP8dwKdlRuFpqNKE31Y98Dk9XlJ.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 22,
+            'title' => 'Vegetables',
+            'slug' => 'vegetables',
+            'image' => 'listsection-images/QegWR3oZNSODVXmpr3SbCdwfLUxAluto3lt0nfng.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 22,
+            'title' => 'Snack',
+            'slug' => 'snack',
+            'image' => 'listsection-images/IvhuQ40GxZ4uc2XEiwC1SaBZTG4WekaBrmpzmDKI.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 22,
+            'title' => 'Food & Groceries',
+            'slug' => 'food-&-groceries',
+            'image' => 'listsection-images/LjOAk5DD3xaWz4sKY8Hx73JlUZ2MPTGQ36D0Z7vq.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 22,
+            'title' => 'Frozen Food',
+            'slug' => 'frozen-food',
+            'image' => 'listsection-images/tM1P0RdzPnYskBNpSvRyHZBZyMEcFUWHwvVZT66d.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 22,
+            'title' => 'Utilities',
+            'slug' => 'utilities',
+            'image' => 'listsection-images/k68T4LO0fmHYQHX5SnWgoiGfR3MwzA071gIwbLMJ.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 23,
+            'title' => 'Shop by Category',
+            'slug' => 'shop-by-category',
+            'image' => 'listsection-images/k6c4XDS6dOA6Vyd3uvC6RIhH5D8WAvBPreDrInUu.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p><p>&nbsp;</p><p>Rp<strong>100.000</strong></p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 23,
+            'title' => 'Shop by Category',
+            'slug' => 'shop-by-category2',
+            'image' => 'listsection-images/Zuoft9VhlznegKEibxeshpuUDj1YI3L04gjIXwf0.png',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p><p>&nbsp;</p><p>Rp<strong>100.000</strong></p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 24,
+            'title' => 'Nivea Cream',
+            'slug' => 'nivea-cream',
+            'image' => 'listsection-images/mYT97dTyhC14zxaRqM6nrAUP8mEimVicLX7KkBeP.png',
+            'excerpt' => 'Rp100.000',
+            'isi' => '<p><strong>Rp100.000</strong></p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 24,
+            'title' => 'Elvive',
+            'slug' => 'elvive',
+            'image' => 'listsection-images/ayGYkfXMHi8YXdp0cm68z8pPGXxofaa5TtRlBmEr.png',
+            'excerpt' => 'Rp100.000',
+            'isi' => '<p><strong>Rp100.000</strong></p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 24,
+            'title' => 'Bamd Aid',
+            'slug' => 'band-aid',
+            'image' => 'listsection-images/IMrlxP32kEE7vBfGaN2fsodsgeYId4OSA8XWhdSR.png',
+            'excerpt' => 'Rp30.000',
+            'isi' => '<p><strong>Rp30.000</strong></p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indomarket',
+            'id_section' => 24,
+            'title' => 'Clipsy Mix',
+            'slug' => 'clipsy-mix',
+            'image' => 'listsection-images/DKI47YyqOfb6aLL8qh8b5xSUknuPjJZU2cyqoQXM.png',
+            'excerpt' => 'Rp50.000',
+            'isi' => '<p><strong>Rp50.000</strong></p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'Esential',
+            'subtitle' => 'Rp50.000',
+            'slug' => 'esential',
+            'image' => 'listsection-images/7Mt2MjrKRCYrj0LK47EmkUyllE3tS9YTsbDyuqdG.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'Esential',
+            'subtitle' => 'Rp50.000',
+            'slug' => 'esential2',
+            'image' => 'listsection-images/g1AHWf4gH0MXJuxFKihc0DG9z2uYFXPcRjHw2b3K.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'Esential',
+            'subtitle' => 'Rp70.000',
+            'slug' => 'esential3',
+            'image' => 'listsection-images/LEepoM4hOhjbWMHjI43KdUc191KtqZOe4nrn3CQl.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'Esential',
+            'subtitle' => 'Rp10.000',
+            'slug' => 'esential4',
+            'image' => 'listsection-images/KTB9tvE7Mn42K0mNSD8ARXuQzfnwXJefwH61m1ju.jpg',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'summer1',
+            'slug' => 'summer1',
+            'image' => 'listsection-images/fBexaHaHDLKgh6a6dt5FvvbZeYAE44MH7jxTG6XI.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'summer2',
+            'slug' => 'summer2',
+            'image' => 'listsection-images/wIiOTxgPIWUCe0LmSjvhngetXd5JHYlR6wdonM86.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 19,
+            'title' => 'summer3',
+            'slug' => 'summer3',
+            'image' => 'listsection-images/WTjeMblILOl2ACoySr13otv4DoYtMeKvss9LRtlF.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 201,
+            'title' => 'botsaramoda1',
+            'slug' => 'botsaramoda1',
+            'image' => 'listsection-images/FJC4Xlh4uoobe1eG9SBPD03988L9rYLEOmmDa0TE.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 201,
+            'title' => 'botsaramoda2',
+            'slug' => 'botsaramoda2',
+            'image' => 'listsection-images/dvANRPEd7pz82PQrMsFEmiq7YaxEwvGQ0dJpQhfP.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 201,
+            'title' => 'botsaramoda3',
+            'slug' => 'botsaramoda3',
+            'image' => 'listsection-images/iDz4LYn8ecCE2JDT35OFyclPVckmyplMg1R7rNeE.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'saramoda',
+            'id_section' => 201,
+            'title' => 'botsaramoda4',
+            'slug' => 'botsaramoda4',
+            'image' => 'listsection-images/eGkIc8JyoPlzL5clGDRvAATdmvkq89rvMexkT7C8.jpg',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 44,
+            'title' => 'TIPE 36 Camelia',
+            'subtitle' => 'We are here to help you',
+            'slug' => 'tipe-36-camelia',
+            'image' => 'listsection-images/Sqc6tWX0pC8SKhwM13yf4g8Xaygbkukh0x9wFODH.png',
+            'excerpt' => '24,30 m2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit inte...',
+            'isi' => '<p>24,30 m2</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p><figure class="image image-style-side"><img src="http://127.0.0.1:8000/media/Denah-Rumah-Minimalis-Berukuran-Mungi 1_1682266241.png"></figure><ul><li><strong>Kamar Tidur</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et</p><ol><li><strong>Ruang Tamu</strong></li></ol><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et</li></ul><p>&nbsp;</p><ul><li><strong>Dapur</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero etsss</p><ul><li>&nbsp;</li><li><strong>Kamar Mandi</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero etaaas</p><p>&nbsp;</p><ul><li><strong>Halaman</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero etaaas</p><p>&nbsp;</p><ul><li><strong>Carport</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero</p><p>&nbsp;</p><p>&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 44,
+            'title' => 'TIPE 60 Angrek',
+            'subtitle' => 'We are here to help you',
+            'slug' => 'tipe-60-angrek',
+            'image' => 'listsection-images/HllqKhVfME52fddxxhyBxvEFwsfQfkq5OiwIHBRn.png',
+            'excerpt' => '24,30 m2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit inte...',
+            'isi' => '<p>24,30 m2</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p><figure class="image image-style-side"><img src="http://127.0.0.1:8000/media/Denah-Rumah-Minimalis-Berukuran-Mungi 1_1682266241.png"></figure><ul><li><strong>Kamar Tidur</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et</p><ol><li><strong>Ruang Tamu</strong></li></ol><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et</li></ul><p>&nbsp;</p><ul><li><strong>Dapur</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero etsss</p><ul><li>&nbsp;</li><li><strong>Kamar Mandi</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero etaaas</p><p>&nbsp;</p><ul><li><strong>Halaman</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero etaaas</p><p>&nbsp;</p><ul><li><strong>Carport</strong></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero</p><p>&nbsp;</p><p>&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 45,
+            'title' => 'Find Your Comfort House',
+            'slug' => 'find-your-comfort-house',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 45,
+            'title' => 'Find Your Comfort House2',
+            'slug' => 'find-your-comfort-house2',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 45,
+            'title' => 'Find Your Comfort House3',
+            'slug' => 'find-your-comfort-house3',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 45,
+            'title' => 'Find Your Comfort House4',
+            'slug' => 'find-your-comfort-house4',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 45,
+            'title' => 'Find Your Comfort House5',
+            'slug' => 'find-your-comfort-house5',
+            'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac...',
+            'isi' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti&nbsp;</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 43,
+            'title' => 'indoproperti',
+            'slug' => 'indoproperti',
+            'image' => 'listsection-images/jtiDNza9Gg1JqqCXPsKslBKgO7siVTda4eCtxtUP.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 43,
+            'title' => 'indoproperti2',
+            'slug' => 'indoproperti2',
+            'image' => 'listsection-images/63zEWYINqkTKw2Dzm7qSBoey1KCkZdW85ck9u2zt.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 43,
+            'title' => 'indoproperti3',
+            'slug' => 'indoproperti3',
+            'image' => 'listsection-images/I88OBbxgUQfMBm50CCIcknMEoiYZ7epQpIbHKXH6.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 43,
+            'title' => 'indoproperti4',
+            'slug' => 'indoproperti4',
+            'image' => 'listsection-images/ipy1jpW1aDKfNULx6xRpsVclqyLlqhh1C7jVGm2I.png',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 48,
+            'title' => 'Lorem Ipsum',
+            'subtitle' => 'Lorem Ipsum',
+            'slug' => 'lorem-ipsum',
+            'image' => 'listsection-images/HEv7YEpFzz1yTzyJTTE6jlF28a5cJLNs2sErzfMm.jpg',
+            'excerpt' => 'Find YourComfor House We are here to help you',
+            'isi' => '<p><strong>Find Your</strong><br><strong>Comfor House</strong></p><p>We are here to help you</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 48,
+            'title' => 'Lorem Ipsum2',
+            'subtitle' => 'Lorem Ipsum2',
+            'slug' => 'lorem-ipsum2',
+            'image' => 'listsection-images/rjr9yii78pN5TUOMAbNKTAo841WnhTJRiGmq9Alj.jpg',
+            'excerpt' => 'Find YourComfor House We are here to help you',
+            'isi' => '<p><strong>Find Your</strong><br><strong>Comfor House</strong></p><p>We are here to help you</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 48,
+            'title' => 'Lorem Ipsum3',
+            'subtitle' => 'Lorem Ipsum3',
+            'slug' => 'lorem-ipsum3',
+            'image' => 'listsection-images/BoF98kbINP6VaeANYivU5O0F928IafG9LxvD7Lp0.jpg',
+            'excerpt' => 'Find YourComfor House We are here to help you',
+            'isi' => '<p><strong>Find Your</strong><br><strong>Comfor House</strong></p><p>We are here to help you</p>',
+        ]);
+        ListSection::create([
+            'typelanding' => 'indoproperti',
+            'id_section' => 48,
+            'title' => 'Lorem Ipsum4',
+            'subtitle' => 'Lorem Ipsum4',
+            'slug' => 'lorem-ipsum4',
+            'image' => 'listsection-images/7xyAacWBjMPPwAeFeHOhT6vQXO8EX2L0rGPga7Cx.jpg',
+            'excerpt' => 'Find YourComfor House We are here to help you',
+            'isi' => '<p><strong>Find Your</strong><br><strong>Comfor House</strong></p><p>We are here to help you</p>',
         ]);
     }
 }
