@@ -1,9 +1,66 @@
-@extends('main')
+@extends('mainBlank')
 
 @section('contents')
-    <div class=" bg-gradient-to-r from-white to-gray-200 py-10">
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="mb-2 sm:mb-0 flex flex-row
+  ">
+                    <div class="h-10 self-center mx-4">
+                        <img class="h-10 self-center" src="/images/logo.png" />
+                    </div>
+
+                </div>
+
+
+                <div class="flex items-center ">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-6 lg:hidden">
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-bottom-left"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-500 ease-in-out origin-top-left "></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#footer" class="text-gray-800 py-2 mx-8 group-hover:text-fourth1  text-lg">Contact
+                                    Us</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections5" class="text-gray-800 py-2 mx-8 group-hover:text-fourth1  text-lg">Our
+                                    Team</a>
+                            </li>
+                            <li class="group">
+                                <a href="#sections6"
+                                    class="text-gray-800 py-2 mx-8 group-hover:text-fourth1  text-lg">Office</a>
+                            </li>
+
+                            {{-- <li class="group">
+                                <a href="#"
+                                    class="text-base text-black py-2 mx-8 group-hover:text-fourth1">Contact</a>
+                            </li> --}}
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class=" bg-gradient-to-r from-white to-gray-200 pb-10">
         <section id="sections1" class="mb-8">
-            <img class="w-screen   object-cover" src="{{ asset('/storage/' . $sections1->image1) }}">
+            <div class="relative overflow-hidden shadow-lg cursor-pointer ">
+
+                <img class="object-cover w-full mx-auto" loading="eager" src="{{ asset('/storage/' . $sections1->image1) }}"
+                    alt="Saramoda">
+
+                <div class="absolute top-0  px-6   w-full h-full  justify-center items-center">
+
+                    <h2 class="text-center font-serif font-light lg:text-5xl md:text-3xl sm:text-xl tracking-wider m-auto text-white lg:pt-72 md:pt-28 sm:pt-4">{{ $sections1->title1 }} <span class="font-bold">{{ $sections1->title2 }}</span></h2>
+                </div>
+
+
+            </div>
 
         </section>
 
@@ -132,7 +189,7 @@
         </section>
 
 
-        <section class="bg-black  mt-8">
+        <section id="sections5" class="bg-black  mt-8">
             <h1 class="align-middle text-center text-white font-semibold text-5xl pt-10 ">{{ $sections5->title1 }}</h1>
             <p class="text-center text-white font-light my-8">{{ $sections5->desc1 }}</p>
 
@@ -149,7 +206,7 @@
 
 
         </section>
-        <section class="">
+        <section id="sections6" class="">
             <div class="bg-gradient-to-b from-black via-black">
                 <div class="relative overflow-hidden  cursor-pointer ">
 
@@ -203,8 +260,10 @@
                                     <article class="text-black text-xs">
                                         {!! $item->isi !!}
                                     </article>
-                                    <p class="text-xs font-light font-serif py-4 px-2 rounded-full border-2 border-black">{{ $item->title }}</p>
-                                    <p class="text-xs font-light font-serif py-4 px-2 rounded-full border-2 border-black">{{ $item->subtitle }}</p>
+                                    <p class="text-xs font-light font-serif py-4 px-2 rounded-full border-2 border-black">
+                                        {{ $item->title }}</p>
+                                    <p class="text-xs font-light font-serif py-4 px-2 rounded-full border-2 border-black">
+                                        {{ $item->subtitle }}</p>
                                 </div>
 
                             </div>
