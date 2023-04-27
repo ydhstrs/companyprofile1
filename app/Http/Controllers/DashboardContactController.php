@@ -100,9 +100,9 @@ class DashboardContactController extends Controller
             'tiktok' => 'required|max:255',
             'linkedin' => 'required|max:255',
             'instagram' => 'required|max:255',
-            'image' => 'image|file|max:1024',
-            'cv' => 'file|max:1024',
-            'isi' => 'required',
+            'address' => 'required|max:255',
+            'twitter' => 'required|max:255',
+            'youtube' => 'required|max:255',
         ]);
 
         if ($request->file('image')) {
