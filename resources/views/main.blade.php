@@ -41,7 +41,7 @@
                         class="hidden absolute py-5 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="/"
+                                <a href="{{ asset('storage/Portofolio.pdf') }}" download="Lunnizom-Portofolio.pdf"
                                     class="text-white py-2 mx-8 group-hover:text-fourth1  text-lg">Portofolio</a>
                             </li>
                             <li class="group">
