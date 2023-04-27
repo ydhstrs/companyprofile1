@@ -40,10 +40,17 @@
                                     <x-dropdown-link :href="'/dashboard/main/listsection'">
                                         {{ __('List Section') }}
                                     </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/contact'">
+                                        {{ __('Contact') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="'/dashboard/bio'">
+                                        {{ __('Bio') }}
+                                    </x-dropdown-link>
                                 </x-slot>
                             </x-slot>
                         </x-dropdown>
                     </div>
+
                     <div class="hidden sm:flex sm:items-center sm:ml-6">
                         <x-dropdown width="48">
                             <x-slot name="trigger">

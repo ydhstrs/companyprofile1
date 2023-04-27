@@ -34,25 +34,49 @@
                             </div>
                         @endif
                     </div>
-                    <a href="/dashboard/bio/create"
+                    {{-- <a href="/dashboard/bio/create"
                         class="flex flex-wrap gap-3 bg-cyan-900 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded m-8 w-44">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Add Bio</a>
+                        Add Bio</a> --}}
                     <div class="block w-full overflow-x-auto px-8">
 
                         <table class="table-fixed border-collaps">
 
                             <th
-                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
-                                #
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Saramoda
                             </th>
                             <th
                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
-                                Bio Desc
+                                Kepul
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Indo Market
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Legalin
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Foundation
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Barbekoe
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Indo Properti
+                            </th>
+                            <th
+                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
+                                Indo Farm
                             </th>
                             <th
                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left bg-slate-100 text-slate-500 border-gray-100">
@@ -60,16 +84,34 @@
                             </th>
                             @foreach ($bios as $item)
                                 <tr>
-                                    <td
-                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                                        {{ $loop->iteration }}</td>
+                                    
 
-                                    <td
-                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
-                                        {{ $item->text }}
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->saramoda }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->kepul }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->indomarket }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->legalin }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->foundation }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->barbekoe }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->indoproperti }}
+                                    </td>
+                                    <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                                        {{ $item->indofarm }}
                                     </td>
                                     <td class="flex flex-wrap">
-                                        <a href="/dashboard/materi/{{ $item->id }}">
+                                        {{-- <a href="/dashboard/bio/{{ $item->id }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor"
                                                 class="w-6 h-6 text-blue-700 hover:bg-blue-300">
@@ -78,8 +120,8 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round"
                                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                             </svg>
-                                        </a>
-                                        <a href="/dashboard/materi/{{ $item->id }}/edit">
+                                        </a> --}}
+                                        <a href="/dashboard/bio/{{ $item->id }}/edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                 stroke-width="1.5" stroke="currentColor"
                                                 class="w-6 h-6 text-yellow-600 hover:bg-yellow-300">
@@ -88,8 +130,8 @@
                                             </svg>
 
                                         </a>
-                                        <div>
-                                            <form action="/dashboard/materi/{{ $item->id }}" method="post">
+                                        {{-- <div>
+                                            <form action="/dashboard/bio/{{ $item->id }}" method="post">
                                                 @method('delete')
                                                 @csrf
                                                 <button class=""
@@ -102,7 +144,7 @@
                                                     </svg>
                                                 </button>
                                             </form>
-                                        </div>
+                                        </div> --}}
 
                                     </td>
                                 </tr>

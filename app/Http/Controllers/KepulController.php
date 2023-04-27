@@ -8,7 +8,8 @@ use App\Models\Section;
 
 class KepulController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('sublanding.kepul.welcome', [
             "sections1" => Section::where("typelanding", "kepul")->where("typesection", 1)->first(),
             "sections2" => Section::where("typelanding", "kepul")->where("typesection", 2)->first(),
@@ -16,7 +17,8 @@ class KepulController extends Controller
             "sections4" => Section::where("typelanding", "kepul")->where("typesection", 4)->first(),
             "listsections4" => ListSection::where("typelanding", "kepul")->where("id_section", 10)->get(),
             "sections5" => Section::where("typelanding", "kepul")->where("typesection", 5)->first(),
-            "contacts" => Contact::all(),
+            "contact" => Contact::where("typelanding", "kepul")->first(),
+
         ]);
     }
 }

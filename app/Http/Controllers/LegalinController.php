@@ -21,7 +21,7 @@ class LegalinController extends Controller
             "sections4" => Section::where("typelanding", "legalin")->where("typesection", 4)->get(),
             "sections5" => Section::where("typelanding", "legalin")->where("typesection", 5)->get(),
             "listsections5" => ListSection::where("typelanding", "legalin")->where("id_section", 15)->get(),
-            "contacts" => Contact::all(),
+            "contact" => Contact::where("typelanding", "legalin")->first(),
 
         ]);
     }

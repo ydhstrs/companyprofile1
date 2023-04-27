@@ -71,7 +71,7 @@ class DashboardBioController extends Controller
     public function edit(Bio $bio)
     {
         return view('admin.bio.edit', [
-            'banner' => $bio,
+            'bio' => $bio,
         ]);
     }
 
@@ -85,7 +85,14 @@ class DashboardBioController extends Controller
     public function update(Request $request, Bio $bio)
     {
         $validatedData = $request->validate([
-            'text' => '',
+            'saramoda' => '',
+            'kepul' => '',
+            'indomarket' => '',
+            'legalin' => '',
+            'foundation' => '',
+            'barbekoe' => '',
+            'indoproperti' => '',
+            'indofarm' => '',
         ]);
 
 

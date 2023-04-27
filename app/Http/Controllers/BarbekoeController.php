@@ -24,7 +24,7 @@ class BarbekoeController extends Controller
             "sections6" => Section::where("typelanding", "barbekoe")->where("typesection", 6)->first(),
             "sections7" => Section::where("typelanding", "barbekoe")->where("typesection", 7)->first(),
             "listsections7" => ListSection::where("typelanding", "barbekoe")->where("id_section", 39)->get(),
-            "contacts" => Contact::all(),
+            "contact" => Contact::where("typelanding", "barbekoe")->first(),
         ]);
     }
 }

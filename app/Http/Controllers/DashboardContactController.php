@@ -93,7 +93,7 @@ class DashboardContactController extends Controller
      * @param  \App\Models\Isimateris  $isimateris
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $about)
+    public function update(Request $request, Contact $contact)
     {
         $validatedData = $request->validate([
             'email' => 'required|max:255',
@@ -105,21 +105,10 @@ class DashboardContactController extends Controller
             'youtube' => 'required|max:255',
         ]);
 
-        if ($request->file('image')) {
-            if ($request->oldImage) {
-                Storage::delete($request->oldImage);
-            }
-            $validatedData['image'] = $request->file('image')->store('about-images');
-        }
-        if ($request->file('cv')) {
-            if ($request->oldCv) {
-                Storage::delete($request->oldCv);
-            }
-            $validatedData['cv'] = $request->file('cv')->store('about-images');
-        }
 
 
-        Contact::where('id', $about->id)->update($validatedData);
+
+        Contact::where('id', $contact->id)->update($validatedData);
 
         return redirect('/dashboard/contact')->with('success', 'Telah Diubah');
     }

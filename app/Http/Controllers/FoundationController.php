@@ -22,7 +22,7 @@ class FoundationController extends Controller
             "sections5" => Section::where("typelanding", "foundation")->where("typesection", 5)->first(),
             "sections6" => Section::where("typelanding", "foundation")->where("typesection", 6)->first(),
             "listsections6" => ListSection::where("typelanding", "foundation")->where("id_section", 31)->latest()->take(5)->get(),
-            "contacts" => Contact::all(),
+            "contact" => Contact::where("typelanding", "foundation")->first(),
 
         ]);
     }

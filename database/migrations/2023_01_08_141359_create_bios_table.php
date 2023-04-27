@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('bios', function (Blueprint $table) {
             $table->id();
-            $table->longText('text');
+            $table->string('saramoda');
+            $table->string('kepul');
+            $table->string('indomarket');
+            $table->string('legalin');
+            $table->string('foundation');
+            $table->string('barbekoe');
+            $table->string('indoproperti');
+            $table->string('indofarm');
             $table->timestamps();
         });
     }

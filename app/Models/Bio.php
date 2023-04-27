@@ -9,6 +9,13 @@ class Bio extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'text'
+        'saramoda',
+        'kepul',
+        'indomarket',
+        'legalin',
+        'foundation',
+        'barbekoe',
+        'indoproperti',
+        'indofarm',
     ];
 }

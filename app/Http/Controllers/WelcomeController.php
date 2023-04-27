@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banner;
-use App\Models\About;
-use App\Models\Article;
+
 use App\Models\Bio;
 use Illuminate\Http\Request;
 use App\Models\ListSection;
 use App\Models\Section;
-use App\Models\Strength;
 use App\Models\Contact;
-use App\Models\Tool;
-use App\Models\Testimonial;
+
 
 class WelcomeController extends Controller
 {
@@ -28,7 +24,8 @@ class WelcomeController extends Controller
             "listsections4" => ListSection::where("typelanding", "main")->where("id_section", 5)->get(),
             "sections5" => Section::where("typelanding", "main")->where("typesection", 5)->get(),
             "listsections5" => ListSection::where("typelanding", "main")->where("id_section", 6)->get(),
-            "contacts" => Contact::all(),
+            "contact" => Contact::where("typelanding", "main")->first(),
+            "bio" => Bio::first(),
 
         ]);
     }
