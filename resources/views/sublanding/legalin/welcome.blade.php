@@ -172,7 +172,7 @@
 
             <div class="col-span-1">
 
-                <img src="/images/Rectangle6.png" class="w-full h-full">
+                <img src="{{ asset('/storage/' . $sections4[0]->image1) }}" class="w-full h-full">
 
             </div>
 
