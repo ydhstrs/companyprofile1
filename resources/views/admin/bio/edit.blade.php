@@ -33,7 +33,7 @@
                             </div>
                             <div class="mb-6">
                                 <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Kepul</label>
-                                <input type="text" id="kepul" name="addrkepuless"
+                                <input type="text" id="kepul" name="kepul"
                                     class="block w-full p-2.5 bg-gray-50 border border-gray-300 text-black text-sm rounded-lg"
                                     value="{{ $bio->kepul }}">
                             </div>
