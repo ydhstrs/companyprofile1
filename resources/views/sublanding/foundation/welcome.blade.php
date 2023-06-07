@@ -277,7 +277,7 @@
             </div>
             <div class="col-span-1">
                 <div class="rounded-lg block overflow-hidden">
-                    @if (count($listsections) > 1)
+                    @if (count($listsections6) > 1)
                         <img src="{{ asset('/storage/' . $listsections6[0]->image) }}" class=" h-[768px] object-cover">
                     @else
                         <img src="https://source.unsplash.com/1200x600?child" class=" h-[768px] object-cover">
